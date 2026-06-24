@@ -1,0 +1,21 @@
+book_slug: samurai_splat_01
+page_number: 30
+page_type: ending
+scene_title: The Clever Fix
+story_text: Every problem has a clever fix!
+illustration_direction: 'Warm celebration showing the solved problem from the book
+  idea: Create a funny all-ages comic-strip picture book called Samurai Splat.'
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Resolved story world
+emotion: celebration
+camera: wide joyful finale
+hidden_objects:
+- Soft training mat
+- bamboo practice pole
+- noodle bowl
+- slippery rice ball
+text_safe_area: Leave open space for the catchphrase as editable text.
+status: planned

@@ -1,0 +1,14 @@
+book_slug: book01_password_dragon
+page_number: 1
+page_type: front_matter
+scene_title: Title Page
+story_text: Hackster Niko and the Password Dragon
+illustration_direction: Friendly title-page composition with Niko entering Cyber Forest.
+characters:
+- Hackster Niko
+environment: Cyber Forest
+emotion: wonder
+camera: hero title-page view
+hidden_objects: []
+text_safe_area: Large clean center/top area for editable title text.
+status: planned

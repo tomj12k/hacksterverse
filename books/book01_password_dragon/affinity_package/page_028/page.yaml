@@ -1,0 +1,26 @@
+page_number: 28
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_028.png
+prompt_path: books/book01_password_dragon/prompts/page_028.md
+niko_layer_mode: posable_layer
+niko_pose: kind_wave
+niko_center_x: 0.36
+niko_base_y: 0.88
+niko_height: 0.4
+page_type: story
+scene_title: A Thank-You Gift
+story_text: Password Dragon gave Niko a Golden Gear. "For your clever fix."
+characters:
+- Hackster Niko
+- Password Dragon
+environment: Cyber Forest
+emotion: curious
+camera: wide establishing shot
+illustration_direction: Password Dragon gently gives Niko a Golden Gear as a thank-you
+  gift.
+hidden_objects:
+- Golden Gear
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+background_direction: 'Create the Cyber Forest background and include only these non-Niko
+  characters: Password Dragon. Leave the reserved Niko overlay space empty. Do not
+  draw Hackster Niko, any robot child, antenna, or Niko-like figure.'

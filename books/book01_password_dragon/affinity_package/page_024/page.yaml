@@ -1,0 +1,27 @@
+page_number: 24
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_024.png
+prompt_path: books/book01_password_dragon/prompts/page_024.md
+niko_layer_mode: posable_layer
+niko_pose: kind_wave
+niko_center_x: 0.35
+niko_base_y: 0.88
+niko_height: 0.4
+page_type: story
+scene_title: A Promise
+story_text: '"I will make my passwords long, silly, and secret," promised Password
+  Dragon.'
+characters:
+- Hackster Niko
+- Password Dragon
+environment: Cyber Forest
+emotion: caring
+camera: close warm character moment
+illustration_direction: Password Dragon makes a proud promise while Niko gives an
+  encouraging thumbs-up.
+hidden_objects:
+- Golden Gear
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+background_direction: 'Create the Cyber Forest background and include only these non-Niko
+  characters: Password Dragon. Leave the reserved Niko overlay space empty. Do not
+  draw Hackster Niko, any robot child, antenna, or Niko-like figure.'

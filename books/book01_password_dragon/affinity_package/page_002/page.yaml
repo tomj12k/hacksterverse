@@ -1,0 +1,16 @@
+page_number: 2
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_002.png
+prompt_path: books/book01_password_dragon/prompts/page_002.md
+page_type: copyright
+scene_title: Copyright
+story_text: Copyright page. Final publisher details, ISBN, and credits will be added
+  before print approval.
+characters: []
+environment: ''
+emotion: calm
+camera: minimal layout
+illustration_direction: Simple quiet pattern with a tiny Golden Gear and soft Cyber
+  Forest texture, mostly open page space.
+hidden_objects: []
+text_safe_area: Keep most of the page open for copyright text.

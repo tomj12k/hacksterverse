@@ -1,0 +1,26 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 13
+page_type: problem
+scene_title: The Rice Ball Race
+story_text: "Samurai Splat entered the village\u2019s annual Rice Ball Race! The goal\
+  \ was to catch the most slippery rice balls tossed into the air. But as the race\
+  \ began, Samurai Splat got so excited he leaped too high\u2014"
+illustration_direction: Samurai Splat leaps dramatically into the air, arms outstretched,
+  mid-air above a crowd of cheering village people. A rice ball arcs toward his face.
+  Shotgun Bob stands below with arms crossed, looking up with a goofy grin. The village
+  square is filled with colorful stalls and onlookers.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village square
+emotion: excited
+camera: dynamic low angle to emphasize the leap
+hidden_objects:
+- soft training mat
+- bamboo practice pole
+text_safe_area: top third of the page
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_13_the_rice_ball_race.md
+status: prompt generated

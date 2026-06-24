@@ -1,0 +1,65 @@
+Full-bleed square children's picture book illustration. One continuous painted scene, not a document, not a page mockup, not a poster, not a comic panel, not a worksheet, not a white layout.
+{% set niko_layer_enabled = page.niko_layer_mode and page.niko_layer_mode != "none" %}
+{% set character_layer_mode = book.character_layer_mode if book and book.character_layer_mode is defined else "separate_layers" %}
+{% set separate_character_layers = character_layer_mode == "separate_layers" %}
+
+{% if separate_character_layers %}
+Scene: {{ page.background_direction if page.background_direction is defined and page.background_direction else page.illustration_direction }}
+{% elif niko_layer_enabled %}
+Scene: {{ page.background_direction }}
+{% else %}
+Scene: {{ page.illustration_direction }}
+{% endif %}
+
+{% if separate_character_layers %}
+Visible story characters: none. This is a character-free background plate.
+Characters planned as separate editable layers: {{ characters | join(", ") if characters else "none" }}.
+{% elif niko_layer_enabled %}
+{% set other_characters = characters | reject("equalto", "Hackster Niko") | list %}
+{% if other_characters %}
+Visible story characters: {{ other_characters | join(", ") }}.
+{% else %}
+Visible story characters: none. This is an empty environmental background.
+{% endif %}
+{% else %}
+Characters in the scene: {{ characters | join(", ") if characters else "no main characters" }}.
+{% endif %}
+
+{% if "Hackster Niko" in characters and not niko_layer_enabled and not separate_character_layers %}
+Hackster Niko locked design:
+{{ niko_consistency_phrase }}
+
+Preserve the exact same Niko silhouette and body plan on every page. Niko is a robot only, with one rounded helmet head, one tiny antenna, one torso, two rounded robot arms, two rounded robot legs, two hands, and two feet. Niko's face screen contains exactly two glowing eyes and nothing else; the face screen below the eyes is plain blank black glass. No mouth line, no frown curve, no smile curve, no nose dot, no cheeks, no eyebrows, no lower-face marks. Niko has no tail, wings, animal ears, snout, muzzle, paws, claws, horns, scales, fur, feathers, organic skin, or extra appendages. Niko has no dangling cord, cable, leash, rope, strap, tail-like backpack part, or tail-like object attached to the body. The compact floating magnetic backpack must not look like a tail, cape, wing, shell, or animal part.
+{% endif %}
+
+Setting: {{ page.environment or "simple clean storybook setting as appropriate for the page" }}.
+Emotion: {{ page.emotion }}.
+Camera: {{ page.camera }}.
+Hidden objects to include naturally: {{ hidden_objects | join(", ") if hidden_objects else "none" }}.
+
+{% if separate_character_layers %}
+Composition requirements: full-bleed 8.75 x 8.75 inch square artwork, 300 DPI print intent, background/environment plate only, props and hidden objects may appear naturally, leave clean open space for later editable character and text overlays: {{ page.text_safe_area }}
+
+Absolute visual exclusions: no visible story characters, no people, no children, no animals, no creatures, no mascots, no robots, no samurai figure, no cowboy figure, no named cast member, no silhouettes, no antennas, no tails, no faces, no eyes, no bodies, no hands, no feet, no words, no letters, no captions, no speech bubbles, no labels, no signs, no numerals, no glyphs, no code symbols, no fake writing, no pseudo text, no title typography, no page numbers, no document layout, no paper sheet, no white page area, no columns of text, no UI, no panels, no split-page composition, no grid, no halftone, no screen-door texture, no watermarks, no logos, no patches, no decals, no insignia.
+{% elif niko_layer_enabled %}
+{% set other_characters = characters | reject("equalto", "Hackster Niko") | list %}
+Composition requirements: full-bleed 8.75 x 8.75 inch square artwork, 300 DPI print intent, clean open lower-left foreground space at center_x={{ page.niko_center_x }}, base_y={{ page.niko_base_y }}, height={{ page.niko_height }} of the square page, plus open space for later editable text overlays: {{ page.text_safe_area }}
+
+{% if other_characters %}
+Absolute visual exclusions: no Hackster Niko, no robot child, no Niko-like figure, no robots, no antennas, no tail-like robot parts, no extra figures beyond the listed visible story characters, no words, no letters, no captions, no speech bubbles, no labels, no signs, no numerals, no glyphs, no code symbols, no fake writing, no pseudo text, no title typography, no page numbers, no document layout, no paper sheet, no white page area, no columns of text, no UI, no panels, no split-page composition, no grid, no halftone, no screen-door texture, no watermarks, no logos, no patches, no decals, no insignia.
+{% else %}
+Absolute visual exclusions: no visible figures, no people, no children, no animals, no creatures, no mascots, no robots, no silhouettes, no antennas, no tails, no faces, no eyes, no bodies, no words, no letters, no captions, no speech bubbles, no labels, no signs, no numerals, no glyphs, no code symbols, no fake writing, no pseudo text, no title typography, no page numbers, no document layout, no paper sheet, no white page area, no columns of text, no UI, no panels, no split-page composition, no grid, no halftone, no screen-door texture, no watermarks, no logos, no patches, no decals, no insignia.
+{% endif %}
+{% else %}
+Composition requirements: full-bleed 8.75 x 8.75 inch square artwork, 300 DPI print intent, important characters and action inside safe margins, clean open space for later editable text overlays: {{ page.text_safe_area }}
+
+Absolute visual exclusions: no words, no letters, no captions, no speech bubbles, no labels, no signs, no numerals, no glyphs, no code symbols, no fake writing, no pseudo text, no title typography, no page numbers, no document layout, no paper sheet, no white page area, no columns of text, no UI, no panels, no split-page composition, no grid, no halftone, no screen-door texture, no duplicate Niko, no extra robot child in the background, no human child generated in the background, no mascot generated in the background, no mouth on Niko, no frown on Niko, no dangling cord on Niko, no tail-like shape on Niko, no watermarks, no logos, no patches, no decals, no insignia.
+{% endif %}
+
+Style:
+
+{% if book and book.global_illustration_style %}
+{{ book.global_illustration_style }}
+{% endif %}
+
+Warm bright children's picture book style, rounded friendly shapes, soft cinematic lighting, saturated colors, whimsical cyber forest style when relevant, no weapons, no scary imagery, emotionally safe and readable for ages 5-8.

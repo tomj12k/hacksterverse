@@ -1,0 +1,17 @@
+book_slug: samurai_splat_01
+page_number: 1
+page_type: cover
+scene_title: Samurai Splat
+story_text: Samurai Splat stands on a hilltop, ready to take on his next challenge
+  with dramatic flair.
+illustration_direction: Samurai Splat stands dramatically on a hill with a goofy expression,
+  holding a bamboo practice pole. The title is displayed in bold, playful font.
+characters:
+- Samurai Splat
+environment: Hilltop with a village in the distance
+emotion: determined
+camera: wide shot
+hidden_objects:
+- slippery rice ball
+text_safe_area: top center
+status: AI planned

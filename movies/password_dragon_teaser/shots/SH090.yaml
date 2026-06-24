@@ -1,0 +1,31 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH090
+source_page: 16
+scene_title: Build The Vault
+duration_seconds: 8
+shot_type: making montage
+camera: three quick montage beats in one continuous shot
+motion: rounded gears, blue crystal panels, and soft locks assemble into a friendly
+  vault
+description: Niko and Password Dragon build a Password Vault together.
+characters:
+- Hackster Niko
+- Password Dragon
+dialogue:
+- speaker: Niko
+  text: It remembers secrets so you do not have to shout them.
+narration: ''
+sfx:
+- rounded gear clicks
+- blue crystal glow
+- happy vault hum
+music: upbeat teamwork montage
+continuity_notes: The vault should feel like a helpful tool, not a scary lockup.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH090_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH090_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH090_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH090_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH090_mix.wav

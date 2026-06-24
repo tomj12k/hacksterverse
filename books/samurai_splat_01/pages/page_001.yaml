@@ -1,0 +1,27 @@
+book_slug: samurai_splat_01
+page_number: 1
+page_type: front_matter
+scene_title: Title Page
+story_text: Samurai Splat
+illustration_direction: 'Premium title-page composition for Samurai Splat. Show the
+  main characters and visual clues for: Create a funny all-ages comic-strip picture
+  book called Samurai Splat. Feature reference characters: Samurai Splat, Shotgun
+  Bob, village people. Reference notes: Use a bright premium children''s comic-picture-book
+  style with rounded shapes, saturated colors, clean readable silhouettes, expressive
+  poses, cinematic but playful lighting, and slapstick motion. Keep Samurai Splat
+  100% consistent across pages: same body shape, same outfit, same face proportions,
+  same headband/helmet silhouette, same color palette. Keep Shotgun Bob consistent
+  too. Do not bake dialogue or captions into the image; leave clean space for editable
+  text layers. No guns, no blades, no scary violence, no realistic injury, no dark
+  gritty samurai style.'
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Story world entrance
+emotion: wonder
+camera: hero title-page view
+hidden_objects:
+- Soft training mat
+- bamboo practice pole
+text_safe_area: Large clean title area; keep all text editable.
+status: planned

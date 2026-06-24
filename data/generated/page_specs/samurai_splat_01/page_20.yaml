@@ -1,0 +1,25 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 20
+page_type: problem
+scene_title: The Balloon Pop Challenge
+story_text: Samurai Splat tried to pop the balloon with a dramatic flourish, but it
+  kept floating away. 'Maybe you should just grab it!' suggested Shotgun Bob. 'That's
+  too simple!' said Samurai Splat. He took a deep breath and tried again.
+illustration_direction: Samurai Splat is in a dramatic pose, sword raised high, facing
+  a large colorful balloon. The balloon is floating just out of reach. Shotgun Bob
+  is standing nearby, arms crossed, looking amused. The village square is bustling
+  with cheerful villagers in the background.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Village square
+emotion: Determined but frustrated
+camera: Medium shot
+hidden_objects:
+- Soft training mat
+- bamboo practice pole
+text_safe_area: Top third of the page
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_20_the_balloon_pop_challenge.md
+status: prompt generated

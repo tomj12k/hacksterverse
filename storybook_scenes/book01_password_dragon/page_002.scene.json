@@ -1,0 +1,86 @@
+{
+  "book_illustration_path": "books/book01_password_dragon/illustrations/page_002.png",
+  "book_slug": "book01_password_dragon",
+  "canvas": {
+    "bleed_inches": 0.125,
+    "dpi": 300,
+    "height_px": 2625,
+    "safe_margin_inches": 0.5,
+    "trim_inches": [
+      8.5,
+      8.5
+    ],
+    "width_px": 2625
+  },
+  "layers": [
+    {
+      "asset_path": "books/book01_password_dragon/illustrations/page_002.png",
+      "id": "book_illustration",
+      "locked": true,
+      "name": "Current Page Illustration",
+      "parallax_factor": 0,
+      "transform": {
+        "height": 1,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 1,
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1.6
+      },
+      "type": "background",
+      "z_index": 0
+    },
+    {
+      "id": "camera_001",
+      "name": "Camera",
+      "transform": {
+        "rotation": 0,
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      },
+      "type": "camera",
+      "z_index": 99
+    },
+    {
+      "blend_mode": "multiply",
+      "id": "lighting_001",
+      "name": "Ambient Light",
+      "opacity": 0,
+      "tint_color": "#FFFFFF",
+      "type": "lighting",
+      "z_index": 10
+    },
+    {
+      "id": "text_1781977831842",
+      "name": "Page Text 1",
+      "type": "text",
+      "z_index": 20,
+      "parallax_factor": 1,
+      "text": "Every problem has a clever fix!",
+      "font_size": 0.035,
+      "text_color": "#327f7c",
+      "stroke_color": "#327f7c",
+      "box_color": "#FFFFFF",
+      "box_opacity": 0.5,
+      "align": "center",
+      "font_family": "storybook",
+      "transform": {
+        "x": 0.4798563294491525,
+        "y": 0.8471872793079096,
+        "width": 0.76,
+        "height": 0.16,
+        "scale": 1,
+        "rotation": 6,
+        "opacity": 1,
+        "zoom": 2
+      },
+      "asset_path": null
+    }
+  ],
+  "lighting_brief": "ambient_soft",
+  "page_count": 32,
+  "page_number": 2
+}

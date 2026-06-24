@@ -1,0 +1,52 @@
+# Gadget Design Sheet Prompt: {{ name }}
+
+Create a clean prop design sheet for **{{ name }}**.
+
+## Purpose
+
+{{ purpose }}
+
+## Appearance
+
+{{ appearance }}
+
+## Required Angles
+
+{% for angle in angles -%}
+- {{ angle }}
+{% endfor %}
+
+## Materials
+
+{% for material in materials -%}
+- {{ material }}
+{% endfor %}
+
+## Official Colors
+
+{% for color_name, hex_value in color_palette.items() -%}
+- {{ color_name }}: {{ hex_value }}
+{% endfor %}
+
+## Design Rules
+
+- Show multiple angles on a clean prop design sheet.
+- Use simple readable shapes.
+- Keep the object child-safe, friendly, and toy-like.
+- No weapons or weapon-like silhouette.
+- No scary imagery.
+- No embedded paragraph text.
+- Leave room for labels, but do not render labels unless specifically requested.
+
+## Safety Notes
+
+{{ safety_notes }}
+
+## Art Direction
+
+{{ art_style }}
+
+## Additional Notes
+
+{{ generation_notes }}
+

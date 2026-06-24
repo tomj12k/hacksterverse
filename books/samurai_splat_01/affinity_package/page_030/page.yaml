@@ -1,0 +1,24 @@
+book_slug: samurai_splat_01
+page_number: 30
+page_type: resolution
+scene_title: The Lesson of Patience
+story_text: Samurai Splat takes a deep breath and carefully steps onto the soft mat.
+  'This time,' he says, 'I will do it with patience.' Shotgun Bob nods, holding up
+  a noodle bowl as a trophy. 'Good plan, Splat. Now... don't eat the mat!'
+illustration_direction: Samurai Splat stands at the edge of a large soft training
+  mat, taking a deep breath. His eyes are closed, and his arms are out for balance.
+  Behind him, Shotgun Bob holds up a noodle bowl like a trophy, grinning widely. The
+  training area has colorful mats and playful lighting, with a bamboo practice pole
+  in the background. Samurai Splat's pose shows determination, while Shotgun Bob looks
+  cheerful and encouraging.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Training area with a soft mat
+emotion: determined and encouraging
+camera: medium shot
+hidden_objects:
+- slippery rice ball
+- bamboo practice pole
+text_safe_area: top third of the page
+status: AI planned

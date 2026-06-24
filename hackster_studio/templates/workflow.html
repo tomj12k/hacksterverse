@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Workflow · Hackster Studio{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Production Workflow</h1>
+    <p>{{ book_nav.current.title if book_nav.current else book_slug }} · guided path to a production-ready {{ expected_pages }}-page book.</p>
+  </div>
+  <div class="button-row">
+    <a class="button-link" href="/book-generation?book_slug={{ book_slug }}">Generate Book</a>
+    <a class="button-link" href="/book-assembly?book_slug={{ book_slug }}">Assembly</a>
+    <a class="button-link" href="/story-maker?book_slug={{ book_slug }}&page=1">Review</a>
+  </div>
+</section>
+
+<section class="workflow-hero">
+  <div>
+    <h2>Current Package</h2>
+    <div class="workflow-status-grid">
+      <div><span>Pages</span><strong>{{ status.pages }}/{{ expected_pages }}</strong></div>
+      <div><span>Prompts</span><strong>{{ status.prompts }}/{{ expected_pages }}</strong></div>
+      <div><span>Images</span><strong>{{ status.images }}/{{ expected_pages }}</strong></div>
+      <div><span>Approved</span><strong>{{ status.approved_pages }}/{{ expected_pages }}</strong></div>
+    </div>
+  </div>
+  <div class="workflow-export-state">
+    <span class="workflow-pill {% if production_pdf_exists %}is-complete{% endif %}">Lulu PDF</span>
+    <span class="workflow-pill {% if idml_exists %}is-complete{% endif %}">Affinity IDML</span>
+  </div>
+</section>
+
+<section class="workflow-steps">
+  {% for step in steps %}
+  <article class="workflow-step is-{{ step.status }}">
+    <div class="workflow-step-index">{{ step.number }}</div>
+    <div class="workflow-step-body">
+      <div class="workflow-step-top">
+        <h2>{{ step.title }}</h2>
+        <span class="workflow-state">{{ step.status.replace("_", " ").title() }}</span>
+      </div>
+      <p>{{ step.progress }}</p>
+      <a class="button-link" href="{{ step.href }}">{{ step.action }}</a>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="workflow-command-panel">
+  <h2>Automation Commands</h2>
+  <div class="workflow-command-grid">
+    <pre><code>.venv/bin/python -m hackster_studio.cli build-book books/{{ book_slug }}/book.yaml --dry-run</code></pre>
+    <pre><code>.venv/bin/python -m hackster_studio.cli build-book books/{{ book_slug }}/book.yaml --generate-images --image-backend comfyui --limit-pages 1 --build-pdf</code></pre>
+    <pre><code>.venv/bin/python -m hackster_studio.cli qa-gate books/{{ book_slug }}/book.yaml --page 1</code></pre>
+    <pre><code>caffeinate -dimsu .venv/bin/python -m hackster_studio.cli build-book books/{{ book_slug }}/book.yaml --generate-images --image-backend comfyui --build-pdf --production-pdf --idml</code></pre>
+  </div>
+</section>
+{% endblock %}

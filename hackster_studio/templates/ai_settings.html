@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}DGX Setup · Hackster Studio{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>DGX Setup</h1>
+    <p>Connect Hackster Studio to the local DGX planner and ComfyUI image pipeline.</p>
+  </div>
+  <div class="button-row">
+    <a class="button-link" href="/books">Open Book Planner</a>
+  </div>
+</section>
+
+<section class="settings-layout">
+  <form class="editor ai-settings-form" method="post" action="/settings/ai">
+    <div class="section-heading-row">
+      <h2>Local Planner Connection</h2>
+      <span class="status-pill {{ 'is-ready' if settings.dgx_configured else 'needs-setup' }}">{{ "Connected" if settings.dgx_configured else "Needs setup" }}</span>
+    </div>
+    {% if saved %}<div class="notice good">DGX settings saved.</div>{% endif %}
+    <label>DGX Local LLM Base URL
+      <input name="dgx_base_url" value="{{ settings.dgx_base_url }}" placeholder="http://192.168.68.136:8000/v1">
+    </label>
+    <div class="form-grid">
+      <label>DGX Text Model <input name="dgx_text_model" value="{{ settings.dgx_text_model }}"></label>
+      <label>DGX API Key <input name="dgx_api_key" type="password" placeholder="Optional for local servers" autocomplete="off"></label>
+    </div>
+    <button type="submit">Save DGX Settings</button>
+  </form>
+
+  <section class="workflow-command-panel">
+    <h2>How This Works</h2>
+    <p>DGX planning expects a local vLLM-compatible endpoint, usually hosted at <code>/v1</code>.</p>
+    <p>ComfyUI on the DGX remains the image-generation backend. During production runs, Hackster Studio can switch model profiles so the planner releases GPU memory before FLUX starts.</p>
+    <p>Use the DGX buttons on Book Planner to expand one idea into title, lesson, dialogue, page beats, image directions, prompts, and page-spec YAML.</p>
+  </section>
+</section>
+{% endblock %}

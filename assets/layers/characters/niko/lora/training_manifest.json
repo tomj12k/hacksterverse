@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "character_slug": "niko",
+  "character_name": "Niko",
+  "selected_images": [],
+  "status": "needs_more_examples",
+  "active_lora": {
+    "status": "not_configured",
+    "name": "",
+    "path": "",
+    "trigger": "niko_character"
+  },
+  "created_at": "2026-06-21T20:11:33Z",
+  "updated_at": "2026-06-21T20:11:35Z",
+  "dataset_manifest": "assets/layers/characters/niko/lora/dataset_manifest.json",
+  "training_request": "assets/layers/characters/niko/lora/lora_training_request.yaml",
+  "last_training_message": "Selection saved and LoRA dataset refreshed. Pick 20 more strong examples before DGX training submits automatically."
+}

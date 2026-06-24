@@ -1,0 +1,28 @@
+book_slug: samurai_splat_01
+page_number: 29
+page_type: story
+scene_title: The lesson clicks, the world brightens, and the friends celebrate.
+story_text: 'Draft page 29: The lesson clicks, the world brightens, and the friends
+  celebrate.'
+illustration_direction: 'Show the lesson clicks, the world brightens, and the friends
+  celebrate. Keep the page bright, dimensional, friendly, and readable. Feature Shotgun
+  Bob and bamboo practice pole. Do not bake in text. Reference notes: Use a bright
+  premium children''s comic-picture-book style with rounded shapes, saturated colors,
+  clean readable silhouettes, expressive poses, cinematic but playful lighting, and
+  slapstick motion. Keep Samurai Splat 100% consistent across pages: same body shape,
+  same outfit, same face proportions, same headband/helmet silhouette, same color
+  palette. Keep Shotgun Bob consistent too. Do not bake dialogue or captions into
+  the image; leave clean space for editable text layers. No guns, no blades, no scary
+  violence, no realistic injury, no dark gritty samurai style.'
+characters:
+- Shotgun Bob
+environment: Generated story world
+emotion: surprised
+camera: medium storybook view
+hidden_objects:
+- Soft training mat
+- bamboo practice pole
+- noodle bowl
+- slippery rice ball
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+status: planned

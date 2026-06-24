@@ -1,0 +1,28 @@
+page_number: 31
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_031.png
+prompt_path: books/book01_password_dragon/prompts/page_031.md
+niko_layer_mode: posable_layer
+niko_pose: point_right
+niko_center_x: 0.25
+niko_base_y: 0.82
+niko_height: 0.36
+page_type: activity
+scene_title: Password Challenge
+story_text: 'Password Challenge: With a trusted grown-up, choose four funny picture
+  ideas. Make it long, silly, and secret.'
+characters:
+- Hackster Niko
+environment: ''
+emotion: encouraging
+camera: activity layout
+illustration_direction: Activity-page illustration with Niko pointing to blank worksheet
+  areas.
+hidden_objects:
+- Golden Gear
+- Blue Crystal
+text_safe_area: Leave large editable worksheet zones.
+background_direction: Create an empty storybook setting background for a quiet storybook
+  scene. Show the setting, path, light, plants, props, and atmosphere only. No visible
+  characters, no people, no child, no robot, no mascot, no silhouette, no antenna,
+  no figure, no animal, no creature, no fox, no tail.

@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "character.schema.json",
+  "title": "Hackster Asset Generator Character Schema",
+  "type": "object",
+  "required": [
+    "asset_type",
+    "name",
+    "slug",
+    "version",
+    "role",
+    "age_equivalent",
+    "pronouns",
+    "height",
+    "model",
+    "personality_traits",
+    "appearance",
+    "color_palette",
+    "materials",
+    "expressions",
+    "poses",
+    "gadgets",
+    "hidden_objects",
+    "art_style",
+    "generation_notes"
+  ],
+  "properties": {
+    "asset_type": {
+      "const": "character"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": ["string", "number"]
+    },
+    "role": {
+      "type": "string"
+    },
+    "age_equivalent": {
+      "type": ["string", "number", "integer"]
+    },
+    "pronouns": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "catchphrase": {
+      "type": "string"
+    },
+    "personality_traits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "appearance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "color_palette": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "expressions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "poses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "gadgets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hidden_objects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "art_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generation_notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
+

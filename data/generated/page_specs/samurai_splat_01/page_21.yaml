@@ -1,0 +1,24 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 21
+page_type: problem
+scene_title: The Kite Flying Competition
+story_text: Samurai Splat stood at the hilltop with his colorful kite, determined
+  to win the competition. 'This is my moment!' he declared. But as he ran, the kite
+  tangled in a tree above. 'Uh-oh...'
+illustration_direction: Samurai Splat is shown at the top of a grassy hill with a
+  kite in hand, his dramatic pose showing determination. The kite is caught in the
+  branches of a large tree above. The background shows other kites in the sky and
+  a crowd of villagers below. Samurai Splat's face shows concern, and the kite strings
+  are tangled in the tree limbs.
+characters:
+- Samurai Splat
+environment: Hilltop
+emotion: Determined, then concerned
+camera: Medium shot from the side, showing the hill and tree
+hidden_objects:
+- slippery rice ball
+text_safe_area: Top left and bottom center
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_21_the_kite_flying_competition.md
+status: prompt generated

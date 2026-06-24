@@ -1,0 +1,22 @@
+book: Hackster Niko and the Password Dragon
+book_slug: book01_password_dragon
+page_number: 22
+page_type: story
+scene_title: 'Story Beat 8: Niko explains secrets should stay secret.'
+story_text: 'Draft story text for page 22: Niko explains secrets should stay secret.'
+illustration_direction: Show niko explains secrets should stay secret. Keep the Cyber
+  Forest friendly, bright, rounded, and readable.
+characters:
+- Hackster Niko
+environment: Cyber Forest
+emotion: surprised
+camera: medium storybook view
+hidden_objects:
+- Golden Gear
+- Tiny Bug
+- Blue Crystal
+- Mini Robot
+text_safe_area: Leave clean open space for story text inside the 0.5 inch safe margin.
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/book01_password_dragon/page_22_story_beat_8:_niko_explains_secrets_shou.md
+status: prompt generated

@@ -1,0 +1,27 @@
+page_number: 12
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_012.png
+prompt_path: books/book01_password_dragon/prompts/page_012.md
+niko_layer_mode: posable_layer
+niko_pose: stand_front
+niko_center_x: 0.3
+niko_base_y: 0.88
+niko_height: 0.39
+page_type: story
+scene_title: Guessing Goblins Arrive
+story_text: '"Try dragon!" shouted a Guessing Goblin. "Try password!" shouted another.'
+characters:
+- Hackster Niko
+- Password Dragon
+- Guessing Goblins
+environment: Cyber Forest
+emotion: caring
+camera: close warm character moment
+illustration_direction: Small non-scary Guessing Goblins pop from bushes trying obvious
+  guesses; no readable text.
+hidden_objects:
+- Golden Gear
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+background_direction: 'Create the Cyber Forest background and include only these non-Niko
+  characters: Password Dragon, Guessing Goblins. Leave the reserved Niko overlay space
+  empty. Do not draw Hackster Niko, any robot child, antenna, or Niko-like figure.'

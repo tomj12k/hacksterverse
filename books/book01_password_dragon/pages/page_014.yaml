@@ -1,0 +1,19 @@
+book_slug: book01_password_dragon
+page_number: 14
+page_type: story
+scene_title: 'Story Beat 5: They build a silly strong password.'
+story_text: 'Draft story text for page 14: They build a silly strong password.'
+illustration_direction: Show they build a silly strong password. Keep the Cyber Forest
+  friendly, bright, rounded, and readable.
+characters:
+- Hackster Niko
+environment: Cyber Forest
+emotion: playful
+camera: medium storybook view
+hidden_objects:
+- Golden Gear
+- Tiny Bug
+- Blue Crystal
+- Mini Robot
+text_safe_area: Leave clean open space for story text inside the 0.5 inch safe margin.
+status: planned

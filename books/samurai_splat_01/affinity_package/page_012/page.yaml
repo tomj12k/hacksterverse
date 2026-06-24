@@ -1,0 +1,25 @@
+book_slug: samurai_splat_01
+page_number: 12
+page_type: problem
+scene_title: The Water Balloon Fight
+story_text: "Samurai Splat charges into the village square\u2019s water balloon fight\
+  \ with a heroic grin. 'I shall bring PEACE through OVERWHELMING MOISTURE!' he declares.\
+  \ Shotgun Bob, holding a water balloon like a sword, mutters, 'You\u2019re supposed\
+  \ to take turns, Splat.'"
+illustration_direction: Samurai Splat, in full dramatic pose, leaps toward a group
+  of village children mid-battle. His uniform is soaked, and water balloons burst
+  around him. Shotgun Bob stands nearby, arms crossed, looking exasperated. The village
+  square is filled with splashes, laughter, and flying water balloons. The scene is
+  bright and chaotic, with playful lighting and exaggerated motion lines.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village square
+emotion: excited, confused
+camera: "dynamic low-angle shot to emphasize Splat\u2019s dramatic leap"
+hidden_objects:
+- slippery rice ball
+- bamboo practice pole
+text_safe_area: top third of the page, above the action
+status: AI planned

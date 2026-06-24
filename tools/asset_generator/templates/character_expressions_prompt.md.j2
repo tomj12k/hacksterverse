@@ -1,0 +1,41 @@
+# Character Expression Sheet Prompt: {{ name }}
+
+Create a clean expression sheet for **{{ name }}** with 12 expressions.
+
+## Character Lockup
+
+{{ appearance }}
+
+Keep the same head shape, eye size, proportions, materials, and color placement in every expression.
+
+## Required Expressions
+
+{% for expression in expressions[:12] -%}
+- {{ expression }}
+{% endfor %}
+
+## Expression Rules
+
+- Show emotions through expressive robot eyes and body language.
+- Do not add a mouth.
+- Keep the character child-friendly and emotionally safe.
+- Use a clean white background.
+- No extra characters.
+- No embedded paragraph text.
+- No weapons.
+- No scary imagery.
+
+## Official Colors
+
+{% for color_name, hex_value in color_palette.items() -%}
+- {{ color_name }}: {{ hex_value }}
+{% endfor %}
+
+## Art Direction
+
+{{ art_style }}
+
+## Additional Notes
+
+{{ generation_notes }}
+

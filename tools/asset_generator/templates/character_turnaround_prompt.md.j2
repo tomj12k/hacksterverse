@@ -1,0 +1,74 @@
+# Character Turnaround Prompt: {{ name }}
+
+Create a professional character turnaround sheet for **{{ name }}**.
+
+## Character Identity
+
+- Name: {{ name }}
+- Role: {{ role }}
+- Version: {{ version }}
+{% if model is defined and model %}
+- Model: {{ model }}
+{% endif %}
+{% if age_equivalent is defined and age_equivalent %}
+- Age equivalent: {{ age_equivalent }}
+{% endif %}
+{% if pronouns is defined and pronouns %}
+- Pronouns: {{ pronouns }}
+{% endif %}
+{% if height is defined and height %}
+- Height: {{ height }}
+{% endif %}
+{% if catchphrase is defined and catchphrase %}
+- Catchphrase reference only, do not render text: "{{ catchphrase }}"
+{% endif %}
+
+## Required Views
+
+- Front view
+- 3/4 front view
+- Side view
+- Back view
+- 3/4 back view
+
+## Appearance
+
+{{ appearance }}
+
+## Personality Traits To Preserve
+
+{% for trait in personality_traits -%}
+- {{ trait }}
+{% endfor %}
+
+## Materials
+
+{% for material in materials -%}
+- {{ material }}
+{% endfor %}
+
+## Official Colors
+
+{% for color_name, hex_value in color_palette.items() -%}
+- {{ color_name }}: {{ hex_value }}
+{% endfor %}
+
+## Art Direction
+
+{{ art_style }}
+
+## Production Requirements
+
+- Clean white reference-sheet background.
+- No extra characters.
+- Consistent proportions across all views.
+- Consistent face, body, clothing, backpack, shoes, and accessories.
+- Leave room for labels, but do not render labels unless specifically requested.
+- No embedded paragraph text.
+- No weapons.
+- No scary imagery.
+- High-resolution production concept art suitable for a children's picture book pipeline.
+
+## Additional Notes
+
+{{ generation_notes }}

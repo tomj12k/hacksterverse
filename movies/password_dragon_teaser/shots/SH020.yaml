@@ -1,0 +1,31 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH020
+source_page: 4
+scene_title: Niko's Mission
+duration_seconds: 6
+shot_type: medium character
+camera: medium front three-quarter view at child height
+motion: Niko steps forward and his cyan eyes brighten with confidence
+description: Niko pauses on the path, ready for his first Junior Hackster mission.
+characters:
+- Hackster Niko
+dialogue:
+- speaker: Niko
+  text: Today is my first Junior Hackster mission.
+- speaker: Niko
+  text: Every problem has a clever fix!
+narration: ''
+sfx:
+- small servo step
+- friendly core crystal glow
+music: opening theme continues with a hopeful lift
+continuity_notes: No mouth on Niko; show emotion through eyes, antenna glow, and body
+  language.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH020_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH020_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH020_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH020_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH020_mix.wav

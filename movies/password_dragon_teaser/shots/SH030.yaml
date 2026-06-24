@@ -1,0 +1,26 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH030
+source_page: 5
+scene_title: The Giant Sneeze
+duration_seconds: 5
+shot_type: reaction
+camera: quick gentle pan from blinking trees to Niko
+motion: tree lights flicker, leaves wiggle, Niko looks up surprised
+description: A huge friendly sneeze echoes through the glowing trees.
+characters:
+- Hackster Niko
+dialogue: []
+narration: Then came a giant sneeze.
+sfx:
+- distant friendly sneeze
+- fluttering leaves
+music: brief playful pause, then a curious bounce
+continuity_notes: Keep the sneeze comic, never frightening.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH030_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH030_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH030_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH030_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH030_mix.wav

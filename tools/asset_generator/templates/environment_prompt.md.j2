@@ -1,0 +1,61 @@
+# Environment Establishing Shot Prompt: {{ name }}
+
+Create a wide children's book background illustration for **{{ name }}**.
+
+## Environment Description
+
+{{ description }}
+
+## Key Features
+
+{% for feature in key_features -%}
+- {{ feature }}
+{% endfor %}
+
+## Mood
+
+{{ mood }}
+
+## Composition Requirements
+
+- Reusable establishing shot.
+- Clear foreground, midground, and background.
+- Space for text overlays.
+- Hidden-object opportunities integrated into the scene.
+- No characters unless specifically listed below.
+- No embedded paragraph text.
+- No weapons.
+- No scary imagery.
+
+{% if characters_allowed is defined and characters_allowed %}
+## Characters Allowed
+
+{% for character in characters_allowed -%}
+- {{ character }}
+{% endfor %}
+{% else %}
+## Characters Allowed
+
+- None. Keep this as an environment-only background.
+{% endif %}
+
+## Hidden Object Opportunities
+
+{% for hidden_object in hidden_objects -%}
+- {{ hidden_object }}
+{% endfor %}
+
+## Official Colors
+
+{% for color_name, hex_value in color_palette.items() -%}
+- {{ color_name }}: {{ hex_value }}
+{% endfor %}
+
+## Art Direction
+
+{{ art_style }}
+
+## Additional Notes
+
+{{ generation_notes }}
+

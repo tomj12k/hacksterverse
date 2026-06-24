@@ -1,0 +1,20 @@
+book: Hackster Niko and the Password Dragon
+book_slug: book01_password_dragon
+page_number: 31
+page_type: activity
+scene_title: Password Challenge
+story_text: 'Activity page: build a silly strong password with a trusted grown-up.'
+illustration_direction: Activity layout with Niko pointing to blank editable worksheet
+  areas.
+characters:
+- Hackster Niko
+environment: ''
+emotion: encouraging
+camera: activity page layout
+hidden_objects:
+- Golden Gear
+- Blue Crystal
+text_safe_area: Leave large editable worksheet zones.
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/book01_password_dragon/page_31_password_challenge.md
+status: prompt generated

@@ -1,0 +1,28 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH120
+source_page: 32
+scene_title: Next Mission Teaser
+duration_seconds: 6
+shot_type: tag
+camera: close-up on Niko and glowing tablet
+motion: Niko notices a blinking tablet message and tilts his head curiously
+description: A friendly suspicious-message clue teases the next mission.
+characters:
+- Hackster Niko
+dialogue:
+- speaker: Niko
+  text: Hmm. This link looks sneaky...
+narration: ''
+sfx:
+- tablet blink
+- curious tiny beep
+music: small mystery button, still safe and playful
+continuity_notes: No readable screen text or real brand logos.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH120_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH120_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH120_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH120_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH120_mix.wav

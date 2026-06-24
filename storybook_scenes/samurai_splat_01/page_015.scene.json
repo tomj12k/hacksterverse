@@ -1,0 +1,165 @@
+{
+  "book_slug": "samurai_splat_01",
+  "page_number": 15,
+  "page_count": 32,
+  "canvas": {
+    "trim_inches": [
+      8.5,
+      8.5
+    ],
+    "bleed_inches": 0.125,
+    "safe_margin_inches": 0.5,
+    "dpi": 300,
+    "width_px": 2625,
+    "height_px": 2625
+  },
+  "lighting_brief": "ambient_soft",
+  "layers": [
+    {
+      "id": "book_illustration",
+      "name": "Current Page Illustration",
+      "type": "background",
+      "z_index": 0,
+      "parallax_factor": 0.0,
+      "asset_path": "books/samurai_splat_01/illustrations/page_015.png",
+      "locked": true,
+      "transform": {
+        "x": 0.5,
+        "y": 0.5,
+        "width": 1.0,
+        "height": 1.0,
+        "scale": 1.0,
+        "rotation": 0,
+        "opacity": 1
+      },
+      "asset_version": 1782058981556668617,
+      "visible": true,
+      "preserve_aspect": false,
+      "versions": [],
+      "prompt_history": []
+    },
+    {
+      "id": "camera_001",
+      "name": "Camera",
+      "type": "camera",
+      "z_index": 99,
+      "transform": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0,
+        "rotation": 0
+      },
+      "visible": true,
+      "locked": false,
+      "preserve_aspect": false,
+      "versions": [],
+      "prompt_history": []
+    },
+    {
+      "id": "lighting_001",
+      "name": "Ambient Light",
+      "type": "lighting",
+      "z_index": 10,
+      "tint_color": "#FFFFFF",
+      "blend_mode": "multiply",
+      "opacity": 0.0,
+      "visible": true,
+      "locked": false,
+      "preserve_aspect": false,
+      "versions": [],
+      "prompt_history": [],
+      "transform": {}
+    },
+    {
+      "id": "page_text",
+      "name": "Page Text",
+      "type": "text",
+      "z_index": 20,
+      "parallax_factor": 1.0,
+      "text": "Draft page 15: A first clever fix almost works, but something is missing.",
+      "font_size": 0.045,
+      "text_color": "#154c84",
+      "stroke_color": "#F2C94C",
+      "box_color": "#FFFFFF",
+      "box_opacity": 0.84,
+      "align": "center",
+      "font_family": "rounded",
+      "style_prompt": "",
+      "text_art_variant": 0,
+      "preserve_aspect": false,
+      "transform": {
+        "x": 0.5,
+        "y": 0.82,
+        "width": 0.78,
+        "height": 0.17,
+        "scale": 1.0,
+        "rotation": 0,
+        "opacity": 1
+      },
+      "visible": true,
+      "locked": false,
+      "versions": [],
+      "prompt_history": []
+    }
+  ],
+  "status": "generated",
+  "approval": {
+    "approved": false,
+    "approved_at": null,
+    "approved_by": null,
+    "notes": ""
+  },
+  "prompt_history": [],
+  "created_at": "2026-06-21T16:45:41Z",
+  "updated_at": "2026-06-21T18:13:59Z",
+  "production_notes": "",
+  "story_text": "Draft page 15: A first clever fix almost works, but something is missing.",
+  "book_illustration_path": "books/samurai_splat_01/illustrations/page_015.png",
+  "book_illustration_version": 1782058981556668617,
+  "qa": {
+    "ready": false,
+    "errors": 0,
+    "warnings": 0,
+    "issues": [
+      {
+        "severity": "info",
+        "code": "not_approved",
+        "message": "Page is not approved yet."
+      }
+    ]
+  },
+  "page_type": "problem",
+  "scene_title": "A first clever fix almost works, but something is missing.",
+  "illustration_direction": "Show a first clever fix almost works, but something is missing. Keep the page bright, dimensional, friendly, and readable. Feature village people and slippery rice ball. Do not bake in text. Reference notes: Use a bright premium children's comic-picture-book style with rounded shapes, saturated colors, clean readable silhouettes, expressive poses, cinematic but playful lighting, and slapstick motion. Keep Samurai Splat 100% consistent across pages: same body shape, same outfit, same face proportions, same headband/helmet silhouette, same color palette. Keep Shotgun Bob consistent too. Do not bake dialogue or captions into the image; leave clean space for editable text layers. No guns, no blades, no scary violence, no realistic injury, no dark gritty samurai style.",
+  "characters": [
+    "village people"
+  ],
+  "environment": "Village square",
+  "emotion": "Determined and frustrated",
+  "camera": "Medium shot from the side, capturing both Samurai Splat and Shotgun Bob",
+  "hidden_objects": [
+    "Soft training mat",
+    "bamboo practice pole",
+    "noodle bowl"
+  ],
+  "text_safe_area": "Top third of the page, above the characters and balloons",
+  "uses_hackster_niko": false,
+  "suppress_hackster_niko": true,
+  "planned_characters": [
+    {
+      "name": "Samurai Splat",
+      "slug": "samurai_splat",
+      "asset_paths": []
+    },
+    {
+      "name": "Shotgun Bob",
+      "slug": "shotgun_bob",
+      "asset_paths": []
+    },
+    {
+      "name": "village people",
+      "slug": "village_people",
+      "asset_paths": []
+    }
+  ]
+}

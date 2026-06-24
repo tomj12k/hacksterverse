@@ -1,0 +1,27 @@
+page_number: 16
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_016.png
+prompt_path: books/book01_password_dragon/prompts/page_016.md
+niko_layer_mode: posable_layer
+niko_pose: point_right
+niko_center_x: 0.3
+niko_base_y: 0.88
+niko_height: 0.39
+page_type: story
+scene_title: Building The Password Vault
+story_text: '"Let us make a Password Vault," said Niko. "It remembers secrets so you
+  do not have to shout them."'
+characters:
+- Hackster Niko
+- Password Dragon
+environment: Cyber Forest
+emotion: curious
+camera: wide establishing shot
+illustration_direction: Niko assembles a friendly glowing vault from rounded gears
+  and blue crystal panels.
+hidden_objects:
+- Golden Gear
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+background_direction: 'Create the Cyber Forest background and include only these non-Niko
+  characters: Password Dragon. Leave the reserved Niko overlay space empty. Do not
+  draw Hackster Niko, any robot child, antenna, or Niko-like figure.'

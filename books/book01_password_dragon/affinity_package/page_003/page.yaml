@@ -1,0 +1,26 @@
+page_number: 3
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_003.png
+prompt_path: books/book01_password_dragon/prompts/page_003.md
+niko_layer_mode: posable_layer
+niko_pose: stand_front
+niko_center_x: 0.5
+niko_base_y: 0.82
+niko_height: 0.42
+page_type: dedication
+scene_title: Dedication
+story_text: For curious kids who ask kind questions and try clever fixes.
+characters:
+- Hackster Niko
+environment: ''
+emotion: kind
+camera: quiet vignette
+illustration_direction: Gentle dedication-page vignette with Niko holding a glowing
+  Golden Gear.
+hidden_objects:
+- Golden Gear
+text_safe_area: Leave clean center space for dedication text.
+background_direction: Create an empty storybook setting background for a quiet storybook
+  scene. Show the setting, path, light, plants, props, and atmosphere only. No visible
+  characters, no people, no child, no robot, no mascot, no silhouette, no antenna,
+  no figure, no animal, no creature, no fox, no tail.

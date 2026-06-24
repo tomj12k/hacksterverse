@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Page {{ page.page_number if page else "" }} · Hackster Studio{% endblock %}
+{% block content %}
+{% if page %}
+<section class="page-head">
+  <div>
+    <h1>Page {{ "%02d"|format(page.page_number) }} · {{ page.scene_title }}</h1>
+    <p>{{ book.title if book else "" }} · {{ page.page_type }} · {{ page.status }}</p>
+  </div>
+  <form method="post" action="/pages/{{ page.id }}/generate-prompt">
+    <button type="submit">Generate Page Prompt</button>
+  </form>
+</section>
+
+<form class="editor" method="post" action="/pages/{{ page.id }}/edit">
+  <label>
+    Story Text
+    <textarea name="story_text" rows="6">{{ page.story_text }}</textarea>
+  </label>
+  <label>
+    Illustration Direction
+    <textarea name="illustration_direction" rows="7">{{ page.illustration_direction }}</textarea>
+  </label>
+  <button type="submit">Save Page Text</button>
+</form>
+
+<section class="detail-grid">
+  <div>
+    <h2>Scene Metadata</h2>
+    <dl>
+      <dt>Characters</dt><dd>{{ page.characters_json }}</dd>
+      <dt>Environment</dt><dd>{{ page.environment }}</dd>
+      <dt>Emotion</dt><dd>{{ page.emotion }}</dd>
+      <dt>Camera</dt><dd>{{ page.camera }}</dd>
+      <dt>Hidden Objects</dt><dd>{{ page.hidden_objects_json }}</dd>
+    </dl>
+  </div>
+  <div>
+    <h2>Layout</h2>
+    <p>{{ page.text_safe_area }}</p>
+    <h2>Prompt Path</h2>
+    <p><code>{{ page.prompt_path or "Not generated yet" }}</code></p>
+  </div>
+</section>
+{% else %}
+<p class="empty">Page not found.</p>
+{% endif %}
+{% endblock %}
+

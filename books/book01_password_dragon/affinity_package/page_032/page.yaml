@@ -1,0 +1,28 @@
+page_number: 32
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_032.png
+prompt_path: books/book01_password_dragon/prompts/page_032.md
+niko_layer_mode: posable_layer
+niko_pose: thinking
+niko_center_x: 0.42
+niko_base_y: 0.86
+niko_height: 0.42
+page_type: teaser
+scene_title: Next Mission
+story_text: Then Niko saw a message blink on his tablet. "Hmm," he said. "This link
+  looks sneaky..."
+characters:
+- Hackster Niko
+environment: Hackster HQ
+emotion: curious
+camera: teaser close-up
+illustration_direction: Niko notices a friendly non-scary suspicious email clue on
+  a glowing tablet; no readable screen text.
+hidden_objects:
+- Tiny Bug
+- Mini Robot
+text_safe_area: Leave clean open area for teaser copy.
+background_direction: Create an empty Hackster HQ background for a quiet storybook
+  scene. Show the setting, path, light, plants, props, and atmosphere only. No visible
+  characters, no people, no child, no robot, no mascot, no silhouette, no antenna,
+  no figure, no animal, no creature, no fox, no tail.

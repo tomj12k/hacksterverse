@@ -1,0 +1,16 @@
+schema_version: 1
+character_slug: samurai_splat
+character_name: Samurai Splat
+status: needs_more_examples
+base_model: flux1-dev.safetensors
+trainer: configured_dgx_command
+rank: 16
+network_alpha: 16
+resolution: 1024
+dataset_manifest: assets/layers/characters/samurai_splat/lora/dataset_manifest.json
+output_dir: assets/layers/characters/samurai_splat/lora/outputs
+recommended_trigger: samurai_splat_character
+notes: Curate 20-40 clean, consistent examples before training. Reject anatomy drift,
+  duplicate body plans, and off-model outfits. Use ControlNet only for pose/layout;
+  identity should come from the LoRA plus references.
+updated_at: '2026-06-24T02:31:15Z'

@@ -1,0 +1,31 @@
+title: Hackster Niko and the Password Dragon
+series: Hackster Niko
+slug: book01_password_dragon
+trim_size: 8.5x8.5
+page_count: 32
+target_age: 5-8
+lesson: Strong passwords and keeping secrets safe.
+niko_layer_mode: posable_layer
+bleed_inches: 0.125
+safe_margin_inches: 0.5
+dpi: 300
+global_illustration_style: premium dimensional children's picture book illustration,
+  bright and warm, rounded friendly shapes, soft cinematic lighting, saturated colors,
+  no text baked into image, leave clean open space for editable story text.
+hidden_objects:
+- Golden Gear
+- Tiny Bug
+- Blue Crystal
+- Mini Robot
+story_beats:
+- Niko enters Cyber Forest.
+- Password Dragon sneezes passwords everywhere.
+- Niko comforts the dragon.
+- Niko explains that easy passwords are weak.
+- They build a silly strong password.
+- Guessing Goblins try easy guesses and fail.
+- Password Parrot almost repeats the secret.
+- Niko explains secrets should stay secret.
+- They build a Password Vault.
+- The forest celebrates.
+- 'A suspicious email teaser hints at Book 2: Sneaky Phish.'

@@ -1,0 +1,60 @@
+asset_type: character
+name: Byte
+slug: byte
+version: 0.1
+role: Niko's helpful digital companion
+age_equivalent: 7
+pronouns: they/them
+height: 10 inches
+model: BYTE-01
+catchphrase: Let's look for the pattern.
+personality_traits:
+  - cheerful
+  - observant
+  - quick
+  - loyal
+appearance: tiny floating helper bot with rounded screen face, small wing-like side panels, glowing blue eyes, soft white shell, and gentle cyan light trails
+color_palette:
+  Hackster Blue: "#47C7FF"
+  Core Crystal: "#63DFFF"
+  Friendly White: "#F8FCFF"
+  Dark Outline: "#394A63"
+materials:
+  - glossy white shell
+  - translucent cyan light panels
+  - soft LED display
+expressions:
+  - happy
+  - curious
+  - alert
+  - thinking
+  - surprised
+  - proud
+  - caring
+  - sleepy
+  - confused
+  - excited
+  - focused
+  - relieved
+poses:
+  - hovering
+  - pointing
+  - scanning
+  - cheering
+  - peeking
+  - projecting a clue
+  - spinning happily
+  - hiding shyly
+  - guiding Niko
+  - resting
+gadgets:
+  - tiny projector
+  - clue ping
+hidden_objects:
+  - Golden Gear
+  - Tiny Bug
+  - Blue Crystal
+  - Mini Robot
+art_style: bright children's picture book style, rounded friendly shapes, soft cinematic lighting, saturated colors, expressive robot eyes, no weapons, no scary imagery
+generation_notes: Keep Byte simple, readable, and smaller than Niko. Avoid making the light trail look like smoke or danger.
+

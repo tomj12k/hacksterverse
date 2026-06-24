@@ -1,0 +1,27 @@
+book_slug: samurai_splat_01
+page_number: 16
+page_type: problem
+scene_title: The Kite Tug-of-War
+story_text: Samurai Splat stood at the hilltop with his kite, determined to win the
+  village's annual kite tug-of-war. He took a deep breath and ran forward, pulling
+  the kite string with all his might. 'This is a battle of wills!' he declared.
+illustration_direction: Samurai Splat is in the center of the image, mid-run with
+  one foot off the ground and arms outstretched, pulling a colorful kite string. The
+  kite is tangled in the branches of a large tree above him. Shotgun Bob stands nearby
+  with a goofy grin, arms crossed. Village people are gathered on the hillside, some
+  cheering, others pointing at the tangled kite. The hilltop has wildflowers and a
+  few scattered rocks.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Hilltop
+emotion: Determination and frustration
+camera: Medium shot from the side, capturing Samurai Splat's dramatic pose and the
+  kite above
+hidden_objects:
+- slippery rice ball
+- bamboo practice pole
+text_safe_area: Top third of the page, above the illustration of the tree and village
+  people
+status: AI planned

@@ -1,0 +1,22 @@
+book_slug: samurai_splat_01
+page_number: 11
+page_type: problem
+scene_title: The Kite Flying Fiasco
+story_text: Samurai Splat stood on the hilltop, gripping his kite string with dramatic
+  intensity. 'This is a battle of the winds!' he declared. Shotgun Bob, holding a
+  noodle bowl, nodded. 'Yeah, but if you run too fast, you'll fall flat on your face.'
+illustration_direction: Samurai Splat is in a heroic pose, holding a kite string,
+  with the kite high above. He is on a grassy hilltop with a few trees in the distance.
+  Shotgun Bob is beside him, holding a noodle bowl, looking concerned. The background
+  shows a clear blue sky with fluffy clouds.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Hilltop
+emotion: Determined and concerned
+camera: Medium shot from the side, capturing both characters and the kite in the sky
+hidden_objects:
+- Soft training mat
+- bamboo practice pole
+text_safe_area: Top third of the page, above the characters and kite
+status: AI planned

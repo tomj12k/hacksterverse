@@ -1,0 +1,25 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 5
+page_type: problem
+scene_title: The Slippery Rice Ball
+story_text: Samurai Splat squints at the wiggling rice ball in his palm. 'This is
+  no ordinary foe!' he declares. Shotgun Bob leans on his broom, unimpressed. 'It's
+  just rice... maybe add some soy sauce?'
+illustration_direction: Samurai Splat's face is comically intense, his tiny samurai
+  helmet askew. The rice ball glistens with exaggerated oil droplets. Shotgun Bob
+  holds a broom like a scepter, wearing a goofy grin. The kitchen is bright with golden
+  afternoon light, with steam rising from a noodle bowl in the background.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Kitchen area
+emotion: Determined (Samurai Splat), Amused (Shotgun Bob)
+camera: Close-up of their faces with wide-angle view of kitchen
+hidden_objects:
+- Soft training mat peeking from under the table
+- Bamboo practice pole leaning against a cabinet
+text_safe_area: Top third of the page for dialogue balloons, bottom third for captions
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_05_the_slippery_rice_ball.md
+status: prompt generated

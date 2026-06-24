@@ -1,0 +1,26 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH010
+source_page: 4
+scene_title: Cyber Forest Opens
+duration_seconds: 5
+shot_type: establishing
+camera: slow push-in from a wide view
+motion: glowing leaves pulse softly while tiny light paths wake up
+description: Cyber Forest comes alive as Niko enters on a bright safe path.
+characters:
+- Hackster Niko
+dialogue: []
+narration: In Cyber Forest, a first mission was about to begin.
+sfx:
+- soft digital chimes
+- gentle forest sparkle
+music: warm curious opening theme, light marimba and soft synth
+continuity_notes: Niko is small in frame; keep the silhouette readable and friendly.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH010_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH010_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH010_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH010_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH010_mix.wav

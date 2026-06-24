@@ -1,0 +1,30 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH110
+source_page: 23
+scene_title: Forest Cheers
+duration_seconds: 7
+shot_type: celebration
+camera: wide joyful finale with gentle crane up
+motion: forest friends cheer under glowing leaves; hidden objects sparkle subtly
+description: Cyber Forest celebrates strong secrets and careful choices.
+characters:
+- Hackster Niko
+- Password Dragon
+- Cyber Forest friends
+dialogue:
+- speaker: Forest Friends
+  text: Hooray for strong secrets!
+narration: ''
+sfx:
+- soft cheering
+- sparkling leaves
+music: full bright theme reprise
+continuity_notes: Celebration stays readable and uncluttered.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH110_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH110_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH110_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH110_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH110_mix.wav

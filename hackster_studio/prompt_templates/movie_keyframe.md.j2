@@ -1,0 +1,36 @@
+# Hackster Niko Movie Keyframe Prompt
+
+Movie: {{ movie.title }}
+Shot: {{ shot.shot_id }} - {{ shot.scene_title }}
+
+Create one clean, high-quality keyframe for this animated shot.
+
+## Shot
+
+- Duration target: {{ shot.duration_seconds }} seconds
+- Aspect ratio: {{ shot.aspect_ratio }}
+- Resolution target: {{ shot.resolution }}
+- Shot type: {{ shot.shot_type }}
+- Camera: {{ shot.camera }}
+- Story action: {{ shot.description }}
+- Character motion to imply: {{ shot.motion }}
+- Characters: {{ shot.characters | join(", ") }}
+
+## Required Character Lock
+
+{{ niko_consistency_phrase }}
+
+## Visual Style
+
+{{ global_style }}
+
+## Continuity
+
+{{ shot.continuity_notes }}
+
+## Safety And Generation Rules
+
+- No readable text, captions, subtitles, letters, numbers, passwords, screen UI, logos, or watermarks.
+- Keep all conflict playful, gentle, and emotionally safe.
+- Leave clear composition space for motion; avoid overpacked detail.
+- If Niko appears, do not give him a mouth, nose, tail, ears, fur, claws, wings, or extra limbs.

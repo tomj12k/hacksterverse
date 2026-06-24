@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · Hackster Studio{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Publishing Dashboard</h1>
+    <p>{{ book_nav.current.title if book_nav.current else "Hackster Niko" }} production hub.</p>
+  </div>
+  <div class="button-row">
+    <a class="button-link" href="/books">Manage Books</a>
+    <a class="button-link" href="/workflow">Continue Workflow</a>
+  </div>
+</section>
+
+<section class="workflow-strip">
+  <div class="workflow-strip-head">
+    <div>
+      <h2>Book Production Workflow</h2>
+      <p>Move through each gate until the current book is ready for print review.</p>
+    </div>
+    <a class="button-link" href="/workflow">Continue</a>
+  </div>
+  <div class="workflow-mini-grid">
+    {% for step in workflow.steps %}
+    <a class="workflow-mini-step is-{{ step.status }}" href="{{ step.href }}">
+      <span>{{ step.number }}</span>
+      <strong>{{ step.title }}</strong>
+      <em>{{ step.progress }}</em>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="metric-grid">
+  {% for label, value in counts.items() %}
+  <div class="metric">
+    <span>{{ label.replace("_", " ").title() }}</span>
+    <strong>{{ value }}</strong>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="two-col">
+  <div>
+    <h2>Production Tools</h2>
+    <div class="action-list">
+      <a href="/book-generation">Book Generation</a>
+      <a href="/characters">Character Library</a>
+      <a href="/environments">World / Environment Library</a>
+      <a href="/gadgets">Gadget Library</a>
+      <a href="/books">Book Library</a>
+      <a href="/book-assembly">Book Assembly</a>
+      <a href="/story-maker">Story Maker</a>
+      <a href="/prompts">Prompt Generator</a>
+      <a href="/print-validator">Print Validator</a>
+    </div>
+  </div>
+  <div>
+    <h2>Books</h2>
+    <table>
+      <thead>
+        <tr><th>Title</th><th>Status</th><th>Pages</th></tr>
+      </thead>
+      <tbody>
+        {% for book in books %}
+        <tr>
+          <td><a href="/books/{{ book.slug }}">{{ book.title }}</a></td>
+          <td>{{ book.status }}</td>
+          <td>{{ book.page_count }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="3">Run the seed command to add the starter book.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

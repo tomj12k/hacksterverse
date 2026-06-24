@@ -1,0 +1,30 @@
+page_number: 27
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_027.png
+prompt_path: books/book01_password_dragon/prompts/page_027.md
+niko_layer_mode: posable_layer
+niko_pose: celebrate
+niko_center_x: 0.42
+niko_base_y: 0.88
+niko_height: 0.42
+page_type: story
+scene_title: Everyone Helps
+story_text: '"Cyber Forest is safer when everyone helps," said Niko.'
+characters:
+- Hackster Niko
+- Password Dragon
+- Guessing Goblins
+- Password Parrot
+- Cyber Forest friends
+environment: Cyber Forest
+emotion: relieved
+camera: close warm character moment
+illustration_direction: Niko, Dragon, Goblins, Parrot, and forest friends tidy glowing
+  secret sparkles together.
+hidden_objects:
+- Mini Robot
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+background_direction: 'Create the Cyber Forest background and include only these non-Niko
+  characters: Password Dragon, Guessing Goblins, Password Parrot, Cyber Forest friends.
+  Leave the reserved Niko overlay space empty. Do not draw Hackster Niko, any robot
+  child, antenna, or Niko-like figure.'

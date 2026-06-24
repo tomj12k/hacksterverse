@@ -1,0 +1,28 @@
+book_slug: samurai_splat_01
+page_number: 26
+page_type: problem
+scene_title: The Kite Tug-of-War Challenge
+story_text: "Samurai Splat stood on the hilltop, gripping the kite string with dramatic\
+  \ intensity. 'This is a battle of wills!' he declared. Across the field, Shotgun\
+  \ Bob tugged with all his might, shouting, 'Just let go, Splat! It's a kite, not\
+  \ a dragon!' But the kite had other plans\u2014it soared high, then suddenly spiraled\
+  \ into the branches of a towering tree, leaving both friends tangled in a mess of\
+  \ string."
+illustration_direction: Samurai Splat and Shotgun Bob are mid-tug-of-war with a colorful
+  kite. Samurai Splat is leaning back dramatically, eyes wide, mouth open in a yell,
+  while Shotgun Bob is pulling the kite string with a goofy grin. The kite is caught
+  in the branches of a large tree, flapping wildly. The hilltop is filled with cheerful
+  village people watching the spectacle. Use bright colors and exaggerated expressions
+  to emphasize the slapstick humor.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Hilltop
+emotion: excited and frustrated
+camera: wide-angle shot capturing the hilltop scene and the kite in the tree
+hidden_objects:
+- soft training mat
+- bamboo practice pole
+text_safe_area: top third of the page, above the kite and characters
+status: AI planned

@@ -1,0 +1,26 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 29
+page_type: problem
+scene_title: The Noodle Challenge
+story_text: Samurai Splat attempts to eat noodles without making a mess, but the noodles
+  keep slipping.
+illustration_direction: Samurai Splat is sitting at a small wooden table in a kitchen
+  area, wearing his dramatic samurai outfit. He is holding chopsticks with great seriousness,
+  trying to pick up noodles from a bowl. The noodles are sliding all over the place,
+  some flying out of the bowl. Shotgun Bob is standing nearby, holding a noodle like
+  a sword, giving direct advice. The scene is colorful and playful, with exaggerated
+  expressions on both characters' faces.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Kitchen area
+emotion: Determined and frustrated
+camera: Medium close-up focusing on Samurai Splat's hands and the noodles
+hidden_objects:
+- Soft training mat
+- bamboo practice pole
+text_safe_area: Top third of the page, above the characters' heads
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_29_the_noodle_challenge.md
+status: prompt generated

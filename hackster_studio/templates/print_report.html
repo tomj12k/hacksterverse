@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Print Validator · Hackster Studio{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Print Validator</h1>
+    <p>Checks local image dimensions and DPI for 8.5 x 8.5 inch full-bleed Lulu artwork.</p>
+  </div>
+</section>
+
+<form class="inline-form" method="post" action="/print-validator">
+  <label>
+    Local image path
+    <input type="text" name="image_path" placeholder="assets/illustrations/page_01.png">
+  </label>
+  <button type="submit">Validate</button>
+</form>
+
+{% if error %}<p class="notice bad">{{ error }}</p>{% endif %}
+{% if latest %}
+<section class="notice {% if latest.pass_fail %}good{% else %}bad{% endif %}">
+  <strong>{% if latest.pass_fail %}PASS{% else %}FAIL{% endif %}</strong>
+  {{ latest.width_px }} x {{ latest.height_px }}px · DPI {{ latest.dpi_x }} x {{ latest.dpi_y }}
+  <p>{{ latest.notes }}</p>
+</section>
+{% endif %}
+
+<table>
+  <thead>
+    <tr><th>Result</th><th>File</th><th>Size</th><th>DPI</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    {% for report in reports %}
+    <tr>
+      <td>{% if report.pass_fail %}PASS{% else %}FAIL{% endif %}</td>
+      <td><code>{{ report.file_path }}</code></td>
+      <td>{{ report.width_px }} x {{ report.height_px }}</td>
+      <td>{{ report.dpi_x }} x {{ report.dpi_y }}</td>
+      <td>{{ report.notes }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="5">No print reports yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+

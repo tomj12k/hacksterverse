@@ -1,0 +1,28 @@
+page_number: 13
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_013.png
+prompt_path: books/book01_password_dragon/prompts/page_013.md
+niko_layer_mode: posable_layer
+niko_pose: point_right
+niko_center_x: 0.3
+niko_base_y: 0.88
+niko_height: 0.39
+page_type: story
+scene_title: The Guesses Fail
+story_text: The vault light stayed blue. "Nope," said Niko. "Strong passwords do not
+  give up easily."
+characters:
+- Hackster Niko
+- Password Dragon
+- Guessing Goblins
+environment: Cyber Forest
+emotion: confident
+camera: wide establishing shot
+illustration_direction: A friendly glowing lock stays closed while goblins look puzzled,
+  still silly and safe.
+hidden_objects:
+- Tiny Bug
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+background_direction: 'Create the Cyber Forest background and include only these non-Niko
+  characters: Password Dragon, Guessing Goblins. Leave the reserved Niko overlay space
+  empty. Do not draw Hackster Niko, any robot child, antenna, or Niko-like figure.'

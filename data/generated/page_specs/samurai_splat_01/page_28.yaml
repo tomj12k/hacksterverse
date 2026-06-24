@@ -1,0 +1,28 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 28
+page_type: problem
+scene_title: The Rice Ball Challenge
+story_text: Samurai Splat tried to catch the slippery rice balls with his bare hands,
+  but they kept getting away! 'I must be faster!' he shouted, leaping after one that
+  rolled across the square. 'Maybe slower?' suggested Shotgun Bob, holding up a rice
+  ball like a scientific specimen.
+illustration_direction: Samurai Splat is mid-leap after a rolling rice ball, arms
+  outstretched, feet flailing. The rice ball is a shiny white sphere with a few black
+  sesame seeds. The village square is bustling with colorful village people watching
+  the spectacle. Shotgun Bob is holding up a rice ball with both hands, looking thoughtful.
+  Include a soft training mat in the background.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village square
+emotion: excited
+camera: dynamic low angle to emphasize the leap
+hidden_objects:
+- bamboo practice pole
+- noodle bowl
+text_safe_area: top third of the page
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_28_the_rice_ball_challenge.md
+status: prompt generated

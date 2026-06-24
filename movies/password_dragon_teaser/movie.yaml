@@ -1,0 +1,297 @@
+title: 'Hackster Niko and the Password Dragon: Teaser'
+series: Hackster Niko
+slug: password_dragon_teaser
+source_book: book01_password_dragon
+format: short_film
+runtime_seconds: 75
+target_age: 5-8
+resolution: 1920x1080
+aspect_ratio: '16:9'
+fps: 24
+delivery:
+- YouTube 1080p
+- social cutdowns
+lesson: Strong passwords are long, silly, and secret.
+tone: Warm, clever, playful, reassuring, wonder-filled, emotionally safe.
+niko_consistency: 'LOCKED CHARACTER MODEL: Hackster Niko, model HN-01, is always the
+  same small friendly learning robot, 2 feet 6 inches tall, childlike proportions,
+  glossy white ceramic shell, rounded helmet-like head, smooth dark glass LED face
+  with expressive glowing cyan-blue eyes only and no mouth, one tiny antenna with
+  glowing blue tip, blank blue hoodie, one plain circular glowing cyan Core Crystal
+  centered on the chest, compact floating magnetic backpack, two simple rounded robot
+  arms, two simple rounded robot legs, blank cuffs, blank chunky sneakers, child-friendly
+  rounded shapes, no dangling cords or straps. Niko is never an animal, never a mascot
+  suit, never furry, never reptilian, never dragon-like, never fox-like, and never
+  has a tail, wings, ears, snout, claws, paws, horns, scales, feathers, fur, organic
+  limbs, or extra appendages.'
+global_visual_style: premium children's picture book illustration, bright and warm,
+  rounded friendly shapes, soft cinematic lighting, saturated colors, whimsical cyber
+  forest, expressive characters, no realistic weapons, no scary imagery, no text baked
+  into image, no letters, no captions, no UI, leave clean open space for editable
+  story text.
+negative_prompt: text, letters, captions, subtitles, readable passwords, logos, brand
+  names, UI, scary imagery, weapons, sharp teeth, realistic threat, horror lighting,
+  extra limbs, tail, mouth on Niko
+music_direction: Warm child-safe adventure score with light marimba, soft synth, bells,
+  and gentle percussion.
+models:
+  script_llm: Qwen3.6 or Llama 4
+  keyframes: FLUX.1-dev or SDXL illustration checkpoint
+  video: Wan 2.2 I2V/TI2V
+  dialogue: Chatterbox TTS or CosyVoice
+  lip_sync: LatentSync, with MuseTalk for fast talking-head tests
+  music: ACE-Step 1.5
+  sfx: AudioLDM2, with Stable Audio Open as a gated optional upgrade
+  assembly: DaVinci Resolve, Premiere, or ffmpeg
+shots:
+- shot_id: SH010
+  source_page: 4
+  scene_title: Cyber Forest Opens
+  duration_seconds: 5
+  shot_type: establishing
+  camera: slow push-in from a wide view
+  motion: glowing leaves pulse softly while tiny light paths wake up
+  description: Cyber Forest comes alive as Niko enters on a bright safe path.
+  characters:
+  - Hackster Niko
+  dialogue: []
+  narration: In Cyber Forest, a first mission was about to begin.
+  sfx:
+  - soft digital chimes
+  - gentle forest sparkle
+  music: warm curious opening theme, light marimba and soft synth
+  continuity_notes: Niko is small in frame; keep the silhouette readable and friendly.
+- shot_id: SH020
+  source_page: 4
+  scene_title: Niko's Mission
+  duration_seconds: 6
+  shot_type: medium character
+  camera: medium front three-quarter view at child height
+  motion: Niko steps forward and his cyan eyes brighten with confidence
+  description: Niko pauses on the path, ready for his first Junior Hackster mission.
+  characters:
+  - Hackster Niko
+  dialogue:
+  - speaker: Niko
+    text: Today is my first Junior Hackster mission.
+  - speaker: Niko
+    text: Every problem has a clever fix!
+  narration: ''
+  sfx:
+  - small servo step
+  - friendly core crystal glow
+  music: opening theme continues with a hopeful lift
+  continuity_notes: No mouth on Niko; show emotion through eyes, antenna glow, and
+    body language.
+- shot_id: SH030
+  source_page: 5
+  scene_title: The Giant Sneeze
+  duration_seconds: 5
+  shot_type: reaction
+  camera: quick gentle pan from blinking trees to Niko
+  motion: tree lights flicker, leaves wiggle, Niko looks up surprised
+  description: A huge friendly sneeze echoes through the glowing trees.
+  characters:
+  - Hackster Niko
+  dialogue: []
+  narration: Then came a giant sneeze.
+  sfx:
+  - distant friendly sneeze
+  - fluttering leaves
+  music: brief playful pause, then a curious bounce
+  continuity_notes: Keep the sneeze comic, never frightening.
+- shot_id: SH040
+  source_page: 6
+  scene_title: Password Dragon Appears
+  duration_seconds: 7
+  shot_type: two character reveal
+  camera: wide-to-medium reveal with Niko in foreground
+  motion: harmless glowing secret-orbs swirl around the worried dragon
+  description: Password Dragon sits among floating password sparkles, worried but
+    gentle.
+  characters:
+  - Hackster Niko
+  - Password Dragon
+  dialogue:
+  - speaker: Password Dragon
+    text: Oh no. My passwords flew everywhere!
+  narration: ''
+  sfx:
+  - soft dragon sniffle
+  - floating sparkle whooshes
+  music: tender comic trouble motif
+  continuity_notes: No readable passwords, letters, numbers, or symbols in the image.
+- shot_id: SH050
+  source_page: 7
+  scene_title: Stay Calm
+  duration_seconds: 6
+  shot_type: comfort beat
+  camera: warm medium close-up
+  motion: Niko raises one hand gently; Password Dragon relaxes a little
+  description: Niko comforts Password Dragon beside a glowing stump.
+  characters:
+  - Hackster Niko
+  - Password Dragon
+  dialogue:
+  - speaker: Niko
+    text: I can help.
+  - speaker: Niko
+    text: First, we stay calm. Then we think together.
+  narration: ''
+  sfx:
+  - soft calming shimmer
+  music: warm reassurance, simple bell notes
+  continuity_notes: Body language should be gentle and emotionally safe.
+- shot_id: SH060
+  source_page: 10
+  scene_title: Four Funny Pieces
+  duration_seconds: 7
+  shot_type: explanation
+  camera: over-the-shoulder view of picture icons
+  motion: four picture icons float into place like puzzle pieces
+  description: Niko shows four funny picture ideas for building a long password.
+  characters:
+  - Hackster Niko
+  - Password Dragon
+  dialogue:
+  - speaker: Niko
+    text: 'Pick four funny things: a snack, a place, a color, and a surprise.'
+  narration: ''
+  sfx:
+  - picture-card pops
+  - gentle puzzle clicks
+  music: light learning rhythm
+  continuity_notes: Use pictures only; do not render labels or readable text.
+- shot_id: SH070
+  source_page: 12
+  scene_title: Guessing Goblins Try
+  duration_seconds: 6
+  shot_type: comic obstacle
+  camera: low playful angle on bushes and vault light
+  motion: small silly goblins pop from bushes while the vault remains blue
+  description: Guessing Goblins try obvious guesses and fail against the friendly
+    vault.
+  characters:
+  - Hackster Niko
+  - Password Dragon
+  - Guessing Goblins
+  dialogue:
+  - speaker: Guessing Goblin
+    text: Try dragon!
+  - speaker: Guessing Goblin
+    text: Try password!
+  - speaker: Niko
+    text: Nope. Strong passwords do not give up easily.
+  narration: ''
+  sfx:
+  - tiny bush pops
+  - safe vault hum
+  music: playful comic pizzicato
+  continuity_notes: Goblins are cute, non-threatening, and curious.
+- shot_id: SH080
+  source_page: 14
+  scene_title: Password Parrot
+  duration_seconds: 6
+  shot_type: privacy lesson
+  camera: medium shot with parrot entering from above
+  motion: Password Parrot flutters in; Niko gently pauses the conversation
+  description: Password Parrot asks for the secret and Niko explains privacy.
+  characters:
+  - Hackster Niko
+  - Password Dragon
+  - Password Parrot
+  dialogue:
+  - speaker: Password Parrot
+    text: Tell me the secret!
+  - speaker: Niko
+    text: Passwords are private.
+  narration: ''
+  sfx:
+  - soft wing flutter
+  - gentle pause chime
+  music: kind teaching motif
+  continuity_notes: Do not shame the parrot; it should look eager, not sneaky.
+- shot_id: SH090
+  source_page: 16
+  scene_title: Build The Vault
+  duration_seconds: 8
+  shot_type: making montage
+  camera: three quick montage beats in one continuous shot
+  motion: rounded gears, blue crystal panels, and soft locks assemble into a friendly
+    vault
+  description: Niko and Password Dragon build a Password Vault together.
+  characters:
+  - Hackster Niko
+  - Password Dragon
+  dialogue:
+  - speaker: Niko
+    text: It remembers secrets so you do not have to shout them.
+  narration: ''
+  sfx:
+  - rounded gear clicks
+  - blue crystal glow
+  - happy vault hum
+  music: upbeat teamwork montage
+  continuity_notes: The vault should feel like a helpful tool, not a scary lockup.
+- shot_id: SH100
+  source_page: 18
+  scene_title: Teamwork Works
+  duration_seconds: 6
+  shot_type: emotional payoff
+  camera: medium two-shot
+  motion: Niko and Password Dragon high-five beside the glowing vault
+  description: The friends celebrate that teamwork solved the problem.
+  characters:
+  - Hackster Niko
+  - Password Dragon
+  dialogue:
+  - speaker: Password Dragon
+    text: I could not fix it alone.
+  - speaker: Niko
+    text: That is why we use teamwork.
+  narration: ''
+  sfx:
+  - soft high-five tap
+  - happy vault tune
+  music: warm payoff phrase
+  continuity_notes: Keep Niko mouthless; high-five works through pose and eye expression.
+- shot_id: SH110
+  source_page: 23
+  scene_title: Forest Cheers
+  duration_seconds: 7
+  shot_type: celebration
+  camera: wide joyful finale with gentle crane up
+  motion: forest friends cheer under glowing leaves; hidden objects sparkle subtly
+  description: Cyber Forest celebrates strong secrets and careful choices.
+  characters:
+  - Hackster Niko
+  - Password Dragon
+  - Cyber Forest friends
+  dialogue:
+  - speaker: Forest Friends
+    text: Hooray for strong secrets!
+  narration: ''
+  sfx:
+  - soft cheering
+  - sparkling leaves
+  music: full bright theme reprise
+  continuity_notes: Celebration stays readable and uncluttered.
+- shot_id: SH120
+  source_page: 32
+  scene_title: Next Mission Teaser
+  duration_seconds: 6
+  shot_type: tag
+  camera: close-up on Niko and glowing tablet
+  motion: Niko notices a blinking tablet message and tilts his head curiously
+  description: A friendly suspicious-message clue teases the next mission.
+  characters:
+  - Hackster Niko
+  dialogue:
+  - speaker: Niko
+    text: Hmm. This link looks sneaky...
+  narration: ''
+  sfx:
+  - tablet blink
+  - curious tiny beep
+  music: small mystery button, still safe and playful
+  continuity_notes: No readable screen text or real brand logos.

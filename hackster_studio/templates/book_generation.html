@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Book Generation · Hackster Studio{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Book Generation</h1>
+    <p>{{ book.title if book else book_slug }} · automated planning, prompt packaging, illustration generation, and review handoff.</p>
+  </div>
+  <div class="button-row">
+    <a class="button-link" href="/workflow?book_slug={{ book_slug }}">Workflow</a>
+    <a class="button-link" href="/story-maker?book_slug={{ book_slug }}&page=1">Review</a>
+  </div>
+</section>
+
+<section class="workflow-hero">
+  <div>
+    <h2>Generation State</h2>
+    <div class="workflow-status-grid">
+      <div><span>Pages</span><strong>{{ workflow.status.pages }}/{{ workflow.expected_pages }}</strong></div>
+      <div><span>Prompts</span><strong>{{ workflow.status.prompts }}/{{ workflow.expected_pages }}</strong></div>
+      <div><span>Images</span><strong>{{ workflow.status.images }}/{{ workflow.expected_pages }}</strong></div>
+      <div><span>Approved</span><strong>{{ workflow.status.approved_pages }}/{{ workflow.expected_pages }}</strong></div>
+    </div>
+  </div>
+  <div class="workflow-export-state">
+    <span class="workflow-pill {% if workflow.production_pdf_exists %}is-complete{% endif %}">Lulu PDF</span>
+    <span class="workflow-pill {% if workflow.idml_exists %}is-complete{% endif %}">Affinity IDML</span>
+  </div>
+</section>
+
+<section class="book-generation-layout">
+  <section class="workflow-command-panel planner-panel">
+    <h2>Automated Book Run</h2>
+    <form class="planner-brief-form" method="post" action="/books/{{ book_slug }}/generate-book" data-planner-form>
+      <div class="ai-status-card {{ 'is-ready' if ai_settings.dgx_configured else 'needs-setup' }}">
+        <strong>DGX Local Planner</strong>
+        <span>{{ ai_settings.dgx_text_model }} · {{ ai_settings.dgx_base_url }}</span>
+        <a href="/settings/ai">DGX Setup</a>
+      </div>
+      <label>Book Idea
+        <textarea name="idea" rows="5" placeholder="Type one sentence or a detailed prompt. DGX will produce the page plan, story text, and image directions.">{{ planner_brief.idea or "" }}</textarea>
+      </label>
+      <div class="form-grid">
+        <label>Characters To Focus On <input name="character_count" type="number" min="1" max="12" value="{{ planner_brief.focus_characters|length if planner_brief.focus_characters else 3 }}"></label>
+        <label>Objects To Feature <input name="object_count" type="number" min="1" max="12" value="{{ planner_brief.focus_items|length if planner_brief.focus_items else 4 }}"></label>
+      </div>
+      <label>Characters
+        <textarea name="characters" rows="3" placeholder="Hackster Niko, Byte, Password Dragon, Firewall Fox">{{ planner_brief.focus_characters|join(", ") if planner_brief.focus_characters else "" }}</textarea>
+      </label>
+      <label>Objects / Extra Items
+        <textarea name="objects" rows="3" placeholder="Golden Gear, Tiny Bug, Blue Crystal, Mini Robot">{{ planner_brief.focus_items|join(", ") if planner_brief.focus_items else "" }}</textarea>
+      </label>
+      <label>Reference Image Notes
+        <textarea name="reference_notes" rows="3" placeholder="List character, object, or style references to preserve before image generation.">{{ planner_brief.reference_notes or "" }}</textarea>
+      </label>
+      <div class="planner-submit-status" data-planner-status hidden></div>
+      <div class="button-row">
+        <button type="submit" name="planner_engine" value="dgx">Generate Book Layout With DGX</button>
+      </div>
+    </form>
+    <form class="planner-brief-form resume-run-form" method="post" action="/books/{{ book_slug }}/resume-generation" data-generation-job-form data-generation-job-kind="resume" data-book-generation-book-slug="{{ book_slug }}">
+      <h3 data-generation-job-title>Resume Existing Run</h3>
+      <p data-generation-job-detail>Continue from the current planned pages, prompts, and finished illustrations. This skips DGX story planning and starts at the first missing image.</p>
+      <div class="planner-submit-status" data-generation-job-status hidden></div>
+      <div class="button-row">
+        <button type="submit" data-generation-job-submit>Resume From Current State</button>
+      </div>
+    </form>
+    <form class="planner-brief-form resume-run-form" method="post" action="/books/{{ book_slug }}/generate-character-references" data-generation-job-form data-generation-job-kind="characters" data-book-generation-book-slug="{{ book_slug }}">
+      <h3>Character Reference Gate</h3>
+      <p>Generate front, side, back, 3/4, expression, and pose references under assets/layers/characters before page backgrounds are created.</p>
+      <label class="inline-check">
+        <input type="checkbox" name="force" value="1">
+        Regenerate existing character references
+      </label>
+      <div class="planner-submit-status" data-generation-job-status hidden></div>
+      <div class="button-row">
+        <button type="submit" data-generation-job-submit>Generate Character Packs</button>
+      </div>
+    </form>
+  </section>
+
+  <aside class="workflow-command-panel generation-next-panel">
+    <h2>Next Automation Steps</h2>
+    <div class="action-list">
+      <a href="/generate?book_slug={{ book_slug }}">Generate Illustrations</a>
+      <a href="/story-maker?book_slug={{ book_slug }}&page=1">Review Editable Pages</a>
+      <a href="/book-assembly?book_slug={{ book_slug }}">Check Assembly</a>
+      <a href="/print-validator">Run QA Gate</a>
+    </div>
+  </aside>
+</section>
+
+<section class="workflow-steps generation-phase-list">
+  {% for phase in generation_phases %}
+  <article class="workflow-step is-{{ phase.status }}">
+    <div class="workflow-step-index">{{ loop.index }}</div>
+    <div class="workflow-step-body">
+      <div class="workflow-step-top">
+        <h2>{{ phase.title }}</h2>
+        <span class="workflow-state">{{ phase.status.replace("_", " ").title() }}</span>
+      </div>
+      <p>{{ phase.detail }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="workflow-command-panel">
+  <h2>Production Automation Command</h2>
+  <div class="workflow-command-grid">
+    <pre><code>caffeinate -dimsu .venv/bin/python -m hackster_studio.cli build-book books/{{ book_slug }}/book.yaml --generate-images --image-backend comfyui --build-pdf --production-pdf --idml</code></pre>
+  </div>
+</section>
+{% endblock %}

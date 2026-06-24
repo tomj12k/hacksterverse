@@ -1,0 +1,22 @@
+book_slug: samurai_splat_01
+page_number: 10
+page_type: problem
+scene_title: The Balloon Battle
+story_text: Samurai Splat raised his bamboo practice pole with a fierce cry. 'I shall
+  vanquish this balloon with honor!' he declared. But as he swung, the balloon floated
+  just out of reach. 'It's like fighting a cloud!' he groaned.
+illustration_direction: Samurai Splat stands on a soft training mat in the village
+  square, dramatically raising a bamboo practice pole. A bright red balloon floats
+  just out of reach above him. Shotgun Bob stands nearby with a mischievous grin,
+  arms crossed. The background shows cheerful village people going about their day.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Village square
+emotion: frustrated determination
+camera: medium shot
+hidden_objects:
+- slippery rice ball
+- noodle bowl
+text_safe_area: top third of the page
+status: AI planned

@@ -1,0 +1,274 @@
+{
+  "approval": {
+    "approved": false,
+    "approved_at": null,
+    "approved_by": null,
+    "notes": ""
+  },
+  "book_illustration_path": "books/book01_password_dragon/illustrations/page_031.png",
+  "book_illustration_version": 1782004670242262184,
+  "book_slug": "book01_password_dragon",
+  "canvas": {
+    "bleed_inches": 0.125,
+    "dpi": 300,
+    "height_px": 2625,
+    "safe_margin_inches": 0.5,
+    "trim_inches": [
+      8.5,
+      8.5
+    ],
+    "width_px": 2625
+  },
+  "created_at": "2026-06-21T05:40:49Z",
+  "layers": [
+    {
+      "asset_path": "books/book01_password_dragon/illustrations/page_031.png",
+      "asset_version": 1782004670242262184,
+      "id": "book_illustration",
+      "locked": true,
+      "name": "Current Page Illustration",
+      "parallax_factor": 0,
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "transform": {
+        "height": 1,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 1,
+        "x": 0.5,
+        "y": 0.5
+      },
+      "type": "background",
+      "versions": [],
+      "visible": true,
+      "z_index": 0
+    },
+    {
+      "id": "camera_001",
+      "locked": false,
+      "name": "Camera",
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "transform": {
+        "rotation": 0,
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      },
+      "type": "camera",
+      "versions": [],
+      "visible": true,
+      "z_index": 99
+    },
+    {
+      "blend_mode": "multiply",
+      "id": "lighting_001",
+      "locked": false,
+      "name": "Ambient Light",
+      "opacity": 0,
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "tint_color": "#FFFFFF",
+      "transform": {},
+      "type": "lighting",
+      "versions": [],
+      "visible": true,
+      "z_index": 10
+    },
+    {
+      "asset_path": "assets/layers/characters/niko/niko_kind_wave.png",
+      "character_slug": "niko",
+      "id": "char_niko",
+      "locked": false,
+      "name": "Hackster Niko",
+      "parallax_factor": 1,
+      "pose": "kind_wave",
+      "preserve_aspect": true,
+      "prompt_history": [],
+      "rig": {
+        "type": "niko_simple_v3",
+        "bones": [
+          {
+            "id": "body_lean",
+            "name": "Body Lean",
+            "rotation": -2,
+            "min": -15,
+            "max": 15
+          },
+          {
+            "id": "head_tilt",
+            "name": "Head Tilt",
+            "rotation": -3,
+            "min": -18,
+            "max": 18
+          },
+          {
+            "id": "antenna_tilt",
+            "name": "Antenna Tilt",
+            "rotation": -8,
+            "min": -35,
+            "max": 35
+          },
+          {
+            "id": "left_upper_arm",
+            "name": "Left Upper Arm",
+            "rotation": 118,
+            "min": -160,
+            "max": 160
+          },
+          {
+            "id": "left_forearm",
+            "name": "Left Forearm",
+            "rotation": 104,
+            "min": -170,
+            "max": 170
+          },
+          {
+            "id": "left_hand",
+            "name": "Left Hand",
+            "rotation": 0,
+            "min": -45,
+            "max": 45
+          },
+          {
+            "id": "right_upper_arm",
+            "name": "Right Upper Arm",
+            "rotation": -58,
+            "min": -160,
+            "max": 160
+          },
+          {
+            "id": "right_forearm",
+            "name": "Right Forearm",
+            "rotation": -92,
+            "min": -170,
+            "max": 170
+          },
+          {
+            "id": "right_hand",
+            "name": "Right Hand",
+            "rotation": 18,
+            "min": -45,
+            "max": 45
+          },
+          {
+            "id": "left_thigh",
+            "name": "Left Thigh",
+            "rotation": 88,
+            "min": 45,
+            "max": 130
+          },
+          {
+            "id": "left_shin",
+            "name": "Left Shin",
+            "rotation": 94,
+            "min": 45,
+            "max": 135
+          },
+          {
+            "id": "left_foot",
+            "name": "Left Foot",
+            "rotation": 0,
+            "min": -35,
+            "max": 35
+          },
+          {
+            "id": "right_thigh",
+            "name": "Right Thigh",
+            "rotation": 94,
+            "min": 50,
+            "max": 135
+          },
+          {
+            "id": "right_shin",
+            "name": "Right Shin",
+            "rotation": 86,
+            "min": 45,
+            "max": 135
+          },
+          {
+            "id": "right_foot",
+            "name": "Right Foot",
+            "rotation": 0,
+            "min": -35,
+            "max": 35
+          }
+        ]
+      },
+      "shadow": {
+        "angle": 270,
+        "blur": 8,
+        "distance": 12,
+        "enabled": true,
+        "opacity": 0.24
+      },
+      "transform": {
+        "height": 0.36,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 0.29454545454545455,
+        "x": 0.5372502253605769,
+        "y": 0.6543156550480769
+      },
+      "type": "character",
+      "versions": [],
+      "visible": true,
+      "z_index": 5,
+      "lighting_variant": "ambient_soft"
+    },
+    {
+      "align": "center",
+      "box_color": "#FFFFFF",
+      "box_opacity": 0.84,
+      "font_family": "rounded",
+      "font_size": 0.02,
+      "id": "page_text",
+      "locked": false,
+      "name": "Page Text",
+      "parallax_factor": 1,
+      "preserve_aspect": true,
+      "prompt_history": [],
+      "stroke_color": "#F2C94C",
+      "style_prompt": "",
+      "text": "Password Challenge: With a trusted grown-up, choose four funny picture ideas. Make it long, silly, and secret.",
+      "text_art_variant": 0,
+      "text_color": "#154c84",
+      "transform": {
+        "height": 0.17,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 0.78,
+        "x": 0.5288837139423077,
+        "y": 0.15899188701923078
+      },
+      "type": "text",
+      "versions": [],
+      "visible": true,
+      "z_index": 20,
+      "asset_path": null
+    }
+  ],
+  "lighting_brief": "ambient_soft",
+  "page_count": 32,
+  "page_number": 31,
+  "production_notes": "",
+  "prompt_history": [],
+  "qa": {
+    "ready": false,
+    "errors": 0,
+    "warnings": 0,
+    "issues": [
+      {
+        "severity": "info",
+        "code": "not_approved",
+        "message": "Page is not approved yet."
+      }
+    ]
+  },
+  "status": "not_started",
+  "story_text": "Password Challenge: With a trusted grown-up, choose four funny picture ideas. Make it long, silly, and secret.",
+  "updated_at": "2026-06-21T05:41:07Z"
+}

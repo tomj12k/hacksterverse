@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Book Assembly · Hackster Studio{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Book Assembly</h1>
+    <p>{{ readiness.book_slug }} · {{ readiness.approved_pages }}/{{ readiness.page_count }} approved · {{ readiness.ready_pages }}/{{ readiness.page_count }} print-ready</p>
+  </div>
+  <div class="button-row">
+    <a class="button-link" href="/story-maker?book_slug={{ readiness.book_slug }}&page=1">Open Story Maker</a>
+    <a class="button-link" href="/print-validator">Open QA Gate</a>
+  </div>
+</section>
+
+<section class="metric-grid">
+  <div class="metric">
+    <span>Pages</span>
+    <strong>{{ readiness.page_count }}</strong>
+  </div>
+  <div class="metric">
+    <span>Approved</span>
+    <strong>{{ readiness.approved_pages }}</strong>
+  </div>
+  <div class="metric">
+    <span>Ready</span>
+    <strong>{{ readiness.ready_pages }}</strong>
+  </div>
+  <div class="metric">
+    <span>Status</span>
+    <strong>{{ "Go" if readiness.ready else "Hold" }}</strong>
+  </div>
+</section>
+
+<section class="assembly-grid">
+  {% for page in readiness.pages %}
+  <a class="assembly-page {{ 'is-ready' if page.ready else 'needs-work' }}" href="/story-maker?book_slug={{ readiness.book_slug }}&page={{ page.page_number }}">
+    <div class="assembly-thumb">
+      {% if page.thumbnail %}
+      <img src="/project-assets/{{ page.thumbnail }}" alt="Page {{ page.page_number }} preview">
+      {% else %}
+      <span>No image</span>
+      {% endif %}
+    </div>
+    <div class="assembly-page-meta">
+      <strong>Page {{ "%03d"|format(page.page_number) }}</strong>
+      <span>{{ page.status|replace("_", " ")|title }}</span>
+    </div>
+    <div class="assembly-badges">
+      <span>{{ "Approved" if page.approved else "Unapproved" }}</span>
+      <span>{{ page.errors }} errors</span>
+      <span>{{ page.warnings }} warnings</span>
+    </div>
+  </a>
+  {% endfor %}
+</section>
+{% endblock %}

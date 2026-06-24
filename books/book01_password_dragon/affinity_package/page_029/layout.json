@@ -1,0 +1,9 @@
+{
+  "page_number": 29,
+  "trim_size": "8.5x8.5",
+  "bleed_inches": 0.125,
+  "safe_margin_inches": 0.5,
+  "text_safe_area": "Leave clean open space for editable story text inside safe margins.",
+  "illustration_path": "books/book01_password_dragon/illustrations/page_029.png",
+  "prompt_path": "books/book01_password_dragon/prompts/page_029.md"
+}

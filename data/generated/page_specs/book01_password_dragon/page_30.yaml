@@ -1,0 +1,23 @@
+book: Hackster Niko and the Password Dragon
+book_slug: book01_password_dragon
+page_number: 30
+page_type: ending
+scene_title: The End
+story_text: Every problem has a clever fix!
+illustration_direction: Warm celebratory ending with Niko and friends in Cyber Forest.
+characters:
+- Hackster Niko
+- Password Dragon
+- Cyber Forest friends
+environment: Cyber Forest
+emotion: celebration
+camera: wide joyful finale
+hidden_objects:
+- Golden Gear
+- Tiny Bug
+- Blue Crystal
+- Mini Robot
+text_safe_area: Leave open space for The End and catchphrase as editable text.
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/book01_password_dragon/page_30_the_end.md
+status: prompt generated

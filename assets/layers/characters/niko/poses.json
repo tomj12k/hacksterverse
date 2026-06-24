@@ -1,0 +1,41 @@
+{
+  "character": "niko",
+  "poses": [
+    {
+      "id": "walk_front",
+      "label": "Walking Front",
+      "tags": ["action", "entrance"],
+      "asset_path": "assets/layers/characters/niko/niko_walk_front.png"
+    },
+    {
+      "id": "stand_front",
+      "label": "Standing Front",
+      "tags": ["idle", "listening"],
+      "asset_path": "assets/layers/characters/niko/niko_stand_front.png"
+    },
+    {
+      "id": "point_right",
+      "label": "Pointing Right",
+      "tags": ["teaching", "action"],
+      "asset_path": "assets/layers/characters/niko/niko_point_right.png"
+    },
+    {
+      "id": "kind_wave",
+      "label": "Kind Wave",
+      "tags": ["greeting", "emotion"],
+      "asset_path": "assets/layers/characters/niko/niko_kind_wave.png"
+    },
+    {
+      "id": "thinking",
+      "label": "Thinking",
+      "tags": ["idle", "teaching"],
+      "asset_path": "assets/layers/characters/niko/niko_thinking.png"
+    },
+    {
+      "id": "celebrate",
+      "label": "Celebrate",
+      "tags": ["emotion", "action"],
+      "asset_path": "assets/layers/characters/niko/niko_celebrate.png"
+    }
+  ]
+}

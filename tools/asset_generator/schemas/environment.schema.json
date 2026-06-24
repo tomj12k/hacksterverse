@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "environment.schema.json",
+  "title": "Hackster Asset Generator Environment Schema",
+  "type": "object",
+  "required": [
+    "asset_type",
+    "name",
+    "slug",
+    "version",
+    "description",
+    "key_features",
+    "color_palette",
+    "mood",
+    "hidden_objects",
+    "art_style",
+    "generation_notes"
+  ],
+  "properties": {
+    "asset_type": {
+      "const": "environment"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": ["string", "number"]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "key_features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "color_palette": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+    },
+    "mood": {
+      "type": "string"
+    },
+    "hidden_objects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "characters_allowed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "art_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generation_notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "book_page.schema.json",
+  "title": "Hackster Asset Generator Book Page Schema",
+  "type": "object",
+  "required": [
+    "asset_type",
+    "book",
+    "name",
+    "slug",
+    "version",
+    "page_number",
+    "scene_summary",
+    "characters",
+    "setting",
+    "composition",
+    "story_text_space",
+    "hidden_objects",
+    "art_style",
+    "print_specs",
+    "generation_notes"
+  ],
+  "properties": {
+    "asset_type": {
+      "const": "book_page"
+    },
+    "book": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": ["string", "number"]
+    },
+    "page_number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "scene_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "setting": {
+      "type": "string"
+    },
+    "composition": {
+      "type": "string"
+    },
+    "story_text_space": {
+      "type": "string"
+    },
+    "hidden_objects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "art_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "print_specs": {
+      "type": "object",
+      "required": ["trim_size", "dpi", "bleed", "safe_margin"],
+      "properties": {
+        "trim_size": {
+          "type": "string"
+        },
+        "dpi": {
+          "type": ["integer", "string"]
+        },
+        "bleed": {
+          "type": "string"
+        },
+        "safe_margin": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "generation_notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,25 @@
+book_slug: samurai_splat_01
+page_number: 15
+page_type: problem
+scene_title: The Balloon Juggling
+story_text: Samurai Splat stood in the village square, determined to juggle the balloons.
+  'This is a matter of balance and focus!' he declared. But the balloons floated away,
+  no matter how hard he tried. 'Maybe you should just blow more air into them,' suggested
+  Shotgun Bob. 'No, no! I must master this!', replied Samurai Splat.
+illustration_direction: Samurai Splat is in the center of the village square, wearing
+  his traditional samurai outfit with a headband. He is attempting to juggle three
+  balloons with great seriousness, his face showing intense concentration. Beside
+  him, Shotgun Bob is holding a basket of balloons, giving a goofy, direct suggestion.
+  The background shows the bustling village square with people and shops.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Village square
+emotion: Determined and frustrated
+camera: Medium shot from the side, capturing both Samurai Splat and Shotgun Bob
+hidden_objects:
+- Soft training mat
+- bamboo practice pole
+- noodle bowl
+text_safe_area: Top third of the page, above the characters and balloons
+status: AI planned

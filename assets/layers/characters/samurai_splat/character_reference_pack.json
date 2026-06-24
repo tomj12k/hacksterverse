@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "book_slug": "character_library",
+  "book_title": "Character Library",
+  "character": "Samurai Splat",
+  "character_slug": "samurai_splat",
+  "status": "ready",
+  "requested_image_count": 16,
+  "image_count": 16,
+  "generated_count": 15,
+  "skipped_count": 1,
+  "updated_at": "2026-06-23T04:25:35Z",
+  "reference_mode": "flux_reference_pack",
+  "reference_workflow": "",
+  "reference_workflow_kind": "flux_pulid",
+  "reference_weight": "0.75",
+  "character_workflow": "",
+  "reference_conditioning_configured": true,
+  "reference_conditioning_warning": "",
+  "design_lock_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/design_lock.md",
+  "future_lora": {
+    "recommended": true,
+    "minimum_curated_images": 20,
+    "target_curated_images": 40,
+    "status": "not_trained"
+  },
+  "files": [
+    {
+      "kind": "turnaround",
+      "label": "front",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/references/samurai_splat_turnaround_front.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_turnaround_front.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.6914,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "turnaround",
+      "label": "side",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/references/samurai_splat_turnaround_side.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_turnaround_side.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.6127,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "turnaround",
+      "label": "back",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/references/samurai_splat_turnaround_back.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_turnaround_back.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.7318,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "turnaround",
+      "label": "three_quarter",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/references/samurai_splat_turnaround_three_quarter.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_turnaround_three_quarter.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.6363,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "expression",
+      "label": "happy",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/expressions/samurai_splat_expression_happy.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_expression_happy.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.688,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "expression",
+      "label": "focused",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/expressions/samurai_splat_expression_focused.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_expression_focused.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.7217,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "expression",
+      "label": "surprised",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/expressions/samurai_splat_expression_surprised.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_expression_surprised.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.7083,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "expression",
+      "label": "determined",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/expressions/samurai_splat_expression_determined.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_expression_determined.md",
+      "status": "skipped",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.7379,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "expression",
+      "label": "curious",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/expressions/samurai_splat_expression_curious.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_expression_curious.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.7213,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "expression",
+      "label": "proud",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/expressions/samurai_splat_expression_proud.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_expression_proud.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.7669,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "pose",
+      "label": "standing_neutral",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/poses/samurai_splat_pose_standing_neutral.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_pose_standing_neutral.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.6729,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "pose",
+      "label": "walking",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/poses/samurai_splat_pose_walking.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_pose_walking.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.715,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "pose",
+      "label": "pointing",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/poses/samurai_splat_pose_pointing.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_pose_pointing.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.7977,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "pose",
+      "label": "holding_object",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/poses/samurai_splat_pose_holding_object.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_pose_holding_object.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.721,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "pose",
+      "label": "thinking",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/poses/samurai_splat_pose_thinking.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_pose_thinking.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.6718,
+        "notes": []
+      },
+      "error": ""
+    },
+    {
+      "kind": "pose",
+      "label": "celebrating",
+      "path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/poses/samurai_splat_pose_celebrating.png",
+      "prompt_path": "/Users/tomfisher/Desktop/Hacksterverse/HacksterNiko/assets/layers/characters/samurai_splat/prompts/samurai_splat_pose_celebrating.md",
+      "status": "generated",
+      "qa": {
+        "pass": true,
+        "width": 1536,
+        "height": 1536,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "transparent_ratio": 0.6865,
+        "notes": []
+      },
+      "error": ""
+    }
+  ],
+  "errors": []
+}

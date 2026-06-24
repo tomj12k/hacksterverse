@@ -1,0 +1,27 @@
+page_number: 17
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_017.png
+prompt_path: books/book01_password_dragon/prompts/page_017.md
+niko_layer_mode: posable_layer
+niko_pose: stand_front
+niko_center_x: 0.3
+niko_base_y: 0.88
+niko_height: 0.39
+page_type: story
+scene_title: A Safe Place
+story_text: Password Dragon tucked the secret inside. Click! The vault hummed a happy
+  little tune.
+characters:
+- Hackster Niko
+- Password Dragon
+environment: Cyber Forest
+emotion: surprised
+camera: medium storybook view
+illustration_direction: Password Dragon places a glowing secret orb into the friendly
+  vault while Niko watches.
+hidden_objects:
+- Tiny Bug
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+background_direction: 'Create the Cyber Forest background and include only these non-Niko
+  characters: Password Dragon. Leave the reserved Niko overlay space empty. Do not
+  draw Hackster Niko, any robot child, antenna, or Niko-like figure.'

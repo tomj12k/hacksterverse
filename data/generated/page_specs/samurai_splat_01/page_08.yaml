@@ -1,0 +1,25 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 8
+page_type: problem
+scene_title: The Soft Mat Challenge
+story_text: Samurai Splat stood before the soft mat, his tiny fists clenched. 'I must
+  land with the grace of a falling leaf!' he declared. Shotgun Bob, chewing on a rice
+  ball, nodded. 'Yeah, just don't bounce like a noodle.'
+illustration_direction: Samurai Splat is in a dramatic crouch, facing a large soft
+  mat. His expression is intense, eyes narrowed. Behind him, Shotgun Bob is leaning
+  on the bamboo practice pole, holding a rice ball in one hand and gesturing with
+  the other. The training area has bright lighting and soft textures.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Training area with a soft mat
+emotion: Determined and playful
+camera: Medium shot from the side, capturing both characters and the mat
+hidden_objects:
+- slippery rice ball
+- noodle bowl
+text_safe_area: Top third of the page, above the characters' heads
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_08_the_soft_mat_challenge.md
+status: prompt generated

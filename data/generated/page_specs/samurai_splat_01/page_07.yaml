@@ -1,0 +1,25 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 7
+page_type: problem
+scene_title: The Noodle Dilemma
+story_text: Samurai Splat tried to eat noodles with the grace of a dragon, but the
+  noodles slipped from his chopsticks. 'Maybe you should use a noodle net!' suggested
+  Shotgun Bob, holding up a tiny fishing net. 'Or a noodle nettle!' 'Or a noodle nettle!'
+  said Samurai Splat, accidentally poking himself in the eye.
+illustration_direction: Samurai Splat is sitting at a small kitchen table, chopsticks
+  in hand, noodles slipping from his grasp. Shotgun Bob is holding up a tiny fishing
+  net. Samurai Splat has a noodle poking his eye. The kitchen is bright and colorful
+  with playful lighting.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Kitchen area
+emotion: frustrated
+camera: medium shot
+hidden_objects:
+- slippery rice ball
+text_safe_area: top third
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_07_the_noodle_dilemma.md
+status: prompt generated

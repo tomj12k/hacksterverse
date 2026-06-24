@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Prompts · Hackster Studio{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Prompt Generator</h1>
+    <p>Generated prompts are copy/paste-ready and stored as Markdown files.</p>
+  </div>
+  {% if selected %}<button type="button" data-copy="#prompt-text">Copy Prompt</button>{% endif %}
+</section>
+
+<section class="prompt-layout">
+  <aside>
+    {% for prompt in prompts %}
+    <a class="prompt-link" href="/prompts?prompt_id={{ prompt.id }}">
+      <strong>{{ prompt.title }}</strong>
+      <span>{{ prompt.prompt_type }}</span>
+    </a>
+    {% else %}
+    <p class="empty">No prompts yet.</p>
+    {% endfor %}
+  </aside>
+  <div>
+    {% if selected %}
+    <h2>{{ selected.title }}</h2>
+    <p><code>{{ selected.output_path }}</code></p>
+    <pre id="prompt-text" class="prompt-text">{{ selected.prompt_text }}</pre>
+    {% else %}
+    <p class="empty">Generate prompts from a character, book, or page.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+book_slug: samurai_splat_01
+page_number: 3
+page_type: front_matter
+scene_title: Dedication
+story_text: Dedication text placeholder.
+illustration_direction: Gentle dedication vignette with Samurai Splat, village people,
+  and one important object.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: ''
+emotion: kind
+camera: quiet vignette
+hidden_objects:
+- Soft training mat
+text_safe_area: Leave clean open center area for dedication text.
+status: planned

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} · Hackster Studio{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>{{ title }}</h1>
+    <p>Reference records, prompt generation, and production status.</p>
+  </div>
+</section>
+
+{% if kind == "characters" and asset_characters %}
+<section class="workflow-command-panel character-asset-panel">
+  <h2>Layer Asset Characters</h2>
+  <p>Characters discovered from generated layers and reference packs.</p>
+  <div class="character-card-grid">
+    {% for asset in asset_characters %}
+    <a class="character-card" href="/characters/by-slug/{{ asset.slug }}">
+      {% if asset.preview %}
+      <img src="/project-assets/{{ asset.preview }}" alt="{{ asset.name }}">
+      {% else %}
+      <div class="character-card-empty">{{ asset.name[:1] }}</div>
+      {% endif %}
+      <strong>{{ asset.name }}</strong>
+      <span>{{ asset.image_count }} images · {{ asset.selected_count }} selected · {{ asset.status.replace("_", " ").title() }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="item-list">
+  {% for item in items %}
+  <article class="item-row">
+    <div>
+      <h2>
+        {% if kind == "characters" %}
+        <a href="/characters/{{ item.id }}">{{ item.name }}</a>
+        {% else %}
+        {{ item.name }}
+        {% endif %}
+      </h2>
+      <p>{{ item.description }}</p>
+      {% if item.role %}<span class="tag">{{ item.role }}</span>{% endif %}
+    </div>
+    <form method="post"
+      action="{% if kind == 'characters' %}/characters/{{ item.id }}/generate-prompt{% elif kind == 'environments' %}/environments/{{ item.id }}/generate-prompt{% else %}/gadgets/{{ item.id }}/generate-prompt{% endif %}">
+      <button type="submit">Generate Prompt</button>
+    </form>
+  </article>
+  {% else %}
+  <p class="empty">No records yet. Run <code>python -m hackster_studio.cli seed</code>.</p>
+  {% endfor %}
+</section>
+{% endblock %}

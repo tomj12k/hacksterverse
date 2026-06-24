@@ -1,0 +1,27 @@
+page_number: 1
+approval_status: approved
+illustration_path: books/book01_password_dragon/illustrations/page_001.png
+prompt_path: books/book01_password_dragon/prompts/page_001.md
+niko_layer_mode: posable_layer
+niko_pose: walk_front
+niko_center_x: 0.5
+niko_base_y: 0.86
+niko_height: 0.64
+page_type: title_page
+scene_title: Title Page
+story_text: Hackster Niko and the Password Dragon
+characters:
+- Hackster Niko
+environment: Cyber Forest
+emotion: wonder
+camera: welcoming hero view
+illustration_direction: 'A polished title-page image of Hackster Niko entering Cyber
+  Forest with warm wonder, seen from behind in a three-quarter rear view. Niko keeps
+  the exact HN-01 robot silhouette: round helmet head, antenna, blue hoodie, compact
+  backpack, two robot arms, two robot legs, no tail.'
+hidden_objects: []
+text_safe_area: Large clean title area; text will be editable in layout.
+background_direction: Create an empty Cyber Forest background for a quiet storybook
+  scene. Show the setting, path, light, plants, props, and atmosphere only. No visible
+  characters, no people, no child, no robot, no mascot, no silhouette, no antenna,
+  no figure, no animal, no creature, no fox, no tail.

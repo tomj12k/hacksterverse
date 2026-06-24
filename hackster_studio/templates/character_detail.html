@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block title %}{{ character.name if character else "Character" }} · Hackster Studio{% endblock %}
+{% block content %}
+{% if character %}
+<section class="page-head">
+  <div>
+    <h1>{{ character.name }}</h1>
+    <p>{{ character.role }}</p>
+  </div>
+  <div class="button-row">
+    {% if character.id %}
+    <form method="post" action="/characters/{{ character.id }}/generate-prompt">
+      <button type="submit">Generate Character Prompt</button>
+    </form>
+    {% endif %}
+    <form class="reference-pack-form" method="post" action="{{ character_action_base }}/generate-reference-pack" data-generation-job-form data-generation-job-kind="character_reference" data-book-generation-book-slug="character_{{ training_bench.slug }}">
+      <input type="hidden" name="character_name" value="{{ character.name }}">
+      <label>Images
+        <input name="image_count" type="number" min="1" max="100" value="16" inputmode="numeric">
+      </label>
+      <div class="planner-submit-status" data-generation-job-status hidden></div>
+      <button type="submit" data-generation-job-submit>Generate Reference Pack</button>
+    </form>
+    <form method="post" action="{{ character_action_base }}/delete-reference-pack" onsubmit="return confirm('Delete this character reference pack? LoRA training files will be preserved.');">
+      <input type="hidden" name="character_name" value="{{ character.name }}">
+      <button class="button-danger" type="submit">Delete Reference Pack</button>
+    </form>
+  </div>
+</section>
+
+<section class="character-workbench">
+  <section class="character-brief-panel">
+    <h2>Character Brief</h2>
+    <dl>
+      <dt>Description</dt>
+      <dd>{{ character.description }}</dd>
+      <dt>Appearance</dt>
+      <dd>{{ character.appearance }}</dd>
+      <dt>Personality</dt>
+      <dd>{{ character.personality or "Not set yet." }}</dd>
+      <dt>Style Notes</dt>
+      <dd>{{ character.style_notes or "Use the reference pack and selected examples as source of truth." }}</dd>
+    </dl>
+  </section>
+
+  <section class="character-lora-panel">
+    <div>
+      <h2>LoRA Training Bench</h2>
+      <p>{{ training_bench.selected_count }}/{{ training_bench.minimum_lora_images }} minimum examples selected. Target {{ training_bench.target_lora_images }} curated images.</p>
+    </div>
+    <div class="workflow-status-grid">
+      <div><span>Status</span><strong>{{ training_bench.manifest.status.replace("_", " ").title() }}</strong></div>
+      <div><span>Examples</span><strong>{{ training_bench.selected_count }}</strong></div>
+      <div><span>Assets</span><strong>{{ training_bench.images|length }}</strong></div>
+      <div><span>LoRA</span><strong>{{ training_bench.manifest.active_lora.status.replace("_", " ").title() }}</strong></div>
+    </div>
+    {% if training_bench.manifest.last_training_message %}
+    <p class="character-training-note">{{ training_bench.manifest.last_training_message }}</p>
+    {% endif %}
+  </section>
+</section>
+
+<section class="workflow-command-panel">
+  <h2>Character Design Lock</h2>
+  <form class="planner-brief-form" method="post" action="{{ character_action_base }}/design-lock">
+    <input type="hidden" name="character_name" value="{{ character.name }}">
+    <label>Canonical visual identity
+      <textarea name="design_lock" rows="5">{{ training_bench.design_lock }}</textarea>
+    </label>
+    <div class="button-row">
+      <button type="submit">Save Design Lock</button>
+    </div>
+  </form>
+  <p class="character-training-note"><code>{{ training_bench.design_lock_path }}</code></p>
+</section>
+
+<section class="workflow-command-panel">
+  <h2>Choose Training Examples</h2>
+  <p class="character-training-note">Click the best, most consistent examples. The app automatically saves the set, refreshes the LoRA dataset, writes the DGX training request, and submits training when enough examples are selected.</p>
+  <div class="character-training-status" data-character-training-banner>
+    <strong>LoRA status:</strong>
+    <span data-training-state>{{ (training_bench.manifest.status or "needs_examples")|replace("_", " ")|title }}</span>
+    · <span data-training-count>{{ training_bench.selected_count }}</span>/{{ training_bench.minimum_lora_images }} examples selected
+    {% if training_bench.manifest.last_training_message %}
+    <div class="character-training-message" data-training-message>{{ training_bench.manifest.last_training_message }}</div>
+    {% else %}
+    <div class="character-training-message" data-training-message hidden></div>
+    {% endif %}
+  </div>
+  <form method="post" action="{{ character_action_base }}/training-selection" data-character-auto-selection>
+    <input type="hidden" name="character_name" value="{{ character.name }}">
+    <div class="planner-submit-status" data-character-auto-selection-status hidden></div>
+    <div class="button-row character-selection-actions">
+      <button type="button" data-character-select-all>Select All</button>
+      <button type="button" data-character-clear-selection>Clear Selection</button>
+      <button
+        class="button-danger"
+        type="submit"
+        formaction="{{ character_action_base }}/delete-selected-images"
+        onclick="return confirm('Delete all selected character images? This cannot be undone.');"
+      >Delete Selected Images</button>
+    </div>
+    <div class="character-example-grid">
+      {% for image in training_bench.images %}
+      <article class="character-example-card {% if image.selected %}is-selected{% endif %}">
+        <label class="character-example-select">
+          <input type="checkbox" name="selected_images" value="{{ image.path }}" {% if image.selected %}checked{% endif %}>
+          <img src="/project-assets/{{ image.path }}" alt="{{ image.label }}">
+          <span>{{ image.kind.replace("_", " ").title() }}</span>
+          <strong>{{ image.label }}</strong>
+        </label>
+        <button
+          class="button-danger character-image-delete"
+          type="submit"
+          formaction="{{ character_action_base }}/delete-image"
+          name="image_path"
+          value="{{ image.path }}"
+          onclick="return confirm('Delete this character image? This cannot be undone.');"
+        >Delete Image</button>
+      </article>
+      {% else %}
+      <p class="empty">No character examples yet. Generate a reference pack to create turnarounds, expressions, and poses.</p>
+      {% endfor %}
+    </div>
+    <div class="button-row">
+      <button type="submit" data-character-process>Process Selected Set Now</button>
+    </div>
+  </form>
+</section>
+
+<section class="character-workbench">
+  <section class="workflow-command-panel">
+    <h2>Active LoRA</h2>
+    <form class="planner-brief-form" method="post" action="{{ character_action_base }}/lora-settings">
+      <input type="hidden" name="character_name" value="{{ character.name }}">
+      <label>ComfyUI LoRA Name
+        <input name="lora_name" value="{{ training_bench.manifest.active_lora.name }}" placeholder="samurai_splat_flux_lora.safetensors">
+      </label>
+      <label>LoRA Path / Notes
+        <input name="lora_path" value="{{ training_bench.manifest.active_lora.path }}" placeholder="/models/loras/samurai_splat_flux_lora.safetensors">
+      </label>
+      <label>Trigger Phrase
+        <input name="trigger" value="{{ training_bench.manifest.active_lora.trigger }}" placeholder="{{ training_bench.manifest.character_slug }}_character">
+      </label>
+      <button type="submit">Use This LoRA For {{ character.name }}</button>
+    </form>
+  </section>
+
+  <section class="workflow-command-panel">
+    <h2>Training Files</h2>
+    <dl class="character-file-list">
+      <dt>Character Root</dt>
+      <dd><code>{{ training_bench.root_rel }}</code></dd>
+      <dt>Dataset Manifest</dt>
+      <dd><code>{{ training_bench.manifest.dataset_manifest or "Not prepared yet." }}</code></dd>
+      <dt>Training Request</dt>
+      <dd><code>{{ training_bench.manifest.training_request or "Not prepared yet." }}</code></dd>
+      <dt>Reference Pack</dt>
+      <dd><code>{{ training_bench.root_rel }}/character_reference_pack.json</code></dd>
+    </dl>
+  </section>
+</section>
+{% else %}
+<p class="empty">Character not found.</p>
+{% endif %}
+{% endblock %}

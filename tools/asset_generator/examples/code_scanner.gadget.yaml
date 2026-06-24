@@ -1,0 +1,27 @@
+asset_type: gadget
+name: Code Scanner
+slug: code_scanner
+version: 0.1
+purpose: a friendly handheld tool that helps Niko notice patterns, clues, and mistakes without solving the whole problem for him
+appearance: rounded handheld scanner with a soft white shell, blue glowing lens, small friendly indicator lights, chunky grip sized for Niko, and a tiny Core Crystal detail
+color_palette:
+  Hackster Blue: "#47C7FF"
+  Core Crystal: "#63DFFF"
+  Friendly White: "#F8FCFF"
+  Dark Outline: "#394A63"
+  Golden Gear: "#F2C94C"
+materials:
+  - soft-touch white shell
+  - translucent glowing blue lens
+  - rubberized grip
+  - tiny crystal accent
+angles:
+  - front
+  - side
+  - back
+  - 3/4 view
+  - in-hand scale view
+safety_notes: Must look like a learning tool, not a weapon. Avoid trigger shapes, sharp edges, aiming poses, or tactical details.
+art_style: bright children's picture book prop design, rounded friendly shapes, soft cinematic lighting, saturated colors, no weapons, no scary imagery
+generation_notes: Make the scanner simple enough to redraw consistently across book pages and small enough for Niko's utility belt.
+

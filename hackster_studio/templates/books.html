@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Books · Hackster Studio{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Book Library</h1>
+    <p>Create, switch, plan, and manage every Hackster Niko book from one place.</p>
+  </div>
+  <div class="button-row">
+    <a class="button-link" href="/workflow">Open Current Workflow</a>
+  </div>
+</section>
+
+<section class="book-library-layout">
+  <form class="editor book-create-form" method="post" action="/books" data-planner-form>
+    <h2>Create Book</h2>
+    <div class="ai-status-card {{ 'is-ready' if ai_settings.dgx_configured else 'needs-setup' }}">
+      <strong>DGX Local Planner</strong>
+      <span>{{ ai_settings.dgx_text_model }} · {{ ai_settings.dgx_base_url }}</span>
+      <a href="/settings/ai">DGX Setup</a>
+    </div>
+    <label>Book Idea
+      <textarea name="idea" rows="5" placeholder="Example: Niko helps a shy cloud learn how to ask for help when its weather machine starts mixing up sunny and rainy days."></textarea>
+    </label>
+    <label>Title <input name="title" placeholder="Hackster Niko and the Sneaky Phish"></label>
+    <label>Slug <input name="slug" placeholder="book02_sneaky_phish"></label>
+    <div class="form-grid">
+      <label>Series <input name="series" value="Hackster Niko"></label>
+      <label>Age <input name="target_age" value="5-8"></label>
+      <label>Pages <input name="page_count" type="number" min="1" max="96" value="32"></label>
+      <label>Trim <input name="trim_size" value="8.5x8.5"></label>
+      <label>Characters To Focus On <input name="character_count" type="number" min="1" max="12" value="3"></label>
+      <label>Objects To Feature <input name="object_count" type="number" min="1" max="12" value="4"></label>
+    </div>
+    <label>Characters
+      <textarea name="characters" rows="3" placeholder="Hackster Niko, Byte, a friendly cloud, a weather helper"></textarea>
+    </label>
+    <label>Objects / Hidden Items
+      <textarea name="objects" rows="3" placeholder="Golden Gear, Tiny Bug, Blue Crystal, Mini Robot"></textarea>
+    </label>
+    <label>Reference Image Notes
+      <textarea name="reference_notes" rows="3" placeholder="Describe any reference images or visual rules to collect before generation."></textarea>
+    </label>
+    <label>Lesson <textarea name="lesson" rows="3" placeholder="What this book teaches."></textarea></label>
+    <div class="planner-submit-status" data-planner-status hidden></div>
+    <div class="button-row">
+      <button type="submit">Create Book</button>
+      <button type="submit" name="planner_engine" value="dgx">Create + Generate with DGX</button>
+    </div>
+  </form>
+
+  <div class="book-card-grid">
+    {% for book in books %}
+    <article class="book-card {{ 'is-current' if book.slug == book_nav.current_slug else '' }}">
+      <div>
+        <span class="workflow-pill">{{ book.status }}</span>
+        {% if book.slug == book_nav.current_slug %}<span class="workflow-pill is-complete">Current</span>{% endif %}
+      </div>
+      <h2>{{ book.title }}</h2>
+      <p>{{ book.series }} · Ages {{ book.target_age }} · {{ book.page_count }} pages</p>
+      <p>{{ book.lesson or "No lesson set yet." }}</p>
+      <div class="button-row">
+        <a class="button-link" href="/books/{{ book.slug }}">Manage</a>
+        <form method="post" action="/books/{{ book.slug }}/set-current">
+          <button type="submit">Set Current</button>
+        </form>
+        <form method="post" action="/books/{{ book.slug }}/delete" onsubmit='return confirm({{ ("Delete " ~ book.title ~ " and all generated files for this book? This cannot be undone.")|tojson }});'>
+          <button class="button-danger" type="submit">Delete</button>
+        </form>
+      </div>
+    </article>
+    {% else %}
+    <div class="notice">No books yet. Create the first one here.</div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

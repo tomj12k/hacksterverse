@@ -1,0 +1,28 @@
+asset_type: environment
+name: Cyber Forest
+slug: cyber_forest
+version: 0.1
+description: a magical forest where rounded trees have glowing circuit-like bark patterns, crystal mushrooms, soft blue firefly lights, and friendly paths made of smooth stepping stones
+key_features:
+  - rounded trees with glowing circuit bark
+  - crystal mushrooms beside the path
+  - soft blue firefly lights
+  - clear winding path for story action
+  - cozy places to hide small objects
+color_palette:
+  Hackster Blue: "#47C7FF"
+  Core Crystal: "#63DFFF"
+  Forest Green: "#3FAF64"
+  Friendly White: "#F8FCFF"
+  Dark Outline: "#394A63"
+  Golden Gear: "#F2C94C"
+mood: safe, curious, magical, bright, and welcoming
+hidden_objects:
+  - Golden Gear
+  - Tiny Bug
+  - Blue Crystal
+  - Mini Robot
+characters_allowed: []
+art_style: bright children's picture book style, rounded friendly shapes, soft cinematic lighting, saturated colors, no weapons, no scary imagery
+generation_notes: Build a reusable establishing shot with foreground plants, midground path, and background trees. Leave clean negative space for future type overlays.
+

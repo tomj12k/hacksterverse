@@ -1,0 +1,29 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH060
+source_page: 10
+scene_title: Four Funny Pieces
+duration_seconds: 7
+shot_type: explanation
+camera: over-the-shoulder view of picture icons
+motion: four picture icons float into place like puzzle pieces
+description: Niko shows four funny picture ideas for building a long password.
+characters:
+- Hackster Niko
+- Password Dragon
+dialogue:
+- speaker: Niko
+  text: 'Pick four funny things: a snack, a place, a color, and a surprise.'
+narration: ''
+sfx:
+- picture-card pops
+- gentle puzzle clicks
+music: light learning rhythm
+continuity_notes: Use pictures only; do not render labels or readable text.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH060_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH060_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH060_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH060_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH060_mix.wav

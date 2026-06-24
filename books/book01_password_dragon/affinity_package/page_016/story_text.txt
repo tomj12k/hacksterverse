@@ -1,0 +1,1 @@
+"Let us make a Password Vault," said Niko. "It remembers secrets so you do not have to shout them."

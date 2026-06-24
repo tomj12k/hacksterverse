@@ -1,0 +1,20 @@
+book_slug: book01_password_dragon
+page_number: 27
+page_type: story
+scene_title: 'Story Beat 10: The forest celebrates.'
+story_text: 'Draft story text for page 27: The forest celebrates.'
+illustration_direction: Show the forest celebrates. Keep the Cyber Forest friendly,
+  bright, rounded, and readable.
+characters:
+- Hackster Niko
+- Cyber Forest friends
+environment: Cyber Forest
+emotion: confident
+camera: wide establishing shot
+hidden_objects:
+- Golden Gear
+- Tiny Bug
+- Blue Crystal
+- Mini Robot
+text_safe_area: Leave clean open space for story text inside the 0.5 inch safe margin.
+status: planned

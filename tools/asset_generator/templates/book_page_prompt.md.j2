@@ -1,0 +1,56 @@
+# Book Page Illustration Prompt: {{ name }}
+
+Create a full-bleed children's picture book illustration for **{{ book }}**, page {{ page_number }}.
+
+## Scene Summary
+
+{{ scene_summary }}
+
+## Characters In Scene
+
+{% for character in characters -%}
+- {{ character }}
+{% endfor %}
+
+## Setting
+
+{{ setting }}
+
+## Composition
+
+{{ composition }}
+
+## Story Text Space
+
+{{ story_text_space }}
+
+## Hidden Objects To Include
+
+{% for hidden_object in hidden_objects -%}
+- {{ hidden_object }}
+{% endfor %}
+
+## Print Intent
+
+- Full-bleed 8.5 x 8.5 inch illustration.
+- 300 DPI print intent.
+- 0.125 inch bleed.
+- Keep important characters, faces, and story action inside the safe area.
+- Do not bake story text into the image.
+- Leave clean space for typeset story text.
+- Match the Hackster Niko style guide.
+
+## Provided Print Specs
+
+{% for spec_name, spec_value in print_specs.items() -%}
+- {{ spec_name }}: {{ spec_value }}
+{% endfor %}
+
+## Art Direction
+
+{{ art_style }}
+
+## Additional Notes
+
+{{ generation_notes }}
+

@@ -1,0 +1,23 @@
+book_slug: samurai_splat_01
+page_number: 6
+page_type: problem
+scene_title: Training with the Bamboo Pole
+story_text: Samurai Splat stood on the bamboo pole, holding the slippery rice ball
+  with white-knuckled determination. 'This is a test of balance and willpower!' he
+  declared. 'Just don't look down,' advised Shotgun Bob, holding the noodle bowl nearby.
+illustration_direction: Samurai Splat is balancing on the bamboo pole with a rice
+  ball in hand. His face shows intense concentration. Shotgun Bob stands below with
+  a noodle bowl, looking up with a worried expression. The soft training mat is visible
+  on the ground. The scene has dramatic lighting with soft shadows and exaggerated
+  expressions.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Training area with a bamboo pole
+emotion: Determined and nervous
+camera: Medium shot from the side, capturing both characters and the bamboo pole
+hidden_objects:
+- Soft training mat
+- slippery rice ball
+text_safe_area: Top third of the page, above the characters' heads
+status: AI planned

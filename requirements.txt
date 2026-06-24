@@ -1,0 +1,17 @@
+fastapi
+typer
+rich
+pyyaml
+jinja2
+jsonschema
+numpy
+pillow
+pypdf
+reportlab
+python-dotenv
+openai
+opencv-python-headless
+pytest
+uvicorn
+sqlmodel
+python-multipart

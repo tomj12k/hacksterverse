@@ -1,0 +1,27 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 32
+page_type: back cover
+scene_title: Samurai Splat
+story_text: Samurai Splat takes a deep breath and stands tall on the soft training
+  mat. He smiles, knowing that with patience, even the tiniest steps can lead to big
+  victories. The village square buzzes with cheerful activity as he bows to the reader,
+  thanking them for joining his journey.
+illustration_direction: Samurai Splat stands in the center of the village square,
+  feet planted firmly on a soft training mat. He has a peaceful, focused expression,
+  with a slight smile. The background shows the bustling village with colorful buildings,
+  playful children, and friendly villagers. The lighting is warm and inviting, with
+  soft shadows to emphasize calmness.
+characters:
+- Samurai Splat
+environment: Village square
+emotion: calm and content
+camera: medium shot, slightly angled to show the mat and the village in the background
+hidden_objects:
+- bamboo practice pole
+- noodle bowl
+- slippery rice ball
+text_safe_area: top third of the page, centered above Samurai Splat's head
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_32_samurai_splat.md
+status: prompt generated

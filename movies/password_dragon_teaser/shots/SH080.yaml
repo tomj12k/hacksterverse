@@ -1,0 +1,32 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH080
+source_page: 14
+scene_title: Password Parrot
+duration_seconds: 6
+shot_type: privacy lesson
+camera: medium shot with parrot entering from above
+motion: Password Parrot flutters in; Niko gently pauses the conversation
+description: Password Parrot asks for the secret and Niko explains privacy.
+characters:
+- Hackster Niko
+- Password Dragon
+- Password Parrot
+dialogue:
+- speaker: Password Parrot
+  text: Tell me the secret!
+- speaker: Niko
+  text: Passwords are private.
+narration: ''
+sfx:
+- soft wing flutter
+- gentle pause chime
+music: kind teaching motif
+continuity_notes: Do not shame the parrot; it should look eager, not sneaky.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH080_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH080_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH080_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH080_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH080_mix.wav

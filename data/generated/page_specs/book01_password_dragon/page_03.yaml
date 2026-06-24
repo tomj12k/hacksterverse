@@ -1,0 +1,19 @@
+book: Hackster Niko and the Password Dragon
+book_slug: book01_password_dragon
+page_number: 3
+page_type: front_matter
+scene_title: Dedication
+story_text: Dedication text placeholder.
+illustration_direction: Gentle small illustration moment with Niko holding a glowing
+  gear.
+characters:
+- Hackster Niko
+environment: ''
+emotion: kind
+camera: quiet vignette
+hidden_objects:
+- Golden Gear
+text_safe_area: Leave clean open center area for dedication text.
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/book01_password_dragon/page_03_dedication.md
+status: prompt generated

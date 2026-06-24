@@ -1,0 +1,27 @@
+book_slug: samurai_splat_01
+page_number: 17
+page_type: problem
+scene_title: The Water Balloon Relay
+story_text: Samurai Splat stood at the starting line, his bamboo practice pole in
+  hand. 'This is no ordinary race,' he declared. 'I will conquer it with honor and...
+  dramatic flair!' He refused to hold the water balloon in his hands like everyone
+  else. 'A true warrior carries his payload with dignity!' he insisted.
+illustration_direction: Samurai Splat stands dramatically at the starting line of
+  a village square relay race, holding a bamboo practice pole instead of a water balloon.
+  His pose is overly serious, contrasting with the cheerful, playful expressions of
+  the village people around him. The track is marked with colorful ribbons, and water
+  balloons are visible in the background.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village square
+emotion: Determined and confused
+camera: Medium shot focusing on Samurai Splat's dramatic stance and the contrast with
+  the village people
+hidden_objects:
+- slippery rice ball
+- soft training mat
+text_safe_area: Top and bottom thirds of the page, avoiding the central illustration
+  area
+status: AI planned

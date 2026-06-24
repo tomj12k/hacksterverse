@@ -1,0 +1,9 @@
+{
+  "page_number": 20,
+  "trim_size": "8.5x8.5",
+  "bleed_inches": 0.125,
+  "safe_margin_inches": 0.5,
+  "text_safe_area": "Top third of the page",
+  "illustration_path": "",
+  "prompt_path": ""
+}

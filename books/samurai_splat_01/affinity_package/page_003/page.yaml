@@ -1,0 +1,28 @@
+book_slug: samurai_splat_01
+page_number: 3
+page_type: introduction
+scene_title: Meet Shotgun Bob
+story_text: Samurai Splat stood on the soft training mat, trying to balance on one
+  foot. 'I must master my footing!' he declared dramatically. 'You're wobblin' like
+  a noodle in a typhoon!' laughed Shotgun Bob, tossing a rice ball to Splat. 'Eh,
+  just grab the pole and practice!' 'But I must do it with grace and honor!' Splat
+  protested, before immediately losing his balance.
+illustration_direction: Samurai Splat is dramatically balancing on one foot on a soft
+  training mat, arms out for balance, wearing his signature headband and training
+  gi. Beside him, Shotgun Bob is a goofy, round character with a shotgun-shaped hat,
+  holding a rice ball in one hand and pointing at Splat with the other. The background
+  shows a simple training area with a bamboo practice pole in the corner. Use bold,
+  saturated colors and expressive poses with slapstick motion lines to emphasize Splat's
+  wobbling.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Training area with a soft mat
+emotion: Playful and humorous
+camera: Medium shot from the side to capture both characters and the training mat
+hidden_objects:
+- slippery rice ball
+- bamboo practice pole
+text_safe_area: Top and bottom thirds of the page, avoiding the central character
+  area
+status: AI planned

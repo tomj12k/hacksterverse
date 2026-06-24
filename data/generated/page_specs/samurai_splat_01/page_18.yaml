@@ -1,0 +1,27 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 18
+page_type: problem
+scene_title: The Rice Ball Toss
+story_text: Samurai Splat tried to toss rice balls into a bucket, but he got too excited.
+  'I must show my utmost precision!' he declared, puffing out his chest. 'Just aim
+  for the bucket, Splat,' said Shotgun Bob, scratching his head. 'It's not that hard.'
+illustration_direction: Samurai Splat stands on a soft training mat in the village
+  square, holding a rice ball. His eyes are wide with determination, and his tiny
+  samurai armor is comically oversized. To his right, Shotgun Bob stands with arms
+  crossed, looking unimpressed. In the background, village people watch with amused
+  expressions. A bamboo practice pole is visible in the corner of the square.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village square
+emotion: excited
+camera: medium shot
+hidden_objects:
+- slippery rice ball
+- noodle bowl
+text_safe_area: top third
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_18_the_rice_ball_toss.md
+status: prompt generated

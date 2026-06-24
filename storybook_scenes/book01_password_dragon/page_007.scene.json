@@ -1,0 +1,273 @@
+{
+  "approval": {
+    "approved": false,
+    "approved_at": null,
+    "approved_by": null,
+    "notes": ""
+  },
+  "book_illustration_path": "books/book01_password_dragon/illustrations/page_007.png",
+  "book_illustration_version": 1782002924428707453,
+  "book_slug": "book01_password_dragon",
+  "canvas": {
+    "bleed_inches": 0.125,
+    "dpi": 300,
+    "height_px": 2625,
+    "safe_margin_inches": 0.5,
+    "trim_inches": [
+      8.5,
+      8.5
+    ],
+    "width_px": 2625
+  },
+  "created_at": "2026-06-21T05:42:15Z",
+  "layers": [
+    {
+      "asset_path": "books/book01_password_dragon/illustrations/page_007.png",
+      "asset_version": 1782002924428707453,
+      "id": "book_illustration",
+      "locked": true,
+      "name": "Current Page Illustration",
+      "parallax_factor": 0,
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "transform": {
+        "height": 1,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 1,
+        "x": 0.5,
+        "y": 0.5
+      },
+      "type": "background",
+      "versions": [],
+      "visible": true,
+      "z_index": 0
+    },
+    {
+      "id": "camera_001",
+      "locked": false,
+      "name": "Camera",
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "transform": {
+        "rotation": 0,
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      },
+      "type": "camera",
+      "versions": [],
+      "visible": true,
+      "z_index": 99
+    },
+    {
+      "blend_mode": "multiply",
+      "id": "lighting_001",
+      "locked": false,
+      "name": "Ambient Light",
+      "opacity": 0,
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "tint_color": "#FFFFFF",
+      "transform": {},
+      "type": "lighting",
+      "versions": [],
+      "visible": true,
+      "z_index": 10
+    },
+    {
+      "asset_path": "assets/layers/characters/niko/niko_kind_wave.png",
+      "character_slug": "niko",
+      "id": "char_niko",
+      "locked": false,
+      "name": "Hackster Niko",
+      "parallax_factor": 1,
+      "pose": "kind_wave",
+      "preserve_aspect": true,
+      "prompt_history": [],
+      "rig": {
+        "bones": [
+          {
+            "id": "body_lean",
+            "max": 15,
+            "min": -15,
+            "name": "Body Lean",
+            "rotation": -2
+          },
+          {
+            "id": "head_tilt",
+            "max": 18,
+            "min": -18,
+            "name": "Head Tilt",
+            "rotation": -3
+          },
+          {
+            "id": "antenna_tilt",
+            "max": 35,
+            "min": -35,
+            "name": "Antenna Tilt",
+            "rotation": -8
+          },
+          {
+            "id": "left_upper_arm",
+            "max": 160,
+            "min": -160,
+            "name": "Left Upper Arm",
+            "rotation": 118
+          },
+          {
+            "id": "left_forearm",
+            "max": 170,
+            "min": -170,
+            "name": "Left Forearm",
+            "rotation": 104
+          },
+          {
+            "id": "left_hand",
+            "max": 45,
+            "min": -45,
+            "name": "Left Hand",
+            "rotation": 0
+          },
+          {
+            "id": "right_upper_arm",
+            "max": 160,
+            "min": -160,
+            "name": "Right Upper Arm",
+            "rotation": -58
+          },
+          {
+            "id": "right_forearm",
+            "max": 170,
+            "min": -170,
+            "name": "Right Forearm",
+            "rotation": -92
+          },
+          {
+            "id": "right_hand",
+            "max": 45,
+            "min": -45,
+            "name": "Right Hand",
+            "rotation": 18
+          },
+          {
+            "id": "left_thigh",
+            "max": 130,
+            "min": 45,
+            "name": "Left Thigh",
+            "rotation": 88
+          },
+          {
+            "id": "left_shin",
+            "max": 135,
+            "min": 45,
+            "name": "Left Shin",
+            "rotation": 94
+          },
+          {
+            "id": "left_foot",
+            "max": 35,
+            "min": -35,
+            "name": "Left Foot",
+            "rotation": 0
+          },
+          {
+            "id": "right_thigh",
+            "max": 135,
+            "min": 50,
+            "name": "Right Thigh",
+            "rotation": 94
+          },
+          {
+            "id": "right_shin",
+            "max": 135,
+            "min": 45,
+            "name": "Right Shin",
+            "rotation": 86
+          },
+          {
+            "id": "right_foot",
+            "max": 35,
+            "min": -35,
+            "name": "Right Foot",
+            "rotation": 0
+          }
+        ],
+        "type": "niko_simple_v3"
+      },
+      "shadow": {
+        "angle": 270,
+        "blur": 8,
+        "distance": 12,
+        "enabled": true,
+        "opacity": 0.24
+      },
+      "transform": {
+        "height": 0.42,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 0.34363636363636363,
+        "x": 0.7498779296875,
+        "y": 0.6578181340144231
+      },
+      "type": "character",
+      "versions": [],
+      "visible": true,
+      "z_index": 5
+    },
+    {
+      "align": "center",
+      "box_color": "#FFFFFF",
+      "box_opacity": 0.84,
+      "font_family": "rounded",
+      "font_size": 0.02,
+      "id": "page_text",
+      "locked": false,
+      "name": "Page Text",
+      "parallax_factor": 1,
+      "preserve_aspect": true,
+      "prompt_history": [],
+      "stroke_color": "#F2C94C",
+      "style_prompt": "",
+      "text": "\"I can help,\" said Niko. \"First, we stay calm. Then we think together.\"",
+      "text_art_variant": 0,
+      "text_color": "#154c84",
+      "transform": {
+        "height": 0.17,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 0.78,
+        "x": 0.4999436598557692,
+        "y": 0.1832557091346154
+      },
+      "type": "text",
+      "versions": [],
+      "visible": true,
+      "z_index": 20,
+      "asset_path": null
+    }
+  ],
+  "lighting_brief": "ambient_soft",
+  "page_count": 32,
+  "page_number": 7,
+  "production_notes": "",
+  "prompt_history": [],
+  "qa": {
+    "ready": false,
+    "errors": 0,
+    "warnings": 0,
+    "issues": [
+      {
+        "severity": "info",
+        "code": "not_approved",
+        "message": "Page is not approved yet."
+      }
+    ]
+  },
+  "status": "not_started",
+  "story_text": "\"I can help,\" said Niko. \"First, we stay calm. Then we think together.\"",
+  "updated_at": "2026-06-21T05:42:21Z"
+}

@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block title %}Story Maker · Hackster Studio{% endblock %}
+
+{% block content %}
+<div class="review-workspace">
+  <section class="review-command">
+    <div class="review-title-block">
+      <span class="review-kicker">Review Studio</span>
+      <h1>{{ book_nav.current.title if book_nav.current else scene.book_slug }}</h1>
+      <p>Page {{ "%03d"|format(scene.page_number) }} of {{ page_count }} · {{ scene.scene_title|default("Editable story page") }}</p>
+    </div>
+    <div class="review-command-actions">
+      <span class="save-state" data-save-state>Saved</span>
+      <button type="button" data-action="undo" disabled>Undo</button>
+      <button type="button" data-action="redo" disabled>Redo</button>
+      <button type="button" data-action="save">Save</button>
+      <button type="button" data-action="add-text">Add Text</button>
+      <button type="button" data-action="toggle-text">Toggle Text</button>
+      <button type="button" data-copy="#scene-json">Copy JSON</button>
+    </div>
+  </section>
+
+  <section class="review-status-rail" data-production-strip>
+    <div class="review-status-unit">
+      <span>Status</span>
+      <strong data-page-status>{{ scene.status|default("not_started")|replace("_", " ")|title }}</strong>
+    </div>
+    <div class="review-status-unit">
+      <span>QA</span>
+      <strong data-qa-summary>{{ scene.qa.errors|default(0) }} errors · {{ scene.qa.warnings|default(0) }} warnings</strong>
+    </div>
+    <label class="review-status-control">Set Status
+      <select data-page-status-control>
+        {% for status in ["not_started", "generated", "needs_edit", "approved", "exported"] %}
+        <option value="{{ status }}" {{ "selected" if scene.status == status else "" }}>{{ status|replace("_", " ")|title }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <div class="review-status-actions">
+      <button type="button" data-action="mark-needs-edit">Needs Edit</button>
+      <button type="button" data-action="approve-page">Approve Page</button>
+      <button type="button" data-action="export-flat">Export Flat</button>
+      <button type="button" data-action="promote-flat">Promote To Book</button>
+      <a class="button-link" href="/book-assembly?book_slug={{ scene.book_slug }}">Assembly</a>
+    </div>
+  </section>
+
+  <section class="review-regenerate">
+    <div>
+      <span class="review-kicker">Regenerate</span>
+      <strong data-page-regen-status>Redo only the part of this page that needs work.</strong>
+    </div>
+    <div class="review-status-actions">
+      <button type="button" data-page-regenerate="story">Story</button>
+      <button type="button" data-page-regenerate="prompt">Prompt</button>
+      <button type="button" data-page-regenerate="image">Image</button>
+      <button type="button" data-page-regenerate="all">Story + Prompt + Image</button>
+    </div>
+  </section>
+
+  <section class="story-maker" data-story-maker>
+  <aside class="layers-panel">
+    <div class="panel-heading">
+      <div>
+        <span>Scene</span>
+        <h2>Layers</h2>
+      </div>
+      <div class="layers-panel-actions">
+        <button type="button" data-action="add-layer" aria-label="Add layer">+</button>
+        <button type="button" data-action="delete-layer" aria-label="Delete selected layer" disabled>−</button>
+      </div>
+    </div>
+    <section class="story-cast-panel">
+      <div class="panel-heading panel-heading--compact">
+        <div>
+          <span>Story Cast</span>
+          <h3>Planned Characters</h3>
+        </div>
+      </div>
+      <div class="story-cast-list" data-story-cast></div>
+    </section>
+    <div class="layer-panel-tools">
+      <button type="button" data-layer-action="toggle-visible">Show/Hide</button>
+      <button type="button" data-layer-action="toggle-lock">Lock</button>
+      <button type="button" data-layer-action="duplicate">Duplicate</button>
+      <button type="button" data-layer-action="front">Front</button>
+      <button type="button" data-layer-action="back">Back</button>
+    </div>
+    <div class="layer-list" data-layer-list></div>
+  </aside>
+
+  <div class="stage-panel">
+    <section class="page-review-nav page-review-nav--stage" aria-label="Page navigation">
+      <a class="button-link page-nav-button" href="/story-maker?book_slug={{ scene.book_slug }}&page={{ [scene.page_number - 1, 1]|max }}">Previous</a>
+      <form class="page-jump-form" method="get" action="/story-maker">
+        <input type="hidden" name="book_slug" value="{{ scene.book_slug }}">
+        <label>Page
+          <input name="page" type="number" min="1" max="{{ page_count }}" value="{{ scene.page_number }}">
+        </label>
+        <button type="submit">Go</button>
+      </form>
+      <a class="button-link page-nav-button" href="/story-maker?book_slug={{ scene.book_slug }}&page={{ [scene.page_number + 1, page_count]|min }}">Next</a>
+      <div class="page-review-progress">
+        <span>{{ scene.page_number }}</span>
+        <progress value="{{ scene.page_number }}" max="{{ page_count }}"></progress>
+        <span>{{ page_count }}</span>
+      </div>
+    </section>
+    <div class="stage-toolbar">
+      <div class="viewport-mode-group" role="group" aria-label="Canvas viewport size">
+        <button type="button" data-viewport-mode="default">Default</button>
+        <button type="button" data-viewport-mode="theater">Theater</button>
+        <button type="button" data-viewport-mode="focus">Focus</button>
+      </div>
+      <label><input type="checkbox" data-guide="safe" checked> Safe</label>
+      <label><input type="checkbox" data-guide="bleed" checked> Bleed</label>
+      <label><input type="checkbox" data-guide="trim" checked> Trim</label>
+      <label><input type="checkbox" data-grid-toggle checked> Grid</label>
+      <label><input type="checkbox" data-snap-toggle checked> Snap</label>
+      <label>Grid
+        <select data-grid-size>
+          <option value="0.025">2.5%</option>
+          <option value="0.05" selected>5%</option>
+          <option value="0.10">10%</option>
+        </select>
+      </label>
+      <span class="snap-readout" data-snap-readout>Snap: 5% grid</span>
+      <button class="button-danger button-compact" type="button" data-action="remove-niko-book">Remove Niko From Book</button>
+      <span class="stage-action-status" data-stage-action-status></span>
+    </div>
+    <div class="story-stage show-safe show-bleed show-trim show-grid" data-story-stage aria-label="Layered story page preview">
+      <div class="page-guide page-guide--bleed" aria-hidden="true"></div>
+      <div class="page-guide page-guide--trim" aria-hidden="true"></div>
+      <div class="page-guide page-guide--safe" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <aside class="inspector-panel">
+    <div class="panel-heading">
+      <div>
+        <span>Edit</span>
+        <h2>Inspector</h2>
+      </div>
+    </div>
+    <div class="inspector-columns">
+      <div class="inspector-column inspector-column--attributes">
+        <div class="inspector-grid">
+          <label>X <input data-control="x" type="number" step="0.01"></label>
+          <label>Y <input data-control="y" type="number" step="0.01"></label>
+          <label>Width <input data-control="width" type="number" step="0.01" min="0.02" max="2"></label>
+          <label>Height <input data-control="height" type="number" step="0.01" min="0.02" max="2"></label>
+          <label>Scale <input data-control="scale" type="number" step="0.01" min="0.05"></label>
+          <label>Zoom <input data-control="zoom" type="number" step="0.1" min="0.5" max="5"></label>
+          <label>Rotation <input data-control="rotation" type="number" step="1"></label>
+          <label>Opacity <input data-control="opacity" type="number" step="0.05" min="0" max="1"></label>
+        </div>
+        <div class="transform-tools">
+          <label><input type="checkbox" data-transform-option="preserve-aspect"> Preserve Aspect</label>
+          <button type="button" data-transform-action="snap-safe">Snap To Safe</button>
+          <button type="button" data-transform-action="align-center">Center</button>
+          <button type="button" data-transform-action="reset">Reset</button>
+        </div>
+        <div data-inspector-extras></div>
+        <section class="inspector-section qa-panel">
+          <h3>Page QA</h3>
+          <div data-qa-panel></div>
+        </section>
+      </div>
+
+      <div class="inspector-column inspector-column--pose">
+        <div data-pose-extras></div>
+        <section class="inspector-section inspector-section--skeleton">
+          <h3>Skeleton</h3>
+          <div class="bone-list" data-bone-list></div>
+        </section>
+      </div>
+    </div>
+  </aside>
+</section>
+</div>
+
+<pre id="scene-json" class="hidden-json">{{ scene | tojson(indent=2) }}</pre>
+<script id="story-scene-data" type="application/json">{{ scene | tojson }}</script>
+
+<dialog id="asset-browser" data-asset-browser>
+  <div class="asset-browser-header">
+    <h2>Add Layer</h2>
+    <button type="button" data-close-browser aria-label="Close">x</button>
+  </div>
+  <nav class="asset-browser-tabs" data-asset-tabs></nav>
+  <div class="asset-browser-grid" data-asset-grid></div>
+</dialog>
+
+<script src="{{ url_for('static', path='story_maker.js') }}"></script>
+{% endblock %}

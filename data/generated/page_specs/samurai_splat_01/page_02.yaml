@@ -1,0 +1,22 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 2
+page_type: introduction
+scene_title: The Clumsy Hero
+story_text: Samurai Splat stood on one foot in the village square, holding a steaming
+  noodle bowl with both hands. His tiny legs wobbled like reeds in the wind.
+illustration_direction: Samurai Splat is shown balancing on one foot in the village
+  square. He is holding a noodle bowl in both hands. His body is slightly bent, showing
+  his wobbling balance. The village square has colorful buildings and a few villagers
+  in the background.
+characters:
+- Samurai Splat
+environment: Village square
+emotion: determined
+camera: medium shot
+hidden_objects:
+- slippery rice ball
+text_safe_area: top third of the page
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_02_the_clumsy_hero.md
+status: prompt generated

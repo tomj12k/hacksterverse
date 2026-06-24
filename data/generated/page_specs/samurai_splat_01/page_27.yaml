@@ -1,0 +1,29 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 27
+page_type: problem
+scene_title: The Water Balloon Challenge
+story_text: "Samurai Splat charges into the village square\u2019s water balloon challenge\
+  \ with dramatic flair, declaring it a 'battle of epic proportions!' He insists on\
+  \ using his noodle bowl as a helmet and a bamboo practice pole to swing balloons\
+  \ at the targets. The rules? Out the window."
+illustration_direction: Samurai Splat is in the center of the village square, wearing
+  his signature headband and dramatic pose. He holds a bamboo practice pole and wears
+  a noodle bowl as a helmet. Around him, the village people look confused and amused.
+  Shotgun Bob stands nearby, arms crossed, giving a deadpan look. The environment
+  is bright and colorful, with playful lighting and exaggerated expressions. The scene
+  is dynamic, showing motion with splashes and flying water balloons.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village square
+emotion: excited and chaotic
+camera: wide-angle shot to capture the entire scene and the commotion
+hidden_objects:
+- slippery rice ball
+- soft training mat
+text_safe_area: top third of the page, above the illustration
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_27_the_water_balloon_challenge.md
+status: prompt generated

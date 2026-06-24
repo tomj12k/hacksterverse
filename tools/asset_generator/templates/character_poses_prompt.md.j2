@@ -1,0 +1,45 @@
+# Character Pose Sheet Prompt: {{ name }}
+
+Create a professional pose sheet for **{{ name }}** with 10 child-friendly poses.
+
+## Character Description
+
+{{ appearance }}
+
+## Required Poses
+
+{% for pose in poses[:10] -%}
+- {{ pose }}
+{% endfor %}
+
+## Gadget References
+
+{% for gadget in gadgets -%}
+- {{ gadget }}
+{% endfor %}
+
+## Pose Rules
+
+- Keep the same proportions, silhouette, materials, and color placement in every pose.
+- Make each pose readable at children's book thumbnail size.
+- Keep gestures friendly, open, energetic, and safe.
+- No weapons.
+- No scary imagery.
+- No aggressive combat poses.
+- Clean white reference-sheet background.
+- No embedded paragraph text.
+
+## Official Colors
+
+{% for color_name, hex_value in color_palette.items() -%}
+- {{ color_name }}: {{ hex_value }}
+{% endfor %}
+
+## Art Direction
+
+{{ art_style }}
+
+## Additional Notes
+
+{{ generation_notes }}
+

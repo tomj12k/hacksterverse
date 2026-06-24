@@ -1,0 +1,29 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH040
+source_page: 6
+scene_title: Password Dragon Appears
+duration_seconds: 7
+shot_type: two character reveal
+camera: wide-to-medium reveal with Niko in foreground
+motion: harmless glowing secret-orbs swirl around the worried dragon
+description: Password Dragon sits among floating password sparkles, worried but gentle.
+characters:
+- Hackster Niko
+- Password Dragon
+dialogue:
+- speaker: Password Dragon
+  text: Oh no. My passwords flew everywhere!
+narration: ''
+sfx:
+- soft dragon sniffle
+- floating sparkle whooshes
+music: tender comic trouble motif
+continuity_notes: No readable passwords, letters, numbers, or symbols in the image.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH040_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH040_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH040_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH040_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH040_mix.wav

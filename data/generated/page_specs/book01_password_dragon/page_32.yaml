@@ -1,0 +1,20 @@
+book: Hackster Niko and the Password Dragon
+book_slug: book01_password_dragon
+page_number: 32
+page_type: teaser
+scene_title: 'Book 2 Teaser: Sneaky Phish'
+story_text: 'A suspicious email teaser hints at Book 2: Sneaky Phish.'
+illustration_direction: Niko notices a friendly, non-scary suspicious email clue on
+  a glowing tablet.
+characters:
+- Hackster Niko
+environment: Hackster HQ
+emotion: curious
+camera: teaser close-up
+hidden_objects:
+- Tiny Bug
+- Mini Robot
+text_safe_area: Leave clean open area for teaser copy.
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/book01_password_dragon/page_32_book_2_teaser:_sneaky_phish.md
+status: prompt generated

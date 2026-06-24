@@ -1,0 +1,26 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 4
+page_type: introduction
+scene_title: Hackster Niko's Challenge
+story_text: Hackster Niko, the village inventor, stood on a wooden crate in the village
+  square. 'Samurai Splat!' he called, 'I have a challenge for you! Today, you must
+  solve a simple problem with the flair of a true hero!' He held up a tiny, wobbly
+  noodle bowl.
+illustration_direction: Hackster Niko stands on a wooden crate in the village square.
+  Samurai Splat stands below, eyes wide with determination. The scene is bright and
+  colorful, with playful lighting. The wooden crate has colorful banners tied to it.
+  The village square has a few curious onlookers peeking from behind stalls and market
+  carts. The background has a soft training mat and a bamboo practice pole visible.
+characters:
+- Samurai Splat
+- Hackster Niko
+environment: Village square
+emotion: excited
+camera: medium shot
+hidden_objects:
+- slippery rice ball
+text_safe_area: top third of the page
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_04_hackster_niko_s_challenge.md
+status: prompt generated

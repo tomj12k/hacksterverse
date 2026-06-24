@@ -1,0 +1,26 @@
+book_slug: samurai_splat_01
+page_number: 23
+page_type: problem
+scene_title: The Rice Ball Relay
+story_text: Samurai Splat leaped into the race with a dramatic yell, but his excitement
+  made him lose focus. He sprinted past the starting line, knocking over a rice ball
+  cart. 'Whoa, whoa, WHOA!' shouted Shotgun Bob, trying to steady the cart. The village
+  people gasped as the slippery rice balls rolled everywhere.
+illustration_direction: Samurai Splat is mid-leap in the center of the village square,
+  arms and legs flailing dramatically. His headband is flying off. Behind him, Shotgun
+  Bob is holding onto the rice ball cart with wide eyes and a goofy expression. Around
+  them, village people are frozen in surprise, some with hands over their mouths.
+  Rice balls are rolling in all directions across the cobblestone square. Use bright,
+  saturated colors and exaggerated motion lines for the slapstick effect.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village square
+emotion: chaotic excitement
+camera: dynamic low angle to emphasize the action
+hidden_objects:
+- slippery rice ball
+- soft training mat tucked under a bench
+text_safe_area: top third of the page, above the action lines
+status: AI planned

@@ -1,0 +1,3 @@
+Guessing Goblin: Try dragon!
+Guessing Goblin: Try password!
+Niko: Nope. Strong passwords do not give up easily.

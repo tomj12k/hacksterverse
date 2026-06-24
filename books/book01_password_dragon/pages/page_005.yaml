@@ -1,0 +1,17 @@
+page_number: 5
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_005.png
+prompt_path: books/book01_password_dragon/prompts/page_005.md
+page_type: story
+scene_title: A Rumbling Sound
+story_text: 'The trees blinked with little lights. Then came a giant sneeze: "Aaa-CHOO!"'
+characters:
+- Hackster Niko
+environment: Cyber Forest
+emotion: surprised
+camera: medium storybook view
+illustration_direction: Niko hears a friendly but huge sneeze echo through glowing
+  trees.
+hidden_objects:
+- Tiny Bug
+text_safe_area: Leave clean open space for editable story text inside safe margins.

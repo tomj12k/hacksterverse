@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gadget.schema.json",
+  "title": "Hackster Asset Generator Gadget Schema",
+  "type": "object",
+  "required": [
+    "asset_type",
+    "name",
+    "slug",
+    "version",
+    "purpose",
+    "appearance",
+    "color_palette",
+    "materials",
+    "angles",
+    "safety_notes",
+    "art_style",
+    "generation_notes"
+  ],
+  "properties": {
+    "asset_type": {
+      "const": "gadget"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": ["string", "number"]
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "appearance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "color_palette": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "angles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "safety_notes": {
+      "type": "string"
+    },
+    "art_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generation_notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
+

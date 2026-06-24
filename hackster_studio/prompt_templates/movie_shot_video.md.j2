@@ -1,0 +1,55 @@
+# Hackster Niko Video Shot Prompt
+
+Movie: {{ movie.title }}
+Shot: {{ shot.shot_id }} - {{ shot.scene_title }}
+
+Animate this shot from the approved keyframe.
+
+## Video Settings
+
+- Target duration: {{ shot.duration_seconds }} seconds
+- FPS: {{ shot.fps }}
+- Resolution: {{ shot.resolution }}
+- Aspect ratio: {{ shot.aspect_ratio }}
+
+## Motion Direction
+
+{{ shot.motion }}
+
+## Camera Direction
+
+{{ shot.camera }}
+
+## Story Direction
+
+{{ shot.description }}
+
+## Characters
+
+{{ shot.characters | join(", ") }}
+
+## Dialogue Timing
+
+{% if shot.narration -%}
+- Narrator: {{ shot.narration }}
+{% endif -%}
+{% for line in shot.dialogue -%}
+- {{ line.speaker }}: {{ line.text }}
+{% endfor -%}
+{% if not shot.narration and not shot.dialogue -%}
+- No spoken dialogue in this shot.
+{% endif %}
+
+## Required Character Lock
+
+{{ niko_consistency_phrase }}
+
+## Continuity Notes
+
+{{ shot.continuity_notes }}
+
+## Negative Prompt / Avoid
+
+{{ movie.negative_prompt }}
+
+No readable text, no fake writing, no captions, no subtitle text, no logos, no scary imagery, no weapons, no horror lighting. Keep Niko mouthless and robot-like; show speech through body language, eyes, antenna glow, and later audio/lip-sync workflow where appropriate.

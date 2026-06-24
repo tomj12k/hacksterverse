@@ -1,0 +1,67 @@
+dgx_host_alias: sync-spark-d1a9_local
+comfyui_url: http://192.168.68.136:8188
+model_root: /home/pizzacat/ai/movie_models
+comfy_models_root: /home/pizzacat/ai/comfyui/ComfyUI/models
+
+already_installed:
+  keyframes:
+    - /home/pizzacat/ai/models/unet/flux1-dev.safetensors
+    - /home/pizzacat/ai/models/unet/flux1-schnell.safetensors
+    - /home/pizzacat/ai/models/clip/clip_l.safetensors
+    - /home/pizzacat/ai/models/clip/t5xxl_fp16.safetensors
+    - /home/pizzacat/ai/models/vae/ae.safetensors
+
+required:
+  wan_video:
+    repo: Comfy-Org/Wan_2.2_ComfyUI_Repackaged
+    purpose: Shot animation from approved keyframes.
+    files:
+      diffusion_models:
+        - wan2.2_ti2v_5B_fp16.safetensors
+        - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+        - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+      text_encoders:
+        - umt5_xxl_fp8_e4m3fn_scaled.safetensors
+      vae:
+        - wan2.2_vae.safetensors
+        - wan_2.1_vae.safetensors
+      loras:
+        - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+        - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+
+  chatterbox_tts:
+    repo: ResembleAI/chatterbox-turbo
+    purpose: Fast local character/narrator voice generation.
+    local_dir: chatterbox-turbo
+
+  chatterbox_multilingual:
+    repo: ResembleAI/chatterbox
+    purpose: Higher quality or multilingual Chatterbox voices.
+    local_dir: chatterbox-multilingual
+
+  latentsync:
+    repo: ByteDance/LatentSync-1.6
+    purpose: Final lip-sync pass for rendered dialogue clips.
+    local_dir: latentsync-1.6
+
+  ace_step:
+    repo: ACE-Step/ACE-Step-v1-3.5B
+    purpose: Local music bed and stingers.
+    local_dir: ace-step-v1-3.5B
+
+  audioldm2:
+    repo: cvssp/audioldm2
+    purpose: Non-gated local SFX, ambience, and sound design elements.
+    local_dir: audioldm2
+
+gated_alternative:
+  stable_audio:
+    repo: stabilityai/stable-audio-open-1.0
+    purpose: Higher quality SFX/ambience option if Hugging Face access is approved for your token.
+    status: gated; not required for the default DGX install.
+
+optional:
+  local_llm:
+    repo: Qwen/Qwen3.6-35B-A3B
+    purpose: Local script, shot, and prompt planning. Large download; install after media stack if desired.
+    local_dir: qwen3.6-35b-a3b

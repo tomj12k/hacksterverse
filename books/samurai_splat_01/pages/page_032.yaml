@@ -1,0 +1,16 @@
+book_slug: samurai_splat_01
+page_number: 32
+page_type: teaser
+scene_title: Next Adventure Teaser
+story_text: A new clue glowed nearby. Another clever fix was waiting.
+illustration_direction: Friendly teaser page with a non-scary clue for the next adventure.
+characters:
+- Samurai Splat
+environment: Story world
+emotion: curious
+camera: teaser close-up
+hidden_objects:
+- noodle bowl
+- slippery rice ball
+text_safe_area: Leave clean open area for teaser copy.
+status: planned

@@ -1,0 +1,30 @@
+# Approval Checklist
+
+- [ ] Page 005: A Rumbling Sound
+- [ ] Page 006: Passwords Everywhere
+- [ ] Page 007: Niko Offers Help
+- [ ] Page 008: The Easy Password
+- [ ] Page 009: A Better Idea
+- [ ] Page 010: Four Helpful Pieces
+- [ ] Page 011: The Silly Strong Password
+- [ ] Page 012: Guessing Goblins Arrive
+- [ ] Page 013: The Guesses Fail
+- [ ] Page 014: No Sharing Secrets
+- [ ] Page 015: Trusted Grown-Ups
+- [ ] Page 016: Building The Password Vault
+- [ ] Page 017: A Safe Place
+- [ ] Page 018: Teamwork Works
+- [ ] Page 019: The Goblins Learn
+- [ ] Page 020: Practice Time
+- [ ] Page 021: The Tiny Bug
+- [ ] Page 022: Crystal Check
+- [ ] Page 023: The Forest Cheers
+- [ ] Page 024: A Promise
+- [ ] Page 025: Niko's Rule
+- [ ] Page 026: One More Test
+- [ ] Page 027: Everyone Helps
+- [ ] Page 028: A Thank-You Gift
+- [ ] Page 029: Mission Complete
+- [ ] Page 030: The End
+- [ ] Page 031: Password Challenge
+- [ ] Page 032: Next Mission

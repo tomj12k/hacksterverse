@@ -1,0 +1,22 @@
+book_slug: samurai_splat_01
+page_number: 19
+page_type: problem
+scene_title: The Noodle Toss
+story_text: Samurai Splat stood over the pot, determined to master the art of tossing
+  noodles. He raised his wooden spoon high, but the noodles were slippery and refused
+  to stay on the spoon. 'They're too smooth!' he cried.
+illustration_direction: Samurai Splat is in a kitchen area, holding a wooden spoon
+  high above a pot. His noodles are slipping off the spoon. Shotgun Bob is standing
+  nearby, holding a noodle bowl with a confused look. The kitchen has colorful tiles
+  and a large window with sunlight streaming in.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Kitchen area
+emotion: Determined and frustrated
+camera: Medium shot from the side, capturing both characters and the noodles in motion
+hidden_objects:
+- Soft training mat
+- bamboo practice pole
+text_safe_area: Top left and bottom center
+status: AI planned

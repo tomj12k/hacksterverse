@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Generate · Hackster Studio{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>Images</h1>
+    <p>Generate new art and review every image attached to the current book.</p>
+  </div>
+</section>
+
+<p id="gen-conn-status" class="gen-conn-status">Checking DGX connection…</p>
+
+<div class="gen-layout">
+
+  <!-- ── Generation form ── -->
+  <section class="gen-card" id="gen-form-section">
+    <h2>New Generation</h2>
+    <div class="gen-form">
+      <details class="gen-prefix-details" open>
+        <summary class="gen-label">Character context <span class="gen-prefix-hint">(prepended to every prompt)</span></summary>
+        <textarea id="gen-prefix" class="gen-textarea gen-textarea--sm" rows="3">Hackster Niko, a small friendly learning robot, HN-01 model, 2.5 feet tall, rounded friendly robot body, white surfaces with Hackster Blue accents, expressive glowing robot eyes, no mouth, antenna on head, children's storybook illustration style, soft dimensional lighting, no text</textarea>
+      </details>
+
+      <label class="gen-label" for="gen-prompt">Your prompt</label>
+      <textarea id="gen-prompt" class="gen-textarea" rows="3"
+        placeholder="standing in front of a red steam train at a sunset station"></textarea>
+
+      <label class="gen-label" for="gen-filename">Output filename</label>
+      <div class="gen-filename-row">
+        <span class="gen-filename-prefix">data/generated/pages/</span>
+        <input id="gen-filename" class="gen-filename-input" type="text" placeholder="auto">
+        <span class="gen-filename-suffix">.png</span>
+      </div>
+
+      <div class="gen-actions">
+        <button id="gen-submit" class="btn-primary" type="button">Generate</button>
+        <span id="gen-error" class="gen-error hidden"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Active jobs ── -->
+  <section class="gen-card" id="gen-jobs-section">
+    <div class="gen-section-head">
+      <h2>Jobs</h2>
+      <span id="gen-jobs-badge" class="gen-badge hidden"></span>
+    </div>
+    <div id="gen-jobs-list" class="gen-jobs-list">
+      <p class="gen-empty">No jobs yet this session.</p>
+    </div>
+  </section>
+
+  <!-- ── Image gallery ── -->
+  <section class="gen-card gen-card--wide" id="gen-gallery-section">
+    <div class="gen-section-head">
+      <div>
+        <h2>Book Image Library</h2>
+        <p class="gen-section-subtitle" id="gen-gallery-summary">Loading book image library...</p>
+      </div>
+      <button id="gen-refresh" class="btn-ghost" type="button">Refresh</button>
+    </div>
+    <div id="gen-book-filters" class="gen-book-filters" aria-label="Book image filters"></div>
+    <div id="gen-gallery" class="gen-gallery" data-current-book-slug="{{ book_slug }}">
+      <p class="gen-empty" id="gen-gallery-empty">Loading…</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- Full-size lightbox -->
+<dialog id="gen-lightbox" class="gen-lightbox">
+  <button id="gen-lightbox-close" class="gen-lightbox-close" type="button" aria-label="Close">&times;</button>
+  <img id="gen-lightbox-img" src="" alt="Generated image">
+  <p id="gen-lightbox-caption" class="gen-lightbox-caption"></p>
+</dialog>
+
+<script src="{{ url_for('static', path='generate.js') }}?v=book-library"></script>
+{% endblock %}

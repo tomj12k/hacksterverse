@@ -1,0 +1,19 @@
+book_slug: book01_password_dragon
+page_number: 16
+page_type: story
+scene_title: 'Story Beat 6: Guessing Goblins try easy guesses and fail.'
+story_text: 'Draft story text for page 16: Guessing Goblins try easy guesses and fail.'
+illustration_direction: Show guessing goblins try easy guesses and fail. Keep the
+  Cyber Forest friendly, bright, rounded, and readable.
+characters:
+- Hackster Niko
+environment: Cyber Forest
+emotion: relieved
+camera: close warm character moment
+hidden_objects:
+- Golden Gear
+- Tiny Bug
+- Blue Crystal
+- Mini Robot
+text_safe_area: Leave clean open space for story text inside the 0.5 inch safe margin.
+status: planned

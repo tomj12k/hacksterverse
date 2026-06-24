@@ -1,0 +1,14 @@
+# Replace paths with approved rendered clips if needed.
+# ffmpeg concat demuxer format:
+file '../renders/video_lipsynced/SH010_lipsync.mp4'
+file '../renders/video_lipsynced/SH020_lipsync.mp4'
+file '../renders/video_lipsynced/SH030_lipsync.mp4'
+file '../renders/video_lipsynced/SH040_lipsync.mp4'
+file '../renders/video_lipsynced/SH050_lipsync.mp4'
+file '../renders/video_lipsynced/SH060_lipsync.mp4'
+file '../renders/video_lipsynced/SH070_lipsync.mp4'
+file '../renders/video_lipsynced/SH080_lipsync.mp4'
+file '../renders/video_lipsynced/SH090_lipsync.mp4'
+file '../renders/video_lipsynced/SH100_lipsync.mp4'
+file '../renders/video_lipsynced/SH110_lipsync.mp4'
+file '../renders/video_lipsynced/SH120_lipsync.mp4'

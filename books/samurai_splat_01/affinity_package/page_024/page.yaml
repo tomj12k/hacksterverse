@@ -1,0 +1,26 @@
+book_slug: samurai_splat_01
+page_number: 24
+page_type: problem
+scene_title: The Noodle Relay
+story_text: Samurai Splat stood at the starting line of the noodle relay race, his
+  bamboo pole in hand. 'This is my moment!' he declared. 'I will show the village
+  the power of patience and precision!' But as he tried to balance the noodles on
+  his pole, they kept slipping off.
+illustration_direction: Samurai Splat is in the center of a bustling kitchen area,
+  holding a bamboo practice pole with noodles on it. He is trying to balance the noodles,
+  but they are slipping off. Around him, the village people are cheering and watching
+  the race. Shotgun Bob is nearby, holding a soft training mat and giving advice.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Kitchen area
+emotion: Determined but frustrated
+camera: Medium shot from the side, capturing Samurai Splat's struggle and the reactions
+  of the crowd
+hidden_objects:
+- slippery rice ball
+- noodle bowl
+text_safe_area: Top third of the page, above the illustration of Samurai Splat and
+  the crowd
+status: AI planned

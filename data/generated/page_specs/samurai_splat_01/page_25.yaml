@@ -1,0 +1,28 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 25
+page_type: problem
+scene_title: The Balloon Juggling Challenge
+story_text: Samurai Splat stood in the village square, determined to juggle the balloons.
+  'This is a matter of great importance!' he declared. But the balloons floated away,
+  no matter how hard he tried to keep them in the air. 'They are slippery and light!'
+  he cried.
+illustration_direction: Samurai Splat is in the center of the village square, wearing
+  his dramatic samurai outfit and headband. He is mid-juggle with three balloons in
+  the air, one in each hand, and one floating away. His face shows intense concentration.
+  Shotgun Bob stands to the side, arms crossed, watching with a goofy grin. The village
+  square has colorful stalls and a soft training mat on the ground. The lighting is
+  bright and playful with cinematic highlights.
+characters:
+- Samurai Splat
+- Shotgun Bob
+environment: Village square
+emotion: Determined and frustrated
+camera: Medium shot from the side, capturing both Samurai Splat and Shotgun Bob
+hidden_objects:
+- bamboo practice pole
+- noodle bowl
+text_safe_area: Top third of the page, above the characters and balloons
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_25_the_balloon_juggling_challenge.md
+status: prompt generated

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}{{ book.title if book else "Book" }} · Hackster Studio{% endblock %}
+{% block content %}
+{% if book %}
+<section class="page-head">
+  <div>
+    <h1>{{ book.title }}</h1>
+    <p>{{ book.series }} · Ages {{ book.target_age }} · {{ book.page_count }} pages · {{ book.status }}</p>
+  </div>
+  <div class="button-row">
+    <form method="post" action="/books/{{ book.slug }}/set-current"><button type="submit">Set Current</button></form>
+    <a class="button-link" href="/workflow?book_slug={{ book.slug }}">Workflow</a>
+    <a class="button-link" href="/book-generation?book_slug={{ book.slug }}">Generate Book</a>
+    <a class="button-link" href="/story-maker?book_slug={{ book.slug }}&page=1">Story Maker</a>
+    <a class="button-link" href="/book-assembly?book_slug={{ book.slug }}">Assembly</a>
+    <form method="post" action="/books/{{ book.slug }}/delete" onsubmit='return confirm({{ ("Delete " ~ book.title ~ " and all generated files for this book? This cannot be undone.")|tojson }});'>
+      <button class="button-danger" type="submit">Delete Book</button>
+    </form>
+  </div>
+</section>
+
+<section class="book-detail-layout">
+  <form class="editor book-metadata-form" method="post" action="/books/{{ book.slug }}/edit">
+    <h2>Book Settings</h2>
+    <label>Title <input name="title" value="{{ book.title }}"></label>
+    <div class="form-grid">
+      <label>Series <input name="series" value="{{ book.series }}"></label>
+      <label>Age <input name="target_age" value="{{ book.target_age }}"></label>
+      <label>Status <input name="status" value="{{ book.status }}"></label>
+    </div>
+    <label>Lesson <textarea name="lesson" rows="3">{{ book.lesson }}</textarea></label>
+    <button type="submit">Save Book</button>
+  </form>
+
+  <section class="workflow-command-panel planner-panel">
+    <h2>Generation</h2>
+    <p>Use the dedicated generation page for DGX planning, prompt packaging, image generation, and review handoff.</p>
+    <div class="button-row">
+      <a class="button-link" href="/book-generation?book_slug={{ book.slug }}">Open Book Generation</a>
+    </div>
+  </section>
+</section>
+
+<section class="page-board">
+  <div class="workflow-strip-head">
+    <div>
+      <h2>Pages</h2>
+      <p>Edit story text and illustration direction for the whole book.</p>
+    </div>
+  </div>
+  <div class="page-edit-list">
+    {% for page in pages %}
+    <form id="page-{{ '%03d'|format(page.page_number) }}" class="page-edit-card" method="post" action="/books/{{ book.slug }}/pages/{{ page.page_number }}/edit">
+      <div class="page-edit-top">
+        <strong>Page {{ '%03d'|format(page.page_number) }}</strong>
+        <span class="workflow-pill">{{ page.status }}</span>
+        <a href="/story-maker?book_slug={{ book.slug }}&page={{ page.page_number }}">Open</a>
+      </div>
+      <div class="form-grid">
+        <label>Scene <input name="scene_title" value="{{ page.scene_title }}"></label>
+        <label>Status <input name="status" value="{{ page.status }}"></label>
+      </div>
+      <label>Story Text <textarea name="story_text" rows="3">{{ page.story_text }}</textarea></label>
+      <label>Illustration Direction <textarea name="illustration_direction" rows="3">{{ page.illustration_direction }}</textarea></label>
+      <button type="submit">Save Page {{ '%03d'|format(page.page_number) }}</button>
+    </form>
+    {% else %}
+    <div class="notice">No page plan yet. Generate a page plan to start editing.</div>
+    {% endfor %}
+  </div>
+</section>
+{% else %}
+<p class="empty">Book not found.</p>
+{% endif %}
+{% endblock %}

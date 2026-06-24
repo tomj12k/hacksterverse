@@ -1,0 +1,29 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 9
+page_type: problem
+scene_title: The Village Parade
+story_text: Samurai Splat stood at the front of the parade, determined to lead with
+  dignity and grace. But his feet felt like noodles in his shiny new boots. 'You're
+  overthinking it, Splat!' called Shotgun Bob, marching beside him with a goofy grin.
+  'Just walk like a happy dumpling!'
+illustration_direction: Samurai Splat is at the front of a colorful village parade,
+  wearing shiny new boots. His feet are splayed awkwardly, and his posture is stiff.
+  Shotgun Bob marches beside him with a goofy grin, arms flailing. Behind them, the
+  village people march in a line, waving and smiling. The parade route is lined with
+  colorful banners and decorations. Samurai Splat's face shows determination mixed
+  with anxiety.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village parade route
+emotion: Determination mixed with anxiety
+camera: Medium shot from the side, capturing the entire parade line
+hidden_objects:
+- slippery rice ball
+- bamboo practice pole
+text_safe_area: Top third of the page, above the parade line
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_09_the_village_parade.md
+status: prompt generated

@@ -1,0 +1,164 @@
+{
+  "approval": {
+    "approved": false,
+    "approved_at": null,
+    "approved_by": null,
+    "notes": ""
+  },
+  "book_illustration_path": "books/samurai_splat_01/illustrations/page_006.png",
+  "book_illustration_version": 1782058323689076991,
+  "book_slug": "samurai_splat_01",
+  "camera": "Medium shot from the side, capturing both characters and the bamboo pole",
+  "canvas": {
+    "bleed_inches": 0.125,
+    "dpi": 300,
+    "height_px": 2625,
+    "safe_margin_inches": 0.5,
+    "trim_inches": [
+      8.5,
+      8.5
+    ],
+    "width_px": 2625
+  },
+  "characters": [
+    "village people"
+  ],
+  "created_at": "2026-06-21T16:45:41Z",
+  "emotion": "Determined and nervous",
+  "environment": "Training area with a bamboo pole",
+  "hidden_objects": [
+    "Soft training mat",
+    "slippery rice ball"
+  ],
+  "illustration_direction": "Show the hero discovers the problem: create a funny all-ages comic-strip picture book called samurai splat. Keep the page bright, dimensional, friendly, and readable. Feature village people and noodle bowl. Do not bake in text. Reference notes: Use a bright premium children's comic-picture-book style with rounded shapes, saturated colors, clean readable silhouettes, expressive poses, cinematic but playful lighting, and slapstick motion. Keep Samurai Splat 100% consistent across pages: same body shape, same outfit, same face proportions, same headband/helmet silhouette, same color palette. Keep Shotgun Bob consistent too. Do not bake dialogue or captions into the image; leave clean space for editable text layers. No guns, no blades, no scary violence, no realistic injury, no dark gritty samurai style.",
+  "layers": [
+    {
+      "asset_path": "books/samurai_splat_01/illustrations/page_006.png",
+      "asset_version": 1782058323689076991,
+      "id": "book_illustration",
+      "locked": true,
+      "name": "Current Page Illustration",
+      "parallax_factor": 0,
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "transform": {
+        "height": 1,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 1,
+        "x": 0.5,
+        "y": 0.5
+      },
+      "type": "background",
+      "versions": [],
+      "visible": true,
+      "z_index": 0
+    },
+    {
+      "id": "camera_001",
+      "locked": false,
+      "name": "Camera",
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "transform": {
+        "rotation": 0,
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      },
+      "type": "camera",
+      "versions": [],
+      "visible": true,
+      "z_index": 99
+    },
+    {
+      "blend_mode": "multiply",
+      "id": "lighting_001",
+      "locked": false,
+      "name": "Ambient Light",
+      "opacity": 0,
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "tint_color": "#FFFFFF",
+      "transform": {},
+      "type": "lighting",
+      "versions": [],
+      "visible": true,
+      "z_index": 10
+    },
+    {
+      "align": "center",
+      "box_color": "#FFFFFF",
+      "box_opacity": 0.84,
+      "font_family": "rounded",
+      "font_size": 0.045,
+      "id": "page_text",
+      "locked": false,
+      "name": "Page Text",
+      "parallax_factor": 1,
+      "preserve_aspect": false,
+      "prompt_history": [],
+      "stroke_color": "#F2C94C",
+      "style_prompt": "",
+      "text": "Draft page 6: The hero discovers the problem: Create a funny all-ages comic-strip picture book called Samurai Splat.",
+      "text_art_variant": 0,
+      "text_color": "#154c84",
+      "transform": {
+        "height": 0.17,
+        "opacity": 1,
+        "rotation": 0,
+        "scale": 1,
+        "width": 0.78,
+        "x": 0.5,
+        "y": 0.82
+      },
+      "type": "text",
+      "versions": [],
+      "visible": true,
+      "z_index": 20
+    }
+  ],
+  "lighting_brief": "ambient_soft",
+  "page_count": 32,
+  "page_number": 6,
+  "page_type": "problem",
+  "production_notes": "",
+  "prompt_history": [],
+  "qa": {
+    "ready": false,
+    "errors": 0,
+    "warnings": 0,
+    "issues": [
+      {
+        "severity": "info",
+        "code": "not_approved",
+        "message": "Page is not approved yet."
+      }
+    ]
+  },
+  "scene_title": "The hero discovers the problem: Create a funny all-ages comic-strip picture book called Samurai Splat.",
+  "status": "generated",
+  "story_text": "Draft page 6: The hero discovers the problem: Create a funny all-ages comic-strip picture book called Samurai Splat.",
+  "text_safe_area": "Top third of the page, above the characters' heads",
+  "updated_at": "2026-06-21T18:13:58Z",
+  "uses_hackster_niko": false,
+  "suppress_hackster_niko": true,
+  "planned_characters": [
+    {
+      "name": "Samurai Splat",
+      "slug": "samurai_splat",
+      "asset_paths": []
+    },
+    {
+      "name": "Shotgun Bob",
+      "slug": "shotgun_bob",
+      "asset_paths": []
+    },
+    {
+      "name": "village people",
+      "slug": "village_people",
+      "asset_paths": []
+    }
+  ]
+}

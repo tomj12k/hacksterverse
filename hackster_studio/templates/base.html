@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Hackster Studio{% endblock %}</title>
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme") || "dark";
+        if (t === "light") document.documentElement.classList.remove("dark");
+        else document.documentElement.classList.add("dark");
+      })();
+    </script>
+    <link rel="stylesheet" href="/static/app.css">
+  </head>
+  <body>
+    {% set active_book_slug = book_nav.current_slug if book_nav is defined else "" %}
+    {% set book_query = "?book_slug=" ~ active_book_slug if active_book_slug else "" %}
+    <header class="topbar">
+      <a class="brand" href="/workflow">
+        <span class="brand-mark" aria-hidden="true">HN</span>
+        <span>Hackster Studio</span>
+      </a>
+      {% if book_nav is defined %}
+      <form class="book-switcher" method="post" data-book-switcher>
+        <label>
+          <span>Current Book</span>
+          <select name="book_slug" onchange="this.form.action='/books/' + this.value + '/set-current'; this.form.submit()">
+            {% for nav_book in book_nav.books %}
+            <option value="{{ nav_book.slug }}" {{ "selected" if nav_book.slug == book_nav.current_slug else "" }}>
+              {{ nav_book.title }}
+            </option>
+            {% endfor %}
+          </select>
+        </label>
+      </form>
+      {% endif %}
+      <nav class="nav" aria-label="Primary navigation">
+        <div class="nav-primary">
+          <a class="nav-link nav-link--primary" href="/workflow{{ book_query }}">Workflow</a>
+          <a class="nav-link nav-link--primary" href="/book-generation{{ book_query }}">Generate Book</a>
+          <a class="nav-link nav-link--primary" href="/story-maker{{ book_query }}{{ '&page=1' if active_book_slug else '?page=1' }}">Review</a>
+        </div>
+        <div class="nav-groups">
+          <details class="nav-menu">
+            <summary>Pipeline</summary>
+            <div class="nav-menu-panel">
+              <a href="/book-assembly{{ book_query }}">Assembly</a>
+              <a href="/generate{{ book_query }}">Images</a>
+              <a href="/prompts">Prompts</a>
+              <a href="/print-validator">QA / Print</a>
+            </div>
+          </details>
+          <details class="nav-menu">
+            <summary>Libraries</summary>
+            <div class="nav-menu-panel">
+              <a href="/">Dashboard</a>
+              <a href="/books">Books</a>
+              <a href="/characters">Characters</a>
+              <a href="/environments">Worlds</a>
+              <a href="/gadgets">Gadgets</a>
+            </div>
+          </details>
+          <details class="nav-menu">
+            <summary>System</summary>
+            <div class="nav-menu-panel nav-menu-panel--system">
+              <a href="/settings/ai">DGX Setup</a>
+              <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark mode">Theme</button>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </header>
+    <main class="shell">
+      {% block content %}{% endblock %}
+    </main>
+    <script src="/static/app.js"></script>
+    <script>
+      document.getElementById("theme-toggle").addEventListener("click", function () {
+        var isDark = document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+    </script>
+  </body>
+</html>

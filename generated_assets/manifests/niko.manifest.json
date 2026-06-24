@@ -1,0 +1,21 @@
+{
+  "name": "Hackster Niko",
+  "slug": "niko",
+  "asset_type": "character",
+  "version": "1.0",
+  "generated_at": "2026-06-19T07:45:34.599700+00:00",
+  "source_yaml": "tools/asset_generator/examples/niko.character.yaml",
+  "output_prompts": [
+    "generated_assets/prompts/character/niko/HN_niko_character_turnaround_v1p0.prompt.md",
+    "generated_assets/prompts/character/niko/HN_niko_character_expressions_v1p0.prompt.md",
+    "generated_assets/prompts/character/niko/HN_niko_character_poses_v1p0.prompt.md"
+  ],
+  "recommended_filename_prefix": "HN_Character_HacksterNiko_v1p0",
+  "print_notes": [
+    "Use clean reference backgrounds for design sheets.",
+    "Keep proportions consistent across generated variations.",
+    "Review prompt output before pasting into an image generation tool.",
+    "Do not bake story text into generated imagery.",
+    "Keep important faces, hands, and story action inside print safe areas when relevant."
+  ]
+}

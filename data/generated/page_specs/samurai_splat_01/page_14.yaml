@@ -1,0 +1,27 @@
+book: Samurai Splat
+book_slug: samurai_splat_01
+page_number: 14
+page_type: problem
+scene_title: The Noodle Eating Contest
+story_text: Samurai Splat declared a noodle eating contest to prove his speed and
+  strength. He slurped loudly, but the noodles kept slipping down the wrong way. 'Maybe
+  you should chew a little slower,' suggested Shotgun Bob, holding a noodle bowl.
+  The village people cheered, not noticing the noodles flying everywhere.
+illustration_direction: Samurai Splat is mid-bite with noodles flying around his mouth.
+  Shotgun Bob holds a noodle bowl with a concerned look. Village people in colorful
+  outfits cheer in the background. The kitchen area is bright with playful lighting
+  and dynamic angles to emphasize motion.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Kitchen area
+emotion: frustrated
+camera: dynamic angles
+hidden_objects:
+- slippery rice ball
+- soft training mat
+text_safe_area: top third of the page
+illustration_path: ''
+prompt_path: data/generated/prompts/pages/samurai_splat_01/page_14_the_noodle_eating_contest.md
+status: prompt generated

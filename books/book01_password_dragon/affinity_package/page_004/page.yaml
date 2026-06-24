@@ -1,0 +1,27 @@
+page_number: 4
+approval_status: needs_review
+illustration_path: books/book01_password_dragon/illustrations/page_004.png
+prompt_path: books/book01_password_dragon/prompts/page_004.md
+niko_layer_mode: posable_layer
+niko_pose: walk_front
+niko_center_x: 0.42
+niko_base_y: 0.88
+niko_height: 0.48
+page_type: story
+scene_title: Niko Enters Cyber Forest
+story_text: '"Today is my first Junior Hackster mission," said Niko. "Every problem
+  has a clever fix!"'
+characters:
+- Hackster Niko
+environment: Cyber Forest
+emotion: curious
+camera: wide establishing shot
+illustration_direction: Niko steps onto a bright path in Cyber Forest, curious and
+  brave.
+hidden_objects:
+- Golden Gear
+text_safe_area: Leave clean open space for editable story text inside safe margins.
+background_direction: Create an empty Cyber Forest background for a quiet storybook
+  scene. Show the setting, path, light, plants, props, and atmosphere only. No visible
+  characters, no people, no child, no robot, no mascot, no silhouette, no antenna,
+  no figure, no animal, no creature, no fox, no tail.

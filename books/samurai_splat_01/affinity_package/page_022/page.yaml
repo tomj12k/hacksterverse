@@ -1,0 +1,26 @@
+book_slug: samurai_splat_01
+page_number: 22
+page_type: problem
+scene_title: The Water Balloon Tournament
+story_text: "Samurai Splat, determined to win the village\u2019s annual water balloon\
+  \ tournament, ignores the rules. He grabs a giant, forbidden balloon and charges\
+  \ forward. 'This is how we do it!' he shouts. Shotgun Bob, watching from the sidelines,\
+  \ facepalms. 'You\u2019re supposed to AIM, not FLOOD the whole village!' he yells."
+illustration_direction: Samurai Splat, in full dramatic pose, holds a giant water
+  balloon over his head, ready to launch. His expression is intense and focused. The
+  village square is filled with colorful stalls and cheering villagers. Shotgun Bob
+  stands nearby, arms crossed, looking exasperated. The giant balloon is clearly oversized
+  and comically exaggerated. The scene is bright and playful, with soft lighting and
+  exaggerated motion lines to emphasize the slapstick action.
+characters:
+- Samurai Splat
+- Shotgun Bob
+- village people
+environment: Village square
+emotion: excited, frustrated
+camera: wide shot
+hidden_objects:
+- soft training mat
+- bamboo practice pole
+text_safe_area: top third of the page
+status: AI planned

@@ -1,0 +1,31 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH100
+source_page: 18
+scene_title: Teamwork Works
+duration_seconds: 6
+shot_type: emotional payoff
+camera: medium two-shot
+motion: Niko and Password Dragon high-five beside the glowing vault
+description: The friends celebrate that teamwork solved the problem.
+characters:
+- Hackster Niko
+- Password Dragon
+dialogue:
+- speaker: Password Dragon
+  text: I could not fix it alone.
+- speaker: Niko
+  text: That is why we use teamwork.
+narration: ''
+sfx:
+- soft high-five tap
+- happy vault tune
+music: warm payoff phrase
+continuity_notes: Keep Niko mouthless; high-five works through pose and eye expression.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH100_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH100_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH100_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH100_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH100_mix.wav

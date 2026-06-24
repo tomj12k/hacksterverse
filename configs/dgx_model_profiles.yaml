@@ -1,0 +1,76 @@
+# DGX model profiles for Hackster Studio.
+#
+# The pipeline applies a planner profile while creating book plans, then switches
+# to an image profile before ComfyUI/FLUX generation. Add future services/models
+# here instead of hardcoding them in pipeline code.
+
+profiles:
+  planner:
+    qwen3_32b_awq:
+      env:
+        DGX_LLM_BASE_URL: http://192.168.68.136:8000/v1
+        DGX_LLM_MODEL: Qwen3-32B-AWQ
+      start_services:
+        - vllm-planner.service
+      ready_url: http://192.168.68.136:8000/v1/models
+      ready_timeout_seconds: 600
+      ready_interval_seconds: 5
+
+  image:
+    flux_dev:
+      env:
+        COMFYUI_URL: http://192.168.68.136:8188
+        COMFYUI_WORKFLOW_KIND: flux
+        COMFYUI_UNET: flux1-dev.safetensors
+        COMFYUI_UNET_DTYPE: fp8_e4m3fn
+        COMFYUI_CLIP_1: t5xxl_fp16.safetensors
+        COMFYUI_CLIP_2: clip_l.safetensors
+        COMFYUI_CLIP_TYPE: flux
+        COMFYUI_VAE: ae.safetensors
+        COMFYUI_FLUX_GUIDANCE: "4.0"
+      stop_services:
+        - vllm-planner.service
+      start_services:
+        - comfyui.service
+      ready_url: http://192.168.68.136:8188/system_stats
+      ready_timeout_seconds: 180
+      ready_interval_seconds: 3
+
+    flux_schnell:
+      env:
+        COMFYUI_URL: http://192.168.68.136:8188
+        COMFYUI_WORKFLOW_KIND: flux
+        COMFYUI_UNET: flux1-schnell.safetensors
+        COMFYUI_UNET_DTYPE: fp8_e4m3fn
+        COMFYUI_CLIP_1: t5xxl_fp16.safetensors
+        COMFYUI_CLIP_2: clip_l.safetensors
+        COMFYUI_CLIP_TYPE: flux
+        COMFYUI_VAE: ae.safetensors
+        COMFYUI_FLUX_GUIDANCE: "3.5"
+      stop_services:
+        - vllm-planner.service
+      start_services:
+        - comfyui.service
+      ready_url: http://192.168.68.136:8188/system_stats
+      ready_timeout_seconds: 180
+      ready_interval_seconds: 3
+
+    flux_pulid:
+      env:
+        COMFYUI_URL: http://192.168.68.136:8188
+        COMFYUI_WORKFLOW_KIND: flux_pulid
+        COMFYUI_UNET: flux1-dev.safetensors
+        COMFYUI_UNET_DTYPE: fp8_e4m3fn
+        COMFYUI_CLIP_1: t5xxl_fp16.safetensors
+        COMFYUI_CLIP_2: clip_l.safetensors
+        COMFYUI_CLIP_TYPE: flux
+        COMFYUI_VAE: ae.safetensors
+        COMFYUI_FLUX_GUIDANCE: "4.0"
+        COMFYUI_PULID_MODEL: pulid_flux_v0.9.0.safetensors
+      stop_services:
+        - vllm-planner.service
+      start_services:
+        - comfyui.service
+      ready_url: http://192.168.68.136:8188/system_stats
+      ready_timeout_seconds: 180
+      ready_interval_seconds: 3

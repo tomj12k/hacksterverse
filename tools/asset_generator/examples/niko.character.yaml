@@ -1,0 +1,73 @@
+asset_type: character
+name: Hackster Niko
+slug: niko
+version: 1.0
+role: Junior Hackster
+age_equivalent: 7
+pronouns: he/him
+height: 2'6"
+model: HN-01
+catchphrase: Every problem has a clever fix!
+personality_traits:
+  - kind
+  - curious
+  - creative
+  - brave
+  - helpful
+  - playful
+appearance: small friendly learning robot, glossy white ceramic shell, rounded helmet-like head, large LED face, glowing blue eyes, no mouth, tiny antenna with glowing blue tip, blue hoodie with glowing </> symbol, glowing Core Crystal on chest, floating magnetic backpack, chunky sneakers, utility belt
+color_palette:
+  Hackster Blue: "#47C7FF"
+  Core Crystal: "#63DFFF"
+  Hoodie Blue: "#2E8CFF"
+  Friendly White: "#F8FCFF"
+  Dark Outline: "#394A63"
+  Golden Gear: "#F2C94C"
+materials:
+  - glossy white ceramic shell
+  - soft blue hoodie fabric
+  - glowing LED face panel
+  - translucent Core Crystal
+  - soft rubber sneaker soles
+  - smooth magnetic backpack shell
+expressions:
+  - happy
+  - excited
+  - curious
+  - thinking
+  - surprised
+  - confused
+  - laughing
+  - determined
+  - proud
+  - caring
+  - sleepy
+  - embarrassed
+poses:
+  - waving
+  - running
+  - jumping
+  - using tablet
+  - scanning
+  - building
+  - thinking
+  - climbing
+  - reading
+  - high five
+gadgets:
+  - Code Scanner
+  - Debugger Wrench
+  - Bubble Firewall
+  - USB Flashlight
+  - Bug Vacuum
+  - Password Painter
+  - Magnet Grappler
+  - Pocket Drone
+hidden_objects:
+  - Golden Gear
+  - Tiny Bug
+  - Blue Crystal
+  - Mini Robot
+art_style: bright children's picture book style, rounded friendly shapes, soft cinematic lighting, saturated colors, expressive robot eyes, no weapons, no scary imagery, clean white reference-sheet background for character sheets
+generation_notes: Keep Niko small, approachable, and consistent across all views. Preserve the no-mouth design and communicate emotion through eyes, posture, and gesture.
+

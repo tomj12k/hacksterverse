@@ -1,0 +1,30 @@
+approval_status: needs_review
+fps: 24
+resolution: 1920x1080
+aspect_ratio: '16:9'
+shot_id: SH050
+source_page: 7
+scene_title: Stay Calm
+duration_seconds: 6
+shot_type: comfort beat
+camera: warm medium close-up
+motion: Niko raises one hand gently; Password Dragon relaxes a little
+description: Niko comforts Password Dragon beside a glowing stump.
+characters:
+- Hackster Niko
+- Password Dragon
+dialogue:
+- speaker: Niko
+  text: I can help.
+- speaker: Niko
+  text: First, we stay calm. Then we think together.
+narration: ''
+sfx:
+- soft calming shimmer
+music: warm reassurance, simple bell notes
+continuity_notes: Body language should be gentle and emotionally safe.
+keyframe_path: movies/password_dragon_teaser/renders/keyframes/SH050_keyframe.png
+video_raw_path: movies/password_dragon_teaser/renders/video_raw/SH050_raw.mp4
+video_lipsynced_path: movies/password_dragon_teaser/renders/video_lipsynced/SH050_lipsync.mp4
+dialogue_audio_path: movies/password_dragon_teaser/audio/dialogue/SH050_dialogue.wav
+mix_audio_path: movies/password_dragon_teaser/audio/mixes/SH050_mix.wav
