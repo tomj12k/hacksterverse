@@ -25,6 +25,34 @@ def _base_url() -> str:
     return (os.getenv("COMFYUI_URL") or "http://127.0.0.1:8188").rstrip("/")
 
 
+def free_comfyui_memory(base_url: str) -> None:
+    """Unload models + free cached memory before training.
+
+    On the unified-memory DGX (GB10), VRAM and system RAM are one pool. ComfyUI
+    holds ~88GB of loaded models/working set from image generation, leaving too
+    little for a FLUX training step -> kernel OOM-kill. Clearing first lets the
+    training graph reload into a near-empty pool. Best-effort.
+    """
+    import urllib.request
+
+    payload = json.dumps({"unload_models": True, "free_memory": True}).encode("utf-8")
+    request = urllib.request.Request(f"{base_url}/free", data=payload, method="POST")
+    request.add_header("Content-Type", "application/json")
+    username = os.getenv("COMFYUI_USERNAME")
+    password = os.getenv("COMFYUI_PASSWORD")
+    if username and password:
+        import base64
+
+        token = base64.b64encode(f"{username}:{password}".encode("utf-8")).decode("ascii")
+        request.add_header("Authorization", f"Basic {token}")
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            response.read()
+        print("[lora] requested ComfyUI /free (unload models, free memory)", flush=True)
+    except Exception as exc:  # noqa: BLE001 - freeing is best-effort
+        print(f"[lora] /free request failed (continuing): {exc}", flush=True)
+
+
 def build_training_workflow(
     image_filenames: list[str],
     *,
@@ -35,6 +63,8 @@ def build_training_workflow(
     output_prefix: str,
     captions: list[str] | None = None,
     offloading: bool = True,
+    training_dtype: str = "bf16",
+    quantized_backward: bool = False,
 ) -> dict[str, Any]:
     """Build a ComfyUI FLUX LoRA training graph for the uploaded images."""
     workflow: dict[str, Any] = {
@@ -97,9 +127,9 @@ def build_training_workflow(
             "optimizer": "AdamW",
             "loss_function": "MSE",
             "seed": int(seed),
-            "training_dtype": "bf16",
+            "training_dtype": training_dtype,
             "lora_dtype": "bf16",
-            "quantized_backward": False,
+            "quantized_backward": bool(quantized_backward),
             "algorithm": "LoRA",
             "gradient_checkpointing": True,
             "checkpoint_depth": 1,
@@ -114,6 +144,27 @@ def build_training_workflow(
         "inputs": {"lora": ["train", 0], "prefix": output_prefix, "steps": ["train", 2]},
     }
     return workflow
+
+
+def _prepare_training_image(path: Path, max_dim: int, tmp_dir: Path) -> Path:
+    """Downscale to <= max_dim and flatten transparency onto white.
+
+    FLUX training cost scales with latent area, so native 1536px cutouts blow
+    up memory; 768px is the standard training size. Transparent character
+    cutouts are composited on white so the VAE encodes a clean image.
+    """
+    from PIL import Image
+
+    image = Image.open(path).convert("RGBA")
+    width, height = image.size
+    scale = min(1.0, max_dim / max(width, height))
+    if scale < 1.0:
+        image = image.resize((max(1, round(width * scale)), max(1, round(height * scale))), Image.LANCZOS)
+    background = Image.new("RGBA", image.size, (255, 255, 255, 255))
+    flattened = Image.alpha_composite(background, image).convert("RGB")
+    out_path = tmp_dir / f"{path.stem}_train.png"
+    flattened.save(out_path)
+    return out_path
 
 
 def _dataset_images_and_captions(manifest_path: Path) -> tuple[list[Path], list[str]]:
@@ -161,14 +212,23 @@ def train_lora_comfyui(
     seed: int = 0,
     use_captions: bool = True,
     offloading: bool = True,
+    training_dtype: str = "bf16",
+    quantized_backward: bool = False,
+    train_resolution: int = 768,
     timeout_seconds: int = 7200,
 ) -> str:
+    import tempfile
+
     base_url = _base_url()
     images, captions = _dataset_images_and_captions(manifest_path)
     if not images:
         raise RuntimeError(f"No dataset images found via {manifest_path}")
-    print(f"[lora] uploading {len(images)} images to ComfyUI {base_url}", flush=True)
-    uploaded = [upload_image(base_url, path) for path in images]
+    # Free held models first so training has the full unified-memory pool.
+    free_comfyui_memory(base_url)
+    tmp_dir = Path(tempfile.mkdtemp(prefix="hackster_lora_"))
+    prepared = [_prepare_training_image(path, train_resolution, tmp_dir) for path in images]
+    print(f"[lora] uploading {len(prepared)} images (<= {train_resolution}px) to ComfyUI {base_url}", flush=True)
+    uploaded = [upload_image(base_url, path) for path in prepared]
     trigger_caption = captions[0] if (use_captions and captions and captions[0]) else ""
     workflow = build_training_workflow(
         uploaded,
@@ -179,6 +239,8 @@ def train_lora_comfyui(
         output_prefix=output_prefix,
         captions=[trigger_caption] if trigger_caption else None,
         offloading=offloading,
+        training_dtype=training_dtype,
+        quantized_backward=quantized_backward,
     )
     print(f"[lora] submitting training graph: steps={steps} rank={rank} lr={learning_rate} prefix={output_prefix}", flush=True)
     prompt_id = submit_prompt(base_url, workflow)
@@ -208,6 +270,7 @@ def main() -> int:
             learning_rate=float(os.getenv("HACKSTER_LORA_LEARNING_RATE", "0.0005")),
             seed=int(os.getenv("HACKSTER_LORA_SEED", "0")),
             offloading=os.getenv("HACKSTER_LORA_OFFLOADING", "1").strip().lower() not in ("", "0", "false", "no"),
+            train_resolution=int(os.getenv("HACKSTER_LORA_TRAIN_RESOLUTION", "768")),
             timeout_seconds=int(os.getenv("HACKSTER_LORA_TIMEOUT", "7200")),
         )
     except Exception as exc:  # noqa: BLE001 - surface any backend failure to the log
